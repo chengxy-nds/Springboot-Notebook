@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="delayqueue" />
+        <module name="springboot-aop-redis-lua" />
+        <module name="springboot-rabbitmq-confirm" />
+        <module name="springboot-rabbitmq-mqtt" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="delayqueue" target="1.8" />
+      <module name="springboot-aop-redis-lua" target="1.8" />
+      <module name="springboot-rabbitmq-confirm" target="1.8" />
+      <module name="springboot-rabbitmq-mqtt" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

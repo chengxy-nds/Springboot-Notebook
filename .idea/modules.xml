@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Springboot-Notebook.iml" filepath="$PROJECT_DIR$/.idea/Springboot-Notebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-delayqueue/delayqueue.iml" filepath="$PROJECT_DIR$/springboot-delayqueue/delayqueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-aop-redis-lua-/springboot-aop-redis-lua.iml" filepath="$PROJECT_DIR$/springboot-aop-redis-lua-/springboot-aop-redis-lua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-mqtt/springboot-rabbitmq-mqtt.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-mqtt/springboot-rabbitmq-mqtt.iml" />
+    </modules>
+  </component>
+</project>
