@@ -1,0 +1,7 @@
+iot:
+    mqtt:
+        clientId: client-1
+        defaultTopic: mqtt_test_topic
+        serverClientId: server-1
+        servers: tcp://127.0.0.1:1883
+
