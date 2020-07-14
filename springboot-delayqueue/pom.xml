@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.chengxy</groupId>
-    <artifactId>delayqueue</artifactId>
+    <artifactId>springboot-delayqueue</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>delayqueue</name>
+    <name>springboot-delayqueue</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
