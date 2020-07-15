@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 @RestController
@@ -19,7 +19,7 @@ public class LimiterController {
     private static final AtomicInteger ATOMIC_INTEGER_3 = new AtomicInteger();
 
     /**
-     * @author xinzhifu
+     * @author xiaofu
      * @description
      * @date 2020/4/8 13:42
      */
@@ -31,7 +31,7 @@ public class LimiterController {
     }
 
     /**
-     * @author xinzhifu
+     * @author xiaofu
      * @description
      * @date 2020/4/8 13:42
      */
@@ -43,7 +43,7 @@ public class LimiterController {
     }
 
     /**
-     * @author xinzhifu
+     * @author xiaofu
      * @description
      * @date 2020/4/8 13:42
      */

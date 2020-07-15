@@ -1,7 +1,7 @@
 package com.xiaofu.limit.interceptor;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 
@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
 
 
 /**
- * @author xinzhifu
+ * @author xiaofu
  * @description 限流切面实现
  * @date 2020/4/8 13:04
  */
@@ -51,7 +51,7 @@ public class LimitInterceptor {
 
     /**
      * @param pjp
-     * @author xinzhifu
+     * @author xiaofu
      * @description 切面
      * @date 2020/4/8 13:04
      */
@@ -100,7 +100,7 @@ public class LimitInterceptor {
     }
 
     /**
-     * @author xinzhifu
+     * @author xiaofu
      * @description 编写 redis Lua 限流脚本
      * @date 2020/4/8 13:24
      */
@@ -124,7 +124,7 @@ public class LimitInterceptor {
 
 
     /**
-     * @author xinzhifu
+     * @author xiaofu
      * @description 获取id地址
      * @date 2020/4/8 13:24
      */

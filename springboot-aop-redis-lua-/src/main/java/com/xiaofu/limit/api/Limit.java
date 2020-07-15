@@ -5,7 +5,7 @@ import com.xiaofu.limit.enmu.LimitType;
 import java.lang.annotation.*;
 
 /**
- * @author xinzhifu
+ * @author xiaofu
  * @description 自定义限流注解
  * @date 2020/4/8 13:15
  */

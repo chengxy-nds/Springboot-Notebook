@@ -2,7 +2,7 @@ package com.xiaofu.limit.enmu;
 
 
 /**
- * @author xinzhifu
+ * @author xiaofu
  * @description 限流类型
  * @date 2020/4/8 13:47
  */
