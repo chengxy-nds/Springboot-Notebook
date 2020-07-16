@@ -42,6 +42,19 @@
             <version>3.11.4</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
+            <!--<version>2.3.1.RELEASE</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.redisson</groupId>-->
+            <!--&lt;!&ndash; for Spring Data Redis v.2.2.x &ndash;&gt;-->
+            <!--<artifactId>redisson-spring-data-22</artifactId>-->
+            <!--<version>2.3.1.RELEASE</version>-->
+        <!--</dependency>-->
+
     </dependencies>
 
     <build>
