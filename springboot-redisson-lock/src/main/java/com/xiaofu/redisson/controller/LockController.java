@@ -1,5 +1,6 @@
 package com.xiaofu.redisson.controller;
 
+import org.redisson.api.RFuture;
 import org.redisson.api.RLock;
 import org.redisson.api.RReadWriteLock;
 import org.redisson.api.RedissonClient;
@@ -27,18 +28,12 @@ public class LockController {
 
         RLock lock = redissonClient.getLock("order:A0001");
         try {
-            if (lock.tryLock()) {
-//                String name = Thread.currentThread().getName();
-//                System.out.println(name + " get lock at " + System.currentTimeMillis());
-//                Thread.currentThread().sleep(3000);
-//
-//                lock.unlock();
-//                long endTime = System.currentTimeMillis();
-//                System.out.println("结束时间" + endTime);
-            }
-        } catch (Exception e) {
+            lock.lock(5, TimeUnit.SECONDS);
+            Thread.currentThread().sleep(30000);
             lock.unlock();
-        } finally {
+            System.out.println("锁释放~");
+
+        } catch (Exception e) {
             lock.unlock();
         }
         return null;
@@ -52,7 +47,7 @@ public class LockController {
      */
     public void reentrantLock() {
 
-        RLock reentrantLock = redissonClient.getLock("order:A0001");
+        RLock reentrantLock = redissonClient.getLock("order:A0002");
         try {
             reentrantLock.lock();
             //TODO something
@@ -77,6 +72,28 @@ public class LockController {
 
             // 100尝试加锁的时间 ，10锁过期时间
             if (reentrantLock.tryLock(100, 10, TimeUnit.SECONDS)) {
+                //TODO something
+            }
+        } catch (Exception e) {
+            reentrantLock.unlock();
+        } finally {
+            reentrantLock.unlock();
+        }
+    }
+
+    /**
+     * @author xinzhifu
+     * @description 异步可重入锁-设置过期时间
+     * @date 2020/7/16 15:20
+     */
+    public void reentrantLock2Async() {
+
+        RLock reentrantLock = redissonClient.getLock("order:A0001");
+        try {
+
+            // 100尝试加锁的时间 ，10锁过期时间
+            final RFuture<Boolean> booleanRFuture = reentrantLock.tryLockAsync(100, 10, TimeUnit.SECONDS);
+            if (booleanRFuture.get()) {
                 //TODO something
             }
         } catch (Exception e) {
