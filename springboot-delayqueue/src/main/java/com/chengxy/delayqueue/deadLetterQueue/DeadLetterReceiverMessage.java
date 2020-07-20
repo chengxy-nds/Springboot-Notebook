@@ -1,7 +1,7 @@
 package com.chengxy.delayqueue.deadLetterQueue;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 //@Component

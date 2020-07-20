@@ -6,7 +6,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 @Configuration

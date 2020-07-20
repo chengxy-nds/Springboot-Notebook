@@ -8,7 +8,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 public class ScheduledExecutorServiceDemo {

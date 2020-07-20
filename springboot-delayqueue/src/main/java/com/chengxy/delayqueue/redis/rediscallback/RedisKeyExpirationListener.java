@@ -6,7 +6,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 @Component

@@ -6,7 +6,7 @@ import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author: xinzhifu
+ * @Author: xiaofu
  * @Description:
  */
 public class DelayQueueDemo {
