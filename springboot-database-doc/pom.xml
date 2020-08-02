@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.xiaofu.doc</groupId>
+    <artifactId>springboot-database-doc</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot-database-doc</name>
+    <description>springboot-database-doc</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
+        </dependency>
+
+        <!-- screw核心 -->
+        <dependency>
+            <groupId>cn.smallbun.screw</groupId>
+            <artifactId>screw-core</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+        <!-- HikariCP -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.4.5</version>
+        </dependency>
+
+        <!--mysql driver-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>cn.smallbun.screw</groupId>
+                <artifactId>screw-maven-plugin</artifactId>
+                <version>1.0.3</version>
+                <dependencies>
+                    <!-- HikariCP -->
+                    <dependency>
+                        <groupId>com.zaxxer</groupId>
+                        <artifactId>HikariCP</artifactId>
+                        <version>3.4.5</version>
+                    </dependency>
+                    <!--mysql driver-->
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.20</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <!--username-->
+                    <username>root</username>
+                    <!--password-->
+                    <password>xinzhifu521</password>
+                    <!--driver-->
+                    <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>
+                    <!--jdbc url-->
+                    <jdbcUrl>jdbc:mysql://47.93.6.5:3306/fire</jdbcUrl>
+                    <!--生成文件类型-->
+                    <fileType>MD</fileType>
+                    <!--打开文件输出目录-->
+                    <openOutputDir>false</openOutputDir>
+                    <!--生成模板-->
+                    <produceType>freemarker</produceType>
+                    <!--文档名称 为空时:将采用[数据库名称-描述-版本号]作为文档名称-->
+                    <!--<docName>测试文档名称</docName>-->
+                    <!--描述-->
+                    <description>数据库文档生成</description>
+                    <!--版本-->
+                    <version>${project.version}</version>
+                    <!--标题-->
+                    <title>fire数据库文档</title>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
