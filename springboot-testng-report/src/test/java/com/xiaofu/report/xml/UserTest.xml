@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="用户单元测试" parallel="classes" thread-count="5">
+
+    <listeners>
+        <listener class-name="com.xiaofu.report.config.ExtentTestNGIReporterListener"/>
+    </listeners>
+
+
+    <test verbose="1" name="用户测试">
+        <parameter name="userId" value="1"/>
+        <parameter name="name" value="程序员内点事"/>
+        <groups>
+            <define name="queryUser"/>
+        </groups>
+
+        <classes>
+            <class name="com.xiaofu.report.UserTest"/>
+        </classes>
+    </test>
+</suite>
