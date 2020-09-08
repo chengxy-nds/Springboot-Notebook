@@ -49,8 +49,10 @@
         // 接收消息事件
         client.onMessageArrived = function (message) {
             console.log("接受主题： " + message.destinationName + "的消息： " + message.payloadString);
-            console.log((message.payloadString));
             $("#arrivedDiv").append("<br/>"+message.payloadString);
+            var count = $("#count").text();
+            count = Number(count) + 1;
+            $("#count").text(count);
         };
 
         // 推送给指定主题
@@ -79,7 +81,7 @@
         </div>
     </div>
     <ul>
-        <li class="active"><i class="fa fa-home fa-lg"></i> 未读消息 <span id="count" class="unread">999+</span></li>
+        <li class="active"><i class="fa fa-home fa-lg"></i> 未读消息 <span id="count" class="unread">0</span></li>
         <!--<li><i class="fa fa-envelope fa-lg"></i> Inbox</li>-->
         <!--<li><i class="fa fa-user fa-lg"></i> Profile</li>-->
         <!--<li><i class="fa fa-cogs fa-lg"></i> Settings</li>-->
