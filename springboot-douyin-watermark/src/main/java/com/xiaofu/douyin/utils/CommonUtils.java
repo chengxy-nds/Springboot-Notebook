@@ -18,6 +18,7 @@ public class CommonUtils {
             HttpURLConnection conn = (HttpURLConnection) serverUrl.openConnection();
             conn.setRequestMethod("GET");
             conn.setInstanceFollowRedirects(false);
+            conn.setRequestProperty("User-agent", "ua");//模拟手机连接
             conn.connect();
             String location = conn.getHeaderField("Location");
             return location;

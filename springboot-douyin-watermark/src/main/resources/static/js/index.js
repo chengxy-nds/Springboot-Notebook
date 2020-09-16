@@ -1,22 +1,8 @@
-!function () {
-    try {
-        if (localStorage.getItem('ym_card') != null) {
-            var c = document.getElementsByClassName('card-input')[0];
-            c.value = localStorage.getItem('ym_card');
-            var a = document.getElementsByClassName('card-submit')[0];
-            var b = document.getElementsByClassName('card-quxiao')[0];
-            a.style.display = 'none';
-            b.style.display = 'block';
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}()
-
 layui.use(['layer', 'element'], function () {
     var $ = layui.jquery;
 })
 
+// 复制链接
 function copy(felu) {
     var Url = document.getElementById(felu);
     Url.select(); // 选择对象
@@ -24,17 +10,43 @@ function copy(felu) {
     layer.msg('复制成功');
 }
 
+// 下载文件
+function downloadVideo(url, desc) {
+
+    if (isEmpty(url)) {
+        layer.msg('暂无数据');
+        return;
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';    // 返回类型blob
+    xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let blob = this.response;
+            // 转换一个blob链接
+            let u = window.URL.createObjectURL(new Blob([blob]))
+            let a = document.createElement('a');
+            a.download = desc+'.mp4';
+            a.href = u;
+            a.style.display = 'none'
+            document.body.appendChild(a)
+            a.click();
+            a.remove();
+        }
+    };
+    xhr.send()
+
+}
+
 $(document).ready(function () {
 
     //解析视频
     $('.qsy-submit').click(function () {
 
-
-
         $('.qsy-submit').attr('disabled', true);
         var link = rexUrl($('#qsy-url').val());
         if (isEmpty(link)) {
-            layer.msg('没有检测到链接')
+            layer.msg('请输入链接')
             $('.qsy-submit').attr('disabled', false);
             return false;
         }
@@ -54,10 +66,9 @@ $(document).ready(function () {
                         closeBtn: 1,
                         shadeClose: true,
                         skin: 'yourclass',
-                        content: `<div class="layui-row layui-col-space10"style="background-image: url(${rows['videoPic']});background-size: cover;height: 500px;"><div class="layui-row layui-col-space10"><div class=" layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12"><a href="${rows['videoUrl']}"target="_blank"rel="noopener nofollow noreferrer"><button class="layui-btn">下载视频</button></a></div><div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12"><a href="${rows['musicUrl']}" rel="noopener nofollow noreferrer"><button class="layui-btn">下载音乐</button></a></div><div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12"><textarea id="videourl"cols="30"rows="10" style="height:0;width:0;position: absolute;">${rows['videoUrl']}</textarea><button class="layui-btn"onclick="copy('videourl')">复制链接</button></div></div></div>`
+                        content: `<div style="overflow:hidden;height: 580px;width: 350px;"><div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['videoUrl']}','${rows['desc']}')"><button class="layui-bg-red layui-btn-sm layui-btn">下载视频</button></a></div><div class="popButton"><textarea id="videourl" cols="1" rows="1" style="height:0;width:0;position: absolute;">${rows['videoUrl']}</textarea><button class="layui-btn-sm layui-bg-blue layui-btn" onclick="copy('videourl')">复制链接</button></div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['musicUrl']}','${rows['desc']}')"><button class="layui-btn-sm layui-btn">下载音频</button></a></div><video id="video" width="360px" height="500px" src="${rows['videoUrl']}" controls = "true" poster="${rows['videoPic']}" preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"><source src="${rows['videoUrl']}" type="video/mp4"> </video></div></div>`
+                        //content: `<video id="video" src="${rows['videoUrl']}" controls = "true" poster="${rows['videoPic']}" preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"><source src="${rows['videoUrl']}" type="video/mp4"> </video>`
                     });
-                    layer.msg('解析成功');
-                    return false;
 
                 } catch (error) {
                     layer.alert('错误信息:' + error, {
@@ -79,7 +90,6 @@ $(document).ready(function () {
             }
         })
     })
-
 
     $('.reset_btn').click(function () {
         $('#qsy-url').val("");

@@ -14,6 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.net.URLDecoder;
 
+
+/**
+ * @author xiaofu-公众号：程序员内点事
+ * @description 抖音无水印视频下载
+ * @date 2020/9/15 18:44
+ */
 @Slf4j
 @Controller
 public class DYController {
@@ -50,6 +56,7 @@ public class DYController {
             String videoUrl = "";
             String musicUrl = "";
             String videoPic = "";
+            String desc = "";
 
             if (!StringUtils.isEmpty(redirectUrl)) {
 
@@ -71,7 +78,9 @@ public class DYController {
                 videoUrl = dyResult.getItem_list().get(0)
                         .getVideo().getPlay_addr().getUrl_list().get(0)
                         .replace("playwm", "play");
-                dyDto.setVideoUrl(videoUrl);
+                String videoRedirectUrl = CommonUtils.getLocation(videoUrl);
+
+                dyDto.setVideoUrl(videoRedirectUrl);
                 /**
                  * 5、音频 url
                  */
@@ -82,6 +91,12 @@ public class DYController {
                  */
                 videoPic = dyResult.getItem_list().get(0).getVideo().getDynamic_cover().getUrl_list().get(0);
                 dyDto.setVideoPic(videoPic);
+
+                /**
+                 * 7、视频文案
+                 */
+                desc = dyResult.getItem_list().get(0).getDesc();
+                dyDto.setDesc(desc);
             }
         } catch (Exception e) {
 

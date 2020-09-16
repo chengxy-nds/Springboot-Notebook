@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 解决访问视频url 请求403异常 -->
+    <meta name="referrer" content="no-referrer"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="抖音去水印,抖音视频去水印,抖音视频无水印解析,抖音视频解析,无水印解析,怎么去抖音水印,去抖音水印,抖音解析,抖音去水印,抖音短视 ,抖音视频去水印,保存无水印抖音视频到手机 抖音短视频到电脑,抖音视频解 "
           name="keywords">
@@ -35,9 +37,9 @@
         <div class="layui-logo">
         </div>
         <ul class="layui-nav layui-row" lay-filter="mnav">
-            <li class="layui-nav-item  ">
-                <a href="##"><img src="/img/webicon.png" width="100px" alt="" srcset=""></a>
-            </li>
+            <!--<li class="layui-nav-item  ">-->
+            <!--<a href="##"><img src="/img/webicon.png" width="100px" alt="" srcset=""></a>-->
+            <!--</li>-->
             <li class="layui-nav-item">
                 <a id="to_record" class="is_login" href="http://dsp.youmi.ee/batch">一起去水印</a>
             </li>
@@ -72,8 +74,11 @@
 
                         <!-- 电脑 -->
                         <div class="layui-form-item layui-hide-xs layui-show-sm-inline-block layui-show-md-inline-block layui-show-lg-inline-block">
-                            <button type="button" class="layui-btn-sm layui-btn layui-btn-primary reset_btn layui-bg-orange">清空</button>
-                            <button type="submit" class="layui-btn-sm layui-btn qsy-submit layui-bg-blue" lay-submit="" lay-filter="msubmit">
+                            <button type="button"
+                                    class="layui-btn-sm layui-btn layui-btn-primary reset_btn layui-bg-orange">清空
+                            </button>
+                            <button type="submit" class="layui-btn-sm layui-btn qsy-submit layui-bg-blue" lay-submit=""
+                                    lay-filter="msubmit">
                                 去除水印
                             </button>
                         </div>
@@ -81,9 +86,13 @@
                         <!-- 手机 -->
                         <div class="layui-form-item layui-row layui-col-space10 layui-hide-sm layui-hide-md layui-hide-lg layui-show-xs-block">
                             <div class="layui-btn-group layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
-                                <button type="button"  class="layui-btn-sm layui-bg-orange layui-btn layui-btn-primary   layui-col-xs4 layui-col-sm4 layui-col-md12 layui-col-lg12 reset_btn">清空
+                                <button type="button"
+                                        class="layui-btn-sm layui-bg-orange layui-btn layui-btn-primary   layui-col-xs4 layui-col-sm4 layui-col-md12 layui-col-lg12 reset_btn">
+                                    清空
                                 </button>
-                                <button type="submit" class="layui-btn-sm layui-bg-blue qsy-submit layui-btn  layui-col-xs8 layui-col-sm8 layui-col-md12 layui-col-lg12" lay-submit="" lay-filter="msubmit">去除水印
+                                <button type="submit"
+                                        class="layui-btn-sm layui-bg-blue qsy-submit layui-btn  layui-col-xs8 layui-col-sm8 layui-col-md12 layui-col-lg12"
+                                        lay-submit="" lay-filter="msubmit">去除水印
                                 </button>
                             </div>
                         </div>
