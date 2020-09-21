@@ -138,4 +138,23 @@
     margin-bottom: 10px;
 }
 
-/* 悬浮联系方式end */
+.img-ul {
+    list-style: none;
+}
+
+.img-li {
+    display: inline;
+    line-height: 40px;
+    float: left;
+    margin-left: 15px;
+}
+
+.img-show {
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    width: 30px;
+    height: 30px;
+}
+
+

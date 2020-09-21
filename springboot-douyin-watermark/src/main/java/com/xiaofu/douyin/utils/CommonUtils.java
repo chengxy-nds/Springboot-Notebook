@@ -12,6 +12,14 @@ import java.util.regex.Pattern;
 
 public class CommonUtils {
 
+    public static String DOU_YIN_BASE_URL = "https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=";
+
+    public static String HUO_SHAN_BASE_URL = " https://share.huoshan.com/api/item/info?item_id=";
+
+    public static String DOU_YIN_DOMAIN = "douyin";
+
+    public static String HUO_SHAN_DOMAIN = "huoshan";
+
     public static String getLocation(String url) {
         try {
             URL serverUrl = new URL(url);
@@ -31,6 +39,16 @@ public class CommonUtils {
     public static String matchNo(String redirectUrl) {
         List<String> results = new ArrayList<>();
         Pattern p = Pattern.compile("video/([\\w/\\.]*)/");
+        Matcher m = p.matcher(redirectUrl);
+        while (!m.hitEnd() && m.find()) {
+            results.add(m.group(1));
+        }
+        return results.get(0);
+    }
+
+    public static String hSMatchNo(String redirectUrl) {
+        List<String> results = new ArrayList<>();
+        Pattern p = Pattern.compile("item_id=([\\w/\\.]*)&");
         Matcher m = p.matcher(redirectUrl);
         while (!m.hitEnd() && m.find()) {
             results.add(m.group(1));

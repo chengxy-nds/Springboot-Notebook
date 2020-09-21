@@ -12,7 +12,6 @@ function copy(felu) {
 
 // 下载文件
 function downloadVideo(url, desc) {
-
     if (isEmpty(url)) {
         layer.msg('暂无数据');
         return;
@@ -20,13 +19,15 @@ function downloadVideo(url, desc) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'blob';    // 返回类型blob
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.setRequestHeader("Access-Control-Allow-Credentials", true);
     xhr.onload = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let blob = this.response;
             // 转换一个blob链接
             let u = window.URL.createObjectURL(new Blob([blob]))
             let a = document.createElement('a');
-            a.download = desc+'.mp4';
+            a.download = desc + '.mp4';
             a.href = u;
             a.style.display = 'none'
             document.body.appendChild(a)
@@ -35,8 +36,8 @@ function downloadVideo(url, desc) {
         }
     };
     xhr.send()
-
 }
+
 
 $(document).ready(function () {
 
@@ -59,6 +60,7 @@ $(document).ready(function () {
                 $('.qsy-submit').attr('disabled', false);
                 try {
                     var rows = JSON.parse(data);
+                    alert(JSON.stringify(data));
                     layer.close(index);
                     layer.open({
                         type: 1,
@@ -66,10 +68,8 @@ $(document).ready(function () {
                         closeBtn: 1,
                         shadeClose: true,
                         skin: 'yourclass',
-                        content: `<div style="overflow:hidden;height: 580px;width: 350px;"><div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['videoUrl']}','${rows['desc']}')"><button class="layui-bg-red layui-btn-sm layui-btn">下载视频</button></a></div><div class="popButton"><textarea id="videourl" cols="1" rows="1" style="height:0;width:0;position: absolute;">${rows['videoUrl']}</textarea><button class="layui-btn-sm layui-bg-blue layui-btn" onclick="copy('videourl')">复制链接</button></div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['musicUrl']}','${rows['desc']}')"><button class="layui-btn-sm layui-btn">下载音频</button></a></div><video id="video" width="360px" height="500px" src="${rows['videoUrl']}" controls = "true" poster="${rows['videoPic']}" preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"><source src="${rows['videoUrl']}" type="video/mp4"> </video></div></div>`
-                        //content: `<video id="video" src="${rows['videoUrl']}" controls = "true" poster="${rows['videoPic']}" preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"><source src="${rows['videoUrl']}" type="video/mp4"> </video>`
+                        content: `<div style="overflow:hidden;height: 580px;width: 350px;"><div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['videoUrl']}','${rows['desc']}')"><button class="layui-bg-red layui-btn-sm layui-btn">下载视频</button></a></div><div class="popButton"><textarea id="videourl" cols="1" rows="1" style="height:0;width:0;position: absolute;">${rows['videoUrl']}</textarea><button class="layui-btn-sm layui-bg-blue layui-btn" onclick="copy('videourl')">复制链接</button></div><div class="popButton"><a href="###" rel="noopener nofollow noreferrer" onclick="downloadVideo('${rows['musicUrl']}','${rows['desc']}')"><button class="layui-btn-sm layui-btn">下载音频</button></a></div><video id="video" width="360px" height="550px" src="${rows['videoUrl']}" controls = "true" poster="${rows['videoPic']}" preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"><source src="${rows['videoUrl']}" type="video/mp4"> </video></div></div>`
                     });
-
                 } catch (error) {
                     layer.alert('错误信息:' + error, {
                         title: '异常',
