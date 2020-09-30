@@ -60,7 +60,6 @@ $(document).ready(function () {
                 $('.qsy-submit').attr('disabled', false);
                 try {
                     var rows = JSON.parse(data);
-                    alert(JSON.stringify(data));
                     layer.close(index);
                     layer.open({
                         type: 1,

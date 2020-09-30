@@ -158,3 +158,14 @@
 }
 
 
+.img-remark {
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    width: 550px;
+    height: 350px;
+    margin-top: 15px;
+
+}
+
+
