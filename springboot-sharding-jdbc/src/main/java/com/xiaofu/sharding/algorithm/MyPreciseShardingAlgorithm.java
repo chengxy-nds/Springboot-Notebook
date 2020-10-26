@@ -1,4 +1,4 @@
-package com.xiaofu.sharding;
+package com.xiaofu.sharding.algorithm;
 
 
 import org.apache.shardingsphere.api.sharding.standard.PreciseShardingAlgorithm;
@@ -6,18 +6,13 @@ import org.apache.shardingsphere.api.sharding.standard.PreciseShardingValue;
 
 import java.util.Collection;
 
-/**
- * 自定义分片算法
- * 
- * @author yinjihuan
- *
- */
-public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
-	@Override
-	public String doSharding(Collection<String> availableTargetNames, PreciseShardingValue<Long> shardingValue) {
-		for (String tableName : availableTargetNames) {
 
-			String  value = shardingValue.getValue() % 4 + "";
+public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
+
+	@Override
+	public String doSharding(Collection<String> tableNames, PreciseShardingValue<Long> shardingValue) {
+		for (String tableName : tableNames) {
+			String  value = shardingValue.getValue() % 3 + "";
 			if (tableName.endsWith(value)) {
 				return tableName;
 			}
@@ -25,3 +20,5 @@ public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long
 		throw new IllegalArgumentException();
 	}
 }
+
+

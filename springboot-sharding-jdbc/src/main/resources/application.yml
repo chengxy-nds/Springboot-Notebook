@@ -1,5 +1,5 @@
-spring:
-  profiles:
-    active: sharding_jdbc
-server:
-  port: 8001
+#spring:
+#  profiles:
+#    active: sharding_jdbc
+#server:
+#  port: 8001
