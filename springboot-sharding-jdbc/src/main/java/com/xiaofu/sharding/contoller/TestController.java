@@ -49,6 +49,7 @@ public class TestController {
             TOrder order = new TOrder();
             order.setOrderNo("A000" + i);
             order.setCreateName("订单 " + i);
+            order.setUserId(Long.parseLong(i + ""));
             order.setPrice(new BigDecimal("" + i));
             orderRepository.insert(order);
 

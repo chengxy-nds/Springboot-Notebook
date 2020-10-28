@@ -11,6 +11,8 @@ public class TOrder {
     @TableId(value = "order_id")
     private Long orderId;
 
+    private Long userId;
+
     private String orderNo;
 
     private String createName;
