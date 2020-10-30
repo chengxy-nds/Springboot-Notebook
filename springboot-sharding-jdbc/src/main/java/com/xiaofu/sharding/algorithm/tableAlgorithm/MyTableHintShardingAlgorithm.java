@@ -1,4 +1,4 @@
-package com.xiaofu.sharding.algorithm;
+package com.xiaofu.sharding.algorithm.tableAlgorithm;
 
 
 import org.apache.shardingsphere.api.sharding.hint.HintShardingAlgorithm;
@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 
 
-public class MyHintShardingAlgorithm implements HintShardingAlgorithm {
+public class MyTableHintShardingAlgorithm implements HintShardingAlgorithm {
 
 	@Override
 	public Collection<String> doSharding(Collection tableNames, HintShardingValue hintShardingValue) {

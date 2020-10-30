@@ -99,27 +99,10 @@ public class TestController {
         return orderRepository.selectList(new QueryWrapper<>());
     }
 
-
-    @GetMapping(value = "/selectOrderAndItemByOrderIdPage")
-    @ResponseBody
-    public String selectOrderAndItemByOrderIdPage(String orderId, Integer pageNo, Integer pageSize) {
-        TOrderDto tOrder = new TOrderDto();
-        if (!StringUtils.isEmpty(orderId)) {
-            tOrder.setOrderId(Long.parseLong(orderId));
-        }
-        Page<TOrderDto> tOrderPage = new Page<>(pageNo, pageSize);
-        tOrderPage.setDesc("o.price");
-        return JSON.toJSONString(orderRepository.selectOrderAndItemByOrderIdPage(tOrderPage, pageNo, pageSize, tOrder.getOrderId()));
-    }
-
-
     @GetMapping(value = "/selectOrderListPage")
     @ResponseBody
     public List<TOrderDto> selectOrderListPage(String orderId, Integer pageNo, Integer pageSize) {
-        TOrderDto tOrder = new TOrderDto();
-        if (!StringUtils.isEmpty(orderId)) {
-            tOrder.setOrderId(Long.parseLong(orderId));
-        }
-        return orderRepository.selectOrderListPage(pageNo, pageSize, tOrder.getOrderId());
+
+        return orderRepository.selectOrderListPage();
     }
 }

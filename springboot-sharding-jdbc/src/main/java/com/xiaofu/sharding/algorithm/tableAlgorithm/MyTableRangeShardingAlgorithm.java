@@ -1,4 +1,4 @@
-package com.xiaofu.sharding.algorithm;
+package com.xiaofu.sharding.algorithm.tableAlgorithm;
 
 
 import com.google.common.collect.Range;
@@ -10,7 +10,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 
-public class MyRangeShardingAlgorithm implements RangeShardingAlgorithm<Integer> {
+public class MyTableRangeShardingAlgorithm implements RangeShardingAlgorithm<Integer> {
 
     @Override
     public Collection<String> doSharding(Collection<String> tableNames, RangeShardingValue<Integer> rangeShardingValue) {

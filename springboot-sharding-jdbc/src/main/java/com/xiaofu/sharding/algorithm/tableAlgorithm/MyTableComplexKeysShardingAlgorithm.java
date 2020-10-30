@@ -1,4 +1,4 @@
-package com.xiaofu.sharding.algorithm;
+package com.xiaofu.sharding.algorithm.tableAlgorithm;
 
 
 import org.apache.shardingsphere.api.sharding.complex.ComplexKeysShardingAlgorithm;
@@ -7,7 +7,7 @@ import org.apache.shardingsphere.api.sharding.complex.ComplexKeysShardingValue;
 import java.util.Collection;
 
 
-public class MyComplexKeysShardingAlgorithm implements ComplexKeysShardingAlgorithm<Long> {
+public class MyTableComplexKeysShardingAlgorithm implements ComplexKeysShardingAlgorithm<Long> {
 
     @Override
     public Collection<String> doSharding(Collection<String> collection, ComplexKeysShardingValue<Long> complexKeysShardingValue) {

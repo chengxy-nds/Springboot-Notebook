@@ -9,38 +9,31 @@
         <result column="price" property="price"/>
         <result column="create_name" property="createName"/>
         <result column="item_name" property="itemName"/>
+        <result column="user_id" property="userId"/>
     </resultMap>
 
 
     <select id="selectOrderListPage" resultMap="orderResult">
 
-        SELECT * FROM  t_order <where>
-            <if test="orderId!=null">
-                order_id = #{orderId}
-            </if>
-        </where> order by order_id limit #{pageNo},#{pageSize}
+           SELECT * FROM t_order where  order_id BETWEEN 1321386717455446018 AND 1321386717455446018;
 
     </select>
+
 
     <select id="selectOrderAndItemByOrderId" parameterType="com.xiaofu.sharding.model.TOrderDto"
             resultMap="orderResult">
-        SELECT o.order_id, o.order_no, o.create_name, o.price, i.item_id, i.item_name  FROM
+        SELECT o.order_id, o.order_no, o.create_name,o.user_id , o.price, i.item_id, i.item_name FROM
         t_order o
-        LEFT JOIN t_order_item i ON o.order_no = i.order_no <where>
-            <if test="orderId!=null">
-                o.order_id = #{orderId}
+        LEFT JOIN t_order_item i ON o.order_no = i.order_no
+        <where>
+            <if test="orderNo!=null">
+                o.order_no = #{order_no}
+            </if>
+
+            <if test="userId!=null">
+                o.user_id = #{userId}
             </if>
         </where>
-    </select>
-
-    <select id="selectOrderAndItemByOrderIdPage" resultMap="orderResult">
-        SELECT o.order_id, o.order_no, o.create_name, o.price, i.item_id, i.item_name FROM
-        t_order o
-        LEFT JOIN t_order_item i ON o.order_no = i.order_no <where>
-            <if test="orderId!=null">
-                o.order_id = #{orderId}
-            </if>
-        </where>  order by o.order_id limit #{pageNo},#{pageSize}
     </select>
 
 </mapper>
