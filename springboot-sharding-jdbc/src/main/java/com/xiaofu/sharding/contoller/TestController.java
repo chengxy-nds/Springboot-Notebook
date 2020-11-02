@@ -45,7 +45,14 @@ public class TestController {
     @ResponseBody
     public String insertOrder() {
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 1; i++) {
+            HintManager.clear();
+            HintManager hintManager = HintManager.getInstance();
+            hintManager.setDatabaseShardingValue(1);
+            hintManager.addTableShardingValue("t_order" , 0);
+            hintManager.addTableShardingValue("t_order" , 1);
+            hintManager.addTableShardingValue("t_order" , 2);
+
             TOrder order = new TOrder();
             order.setOrderNo("A000" + i);
             order.setCreateName("订单 " + i);
@@ -53,12 +60,12 @@ public class TestController {
             order.setPrice(new BigDecimal("" + i));
             orderRepository.insert(order);
 
-            TOrderItem orderItem = new TOrderItem();
-            orderItem.setOrderId(order.getOrderId());
-            orderItem.setOrderNo("A000" + i);
-            orderItem.setItemName("服务项目" + i);
-            orderItem.setPrice(new BigDecimal("" + i));
-            orderItemRepository.insert(orderItem);
+//            TOrderItem orderItem = new TOrderItem();
+//            orderItem.setOrderId(order.getOrderId());
+//            orderItem.setOrderNo("A000" + i);
+//            orderItem.setItemName("服务项目" + i);
+//            orderItem.setPrice(new BigDecimal("" + i));
+//            orderItemRepository.insert(orderItem);
         }
         return "success";
     }
@@ -101,8 +108,13 @@ public class TestController {
 
     @GetMapping(value = "/selectOrderListPage")
     @ResponseBody
-    public List<TOrderDto> selectOrderListPage(String orderId, Integer pageNo, Integer pageSize) {
+    public List<TOrderDto> selectOrderListPage() {
+
 
         return orderRepository.selectOrderListPage();
+    }
+
+    public static void main(String[] args) {
+
     }
 }
