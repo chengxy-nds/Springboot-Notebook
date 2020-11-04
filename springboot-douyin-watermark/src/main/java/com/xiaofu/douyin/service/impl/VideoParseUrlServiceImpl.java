@@ -85,17 +85,26 @@ public class VideoParseUrlServiceImpl implements VideoParseUrlService {
 
         if (!StringUtils.isEmpty(redirectUrl)) {
 
+            /**
+             * 1、拿到itemId
+             */
             String itemId = CommonUtils.hSMatchNo(redirectUrl);
 
             StringBuilder sb = new StringBuilder();
             sb.append(CommonUtils.HUO_SHAN_BASE_URL).append(itemId);
 
+            /**
+             * 2、itemId 拼接视频详情接口
+             */
             String videoResult = CommonUtils.httpGet(sb.toString());
 
             HSResult hsResult = JSON.parseObject(videoResult, HSResult.class);
 
             dyDto.setVideoPic(hsResult.getData().getItem_info().getCover());
 
+            /**
+             * 3、替换URL地址
+             */
             String replace = hsResult.getData().getItem_info().getUrl().replace("_reflow", "_playback");
 
             dyDto.setVideoUrl(replace.substring(0, replace.indexOf("&")));
