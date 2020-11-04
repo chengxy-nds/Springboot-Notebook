@@ -2,3 +2,6 @@ spring:
   redis:
     redisson:
       config: "classpath:redisson.yml"
+server:
+  port: 8083
+
