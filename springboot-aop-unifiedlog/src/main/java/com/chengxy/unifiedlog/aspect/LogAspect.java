@@ -1,5 +1,6 @@
 package com.chengxy.unifiedlog.aspect;
 
+
 import com.alibaba.fastjson.JSON;
 import com.chengxy.unifiedlog.config.PrintlnLog;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +13,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
-
 
 /**
  * @author xiaofu
