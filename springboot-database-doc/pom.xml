@@ -3,38 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.2.RELEASE</version>
-        <relativePath/>
+        <groupId>com.notebook</groupId>
+        <artifactId>Springboot-Notebook</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.xiaofu.doc</groupId>
     <artifactId>springboot-database-doc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-database-doc</name>
-    <description>springboot-database-doc</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <packaging>pom</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -56,12 +34,6 @@
             <version>3.4.5</version>
         </dependency>
 
-        <!--mysql driver-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.20</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -103,7 +75,7 @@
                     <!--jdbc url-->
                     <jdbcUrl>jdbc:mysql://47.93.6.5:3306/fire</jdbcUrl>
                     <!--生成文件类型-->
-                    <fileType>MD</fileType>
+                    <fileType>WORD</fileType>
                     <!--打开文件输出目录-->
                     <openOutputDir>false</openOutputDir>
                     <!--生成模板-->
