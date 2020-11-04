@@ -43,12 +43,12 @@ public class TestController {
     public String insertOrder() {
 
         for (int i = 0; i < 1; i++) {
-            HintManager.clear();
-            HintManager hintManager = HintManager.getInstance();
-            hintManager.setDatabaseShardingValue(1);
-            hintManager.addTableShardingValue("t_order" , 0);
-            hintManager.addTableShardingValue("t_order" , 1);
-            hintManager.addTableShardingValue("t_order" , 2);
+//            HintManager.clear();
+//            HintManager hintManager = HintManager.getInstance();
+//            hintManager.setDatabaseShardingValue(1);
+//            hintManager.addTableShardingValue("t_order" , 0);
+//            hintManager.addTableShardingValue("t_order" , 1);
+//            hintManager.addTableShardingValue("t_order" , 2);
 
             TOrder order = new TOrder();
             order.setOrderNo("A000" + i);
