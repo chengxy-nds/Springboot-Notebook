@@ -1,6 +1,5 @@
 package com.xiaofu.sharding.model;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -8,7 +7,7 @@ import java.math.BigDecimal;
 @Data
 public class TOrderDto {
 
-    @TableId(value = "order_id")
+    //@TableId(value = "order_id")
     private Long orderId;
 
     private String orderNo;

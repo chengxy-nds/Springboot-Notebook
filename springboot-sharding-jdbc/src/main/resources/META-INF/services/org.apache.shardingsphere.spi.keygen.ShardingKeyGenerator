@@ -1,1 +1,1 @@
-com.xiaofu.sharding.key.MyKeyGenerator
+com.xiaofu.sharding.key.MyShardingKeyGenerator

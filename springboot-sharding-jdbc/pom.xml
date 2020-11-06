@@ -51,6 +51,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- 集成数据库密码加密工具jasypt  jdk8版本-->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>1.14</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
