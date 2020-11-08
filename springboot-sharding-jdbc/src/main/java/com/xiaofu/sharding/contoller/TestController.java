@@ -42,7 +42,7 @@ public class TestController {
     @ResponseBody
     public String insertOrder() {
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
 //            HintManager.clear();
 //            HintManager hintManager = HintManager.getInstance();
 //            hintManager.setDatabaseShardingValue(1);
