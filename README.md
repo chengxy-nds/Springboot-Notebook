@@ -19,7 +19,7 @@
 - [6种 @Transactional 注解失效场景](https://mp.weixin.qq.com/s/wUQwzPGo3NNodr2pHzB_lw)
 - [为了不复制粘贴，我被逼着学会了JAVA爬虫](https://mp.weixin.qq.com/s/rF9W00BUCCYHo7M6W5TBoA)
 
-### 分库分表
+### 分库分表(Sharding-JDBC)
 
 - [一文快速入门分库分表（必修课）](https://mp.weixin.qq.com/s/rYG58KS9kHDDOMajKT9y5Q)（springboot-sharding-jdbc）
 - [一文快速入门分库分表中间件 Sharding-JDBC （必修课）](https://mp.weixin.qq.com/s/M8yA6CsHMnBAIelc4JMk2Q)
