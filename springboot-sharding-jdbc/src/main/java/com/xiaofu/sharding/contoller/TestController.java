@@ -55,6 +55,7 @@ public class TestController {
             order.setCreateName("订单 " + i);
             order.setUserId(Long.parseLong(i + ""));
             order.setPrice(new BigDecimal("" + i));
+            order.setPhoneNo("13651301474");
             orderRepository.insert(order);
 
 //            TOrderItem orderItem = new TOrderItem();

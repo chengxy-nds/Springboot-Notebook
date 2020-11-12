@@ -33,7 +33,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table  tableName="t_config" enableCountByExample="false" enableDeleteByExample="false"
+        <table  tableName="t_order_1" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>

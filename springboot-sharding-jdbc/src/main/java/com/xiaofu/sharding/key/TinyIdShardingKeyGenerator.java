@@ -1,11 +1,9 @@
 package com.xiaofu.sharding.key;
 
-import com.xiaoju.uemc.tinyid.client.utils.TinyId;
 import org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Author: xiaofu
@@ -28,7 +26,7 @@ public class TinyIdShardingKeyGenerator implements ShardingKeyGenerator {
     @Override
     public Comparable<?> generateKey() {
 
-        Long id = TinyId.nextId("order");
+        Long id = null;//TinyId.nextId("order");
 
         return id;
     }

@@ -17,4 +17,10 @@ public class TOrder {
     private String createName;
 
     private BigDecimal price;
+
+    private String phoneNo;
+
+    private String phoneNoPlain;
+
+    private String phoneNoCipher;
 }
