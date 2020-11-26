@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.seata.sample.EurekaServerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.79 s - in io.seata.sample.EurekaServerApplicationTests
