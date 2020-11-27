@@ -45,6 +45,8 @@
 - [分布式事务（2PC、3PC、TCC），这样解释没毛病！](https://mp.weixin.qq.com/s/08ixco06hMw99365vDiM0w)
 - [9种 分布式ID生成方式，面试官有点懵了](https://mp.weixin.qq.com/s/0RBeWV-any_Rb9JbVPvcfw)
 - [阿里开源工具 canal 实时同步 MySQL binlog数据](https://mp.weixin.qq.com/s/ba842AgFDlqQm59AuNY6Ww)
+- [分布式事务中间件 Seata （原理+实践）](https://mp.weixin.qq.com/s/hiiVNElHucAr5SnAWG4BIw)
+
 
 ### 干货
 
