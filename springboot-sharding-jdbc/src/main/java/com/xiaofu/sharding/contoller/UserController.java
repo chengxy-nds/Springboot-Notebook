@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -31,7 +32,7 @@ public class UserController {
 
     @GetMapping(value = "/insertUser")
     @ResponseBody
-    public String insertUser() {
+    public String insertUser(HttpServletRequest request) {
 
         TUser user = new TUser();
         user.setUserId(100L);

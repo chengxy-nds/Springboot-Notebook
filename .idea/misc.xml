@@ -5,14 +5,32 @@
     <option name="id" value="1494555348950" />
     <option name="name" value="default" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springboot-aop-redis-lua/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-rabbitmq-confirm/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-rabbitmq-mqtt/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-aop-redis-lua-/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-delayqueue/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-aop-unifiedlog/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redisson-lock/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-database-doc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-testng-report/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-work-flowable/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-global-formatting/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-douyin-watermark/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mqtt-messagepush/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-tess4j-img/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-identify-img/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-sql-attack/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-seata-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-seata-transaction/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-validator-param/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,23 @@
+
+nsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(ÂÄìÃúÿÿÿÿ8„¦îõ¹.
+Xsquid:S2209'"5Change this instance-reference to a static reference.(û äîûÿÿÿÿ8ðËÌô¹.
+Msquid:S5411X"*Use the primitive boolean expression here.(€îåþüÿÿÿÿ8¿æ¯ô¹.
+osquid:S1192S"LDefine a constant instead of duplicating this literal "order:A0001" 5 times.(Æ–Ÿôûÿÿÿÿ8á°ô¹.
+nsquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(€âÿÚüÿÿÿÿ8¹•Ÿ€¸.
+V
+squid:S106@"9Replace this use of System.out or System.err by a logger.(™ôã8¯Á¤ÿ·.
+Usquid:S1135q"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+[
+squid:S106B"9Replace this use of System.out or System.err by a logger.(¢’³çýÿÿÿÿ8áš«ÿ·.
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ÂÄìÃúÿÿÿÿ8„¦îõ¹.
+Usquid:S1135Y"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+[
+squid:S106*"9Replace this use of System.out or System.err by a logger.(¢Â•¿ýÿÿÿÿ8 îÑô¹.
+Vsquid:S1135¸"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+Vsquid:S1135´"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+Vsquid:S1135ˆ"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+^squid:S2222%";Unlock this lock along all executions paths of this method.(…Ò¢Óÿÿÿÿÿ8”çíõ¹.
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(Ëœ«¹þÿÿÿÿ8á¦’¸.
+Vsquid:S1135¼"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.
+Vsquid:S1135Ÿ"2Complete the task associated to this TODO comment.(ËÅ½ÿÿÿÿÿ8å›´ÿ·.

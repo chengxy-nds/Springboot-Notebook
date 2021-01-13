@@ -1,0 +1,15 @@
+
+T
+squid:S106&"9Replace this use of System.out or System.err by a logger.(µ´òµøÿÿÿÿ
+msquid:S3457&"Q%n should be used in place of \n to produce the platform-specific line separator.(µ´òµøÿÿÿÿ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜäÛ»
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÅÙ«
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ñ¸ÄÀøÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à™½Äüÿÿÿÿ
+T
+squid:S106("9Replace this use of System.out or System.err by a logger.(Âû¯Ðüÿÿÿÿ
+Osquid:S1854!"8Remove this useless assignment to local variable "task".(öÏ¹‡
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ßÏ…ìýÿÿÿÿ
+@squid:S1481!")Remove this unused "task" local variable.(öÏ¹‡
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Ï¼Æ

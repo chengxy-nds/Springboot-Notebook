@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.reactivex.rxjava2:rxjava:2.1.17">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.1.17/rxjava-2.1.17.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.1.17/rxjava-2.1.17-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.1.17/rxjava-2.1.17-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

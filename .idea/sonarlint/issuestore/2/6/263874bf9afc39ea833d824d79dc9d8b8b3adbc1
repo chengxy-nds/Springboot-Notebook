@@ -1,13 +1,13 @@
 
 O
 squid:S1067"9Replace this use of System.out or System.err by a logger.(ßØ»™
-Asquid:S00108;")Either remove or fill this block of code.(”ı¾
 Hsquid:S1068",Remove this unused "retryNum" private field.(ÛÖˆĞıÿÿÿÿ
-Jsquid:S1068".Remove this unused "currentNum" private field.(Êëà‘øÿÿÿÿ
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤†îŸøÿÿÿÿ
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
-bsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(˜µÑ„
 gsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(²Ñï­ûÿÿÿÿ
 bsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ñ±™Œ
 gsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ø¥ùüûÿÿÿÿ
+Asquid:S00108;")Either remove or fill this block of code.(”ı¾
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤†îŸøÿÿÿÿ
+Jsquid:S1068".Remove this unused "currentNum" private field.(Êëà‘øÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+bsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(˜µÑ„
 gsquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(²òµæÿÿÿÿÿ

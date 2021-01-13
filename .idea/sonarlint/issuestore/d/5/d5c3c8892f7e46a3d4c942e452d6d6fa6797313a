@@ -1,0 +1,5 @@
+
+Jsquid:S2885"'Make "dateFormat" an instance variable.(Üµ¹ıÿÿÿÿ8ÚÇÄ.
+"squid:ClassVariableVisibilityCheck"VMake dateFormat a static final constant or non-public and provide accessors if needed.(Üµ¹ıÿÿÿÿ8ÚÇÄ.
+jsquid:S00112G"FDefine and throw a dedicated exception instead of using a generic one.(Îà¹Åùÿÿÿÿ8ÏúÇÄ.
+Ssquid:S1444"0Make this "public static dateFormat" field final(Üµ¹ıÿÿÿÿ8ÚÇÄ.

@@ -2,21 +2,92 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="delayqueue" />
         <module name="springboot-aop-redis-lua" />
+        <module name="springboot-mqtt-messagepush" />
+        <module name="springboot-testng-report" />
         <module name="springboot-rabbitmq-confirm" />
-        <module name="springboot-rabbitmq-mqtt" />
+        <module name="springboot-identify-img" />
+        <module name="order-server" />
+        <module name="eureka-server" />
+        <module name="springboot-global-formatting" />
+        <module name="springboot-sql-attack" />
+        <module name="account-server" />
+        <module name="springboot-datasources-rollback (1)" />
+        <module name="springboot-sharding-jdbc" />
+        <module name="springboot-douyin-watermark" />
+        <module name="springboot-aop-unifiedlog" />
+        <module name="storage-server" />
+        <module name="delayqueue" />
+        <module name="springboot-work-flowable" />
+        <module name="springboot-delayqueue" />
+        <module name="springboot-douyin-watermark (1)" />
+        <module name="springboot-redisson-lock" />
+        <module name="springboot-tess4j-img" />
+      </profile>
+      <profile name="Annotation profile for Springboot-Notebook" enabled="true">
+        <sourceOutputDir name="../springboot-sharding-jdbc/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../springboot-sharding-jdbc/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-validator-param" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="account-server" target="1.8" />
       <module name="delayqueue" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="order-server" target="1.8" />
       <module name="springboot-aop-redis-lua" target="1.8" />
+      <module name="springboot-aop-unifiedlog" target="1.8" />
+      <module name="springboot-database-doc" target="1.8" />
+      <module name="springboot-datasources-rollback" target="1.8" />
+      <module name="springboot-datasources-rollback (1)" target="1.8" />
+      <module name="springboot-delayqueue" target="1.8" />
+      <module name="springboot-douyin-watermark" target="1.8" />
+      <module name="springboot-douyin-watermark (1)" target="1.8" />
+      <module name="springboot-global-formatting" target="1.8" />
+      <module name="springboot-identify-img" target="1.8" />
+      <module name="springboot-mqtt-messagepush" target="1.8" />
+      <module name="Springboot-Notebook" target="1.8" />
       <module name="springboot-rabbitmq-confirm" target="1.8" />
       <module name="springboot-rabbitmq-mqtt" target="1.8" />
+      <module name="springboot-redisson-lock" target="1.8" />
+      <module name="springboot-seata-transaction" target="1.8" />
+      <module name="springboot-sharding-jdbc" target="1.8" />
+      <module name="springboot-sql-attack" target="1.8" />
+      <module name="springboot-tess4j-img" target="1.8" />
+      <module name="springboot-testng-report" target="1.8" />
+      <module name="springboot-validator-param" target="1.8" />
+      <module name="springboot-work-flowable" target="1.8" />
+      <module name="storage-server" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="order-server" options="-parameters" />
+      <module name="springboot-aop-redis-lua" options="-parameters" />
+      <module name="springboot-aop-unifiedlog" options="-parameters" />
+      <module name="springboot-delayqueue" options="-parameters" />
+      <module name="springboot-douyin-watermark" options="-parameters" />
+      <module name="springboot-global-formatting" options="-parameters" />
+      <module name="springboot-identify-img" options="-parameters" />
+      <module name="springboot-mqtt-messagepush" options="-parameters" />
+      <module name="springboot-rabbitmq-confirm" options="-parameters" />
+      <module name="springboot-redisson-lock" options="-parameters" />
+      <module name="springboot-seata-transaction" options="-parameters" />
+      <module name="springboot-sharding-jdbc" options="-parameters" />
+      <module name="springboot-sql-attack" options="-parameters" />
+      <module name="springboot-tess4j-img" options="-parameters" />
+      <module name="springboot-testng-report" options="-parameters" />
+      <module name="springboot-validator-param" options="-parameters" />
+      <module name="springboot-work-flowable" options="-parameters" />
+      <module name="storage-server" options="-parameters" />
+    </option>
   </component>
 </project>

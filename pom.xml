@@ -27,6 +27,8 @@
         <module>springboot-delayqueue</module>
         <module>springboot-douyin-watermark</module>
         <module>springboot-global-formatting</module>
+        <module>springboot-sql-attack</module>
+        <module>springboot-validator-param</module>
     </modules>
 
     <properties>

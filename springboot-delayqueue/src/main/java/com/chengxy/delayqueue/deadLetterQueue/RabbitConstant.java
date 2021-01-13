@@ -9,20 +9,21 @@ public @interface RabbitConstant {
     /**
      * 死信交换机
      */
-    String DEAD_LETTER_EXCHANGE = "com.xin.deadLetterExchange";
+    String IOT_VIRTUAL_DEVICE_DELAY_EXCHANGE = "ecej.iot.virtual.device.delay.exchange";
 
     /**
      * 死信队列
      */
-    String DEAD_LETTER_QUEUE = "com.xin.deadLetterQueue";
+    String IOT_VIRTUAL_DEVICE_DELAY_QUEUE = "ecej.iot.virtual.device.delay.queue";
 
     /**
-     * 测试死信正常消费交换机
+     * 消费交换机
      */
-    String MESSAGE_EXCHANGE = "order.pay.exchange";
+    String IOT_VIRTUAL_DEVICE_CLOSE_EXCHANGE = "ecej.iot.virtual.device.close.exchange";
 
     /**
-     * 测试死信正常消费队列
+     * 消费队列
      */
-    String MESSAGE_QUEUE = "order.pay.queue";
+    String IOT_VIRTUAL_DEVICE_CLOSE_QUEUE = "ecej.iot.virtual.device.close.queue";
+
 }

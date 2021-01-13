@@ -1,0 +1,16 @@
+
+O
+squid:S106 "9Replace this use of System.out or System.err by a logger.(’é
+O
+squid:S106&"9Replace this use of System.out or System.err by a logger.(“‹Ž¸
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(òðÉö
+Ssquid:S1854*"=Remove this useless assignment to local variable "schedule2".(‰êš
+O
+squid:S1066"9Replace this use of System.out or System.err by a logger.(¢ä”Æ
+O
+squid:S106)"9Replace this use of System.out or System.err by a logger.(È‚¬˜
+>squid:S1604*"(Make this anonymous inner class a lambda(‰êš
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¶šÆûÿÿÿÿ
+Dsquid:S1481*".Remove this unused "schedule2" local variable.(‰êš
+fsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô¢‡Ï

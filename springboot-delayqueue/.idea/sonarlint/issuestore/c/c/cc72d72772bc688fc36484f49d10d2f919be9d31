@@ -1,0 +1,12 @@
+
+ssquid:S00116"ORename this field "PORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢Ùıçüÿÿÿÿ8ß†æê.
+[
+squid:S106A"9Replace this use of System.out or System.err by a logger.(„²ê®øÿÿÿÿ8ëë’ë.
+V
+squid:S106V"9Replace this use of System.out or System.err by a logger.(· çé8ëë’ë.
+nsquid:S00116"ORename this field "ADDR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ààò8ß†æê.
+dsquid:S2142_"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‹—ë.
+ysquid:S3008"VRename this field "DELAY_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ß¢ñúÿÿÿÿ8‚Æ‘ë.
+V
+squid:S106Z"9Replace this use of System.out or System.err by a logger.(èú„Ï8Õ¸ãê.
+Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹—ë.

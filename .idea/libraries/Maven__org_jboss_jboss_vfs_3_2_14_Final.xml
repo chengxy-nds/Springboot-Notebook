@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss:jboss-vfs:3.2.14.Final">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jboss-vfs/3.2.14.Final/jboss-vfs-3.2.14.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jboss-vfs/3.2.14.Final/jboss-vfs-3.2.14.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jboss-vfs/3.2.14.Final/jboss-vfs-3.2.14.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
