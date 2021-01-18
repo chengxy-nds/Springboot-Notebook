@@ -1,10 +1,13 @@
-package com.xiaofu.valid.vo;
+package com.xiaofu.vo;
 
 import lombok.Data;
 
-@Data
-public class Employee {
+import javax.validation.constraints.NotNull;
 
+@Data
+public class AddEmployeeVo {
+
+    @NotNull
     private Integer employeeId;
 
     private String employeeName;

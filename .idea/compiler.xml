@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-validator-param" />
         <module name="springboot-aop-redis-lua" />
         <module name="springboot-mqtt-messagepush" />
         <module name="springboot-testng-report" />
@@ -18,7 +19,6 @@
         <module name="springboot-sql-attack" />
         <module name="account-server" />
         <module name="springboot-datasources-rollback (1)" />
-        <module name="springboot-sharding-jdbc" />
         <module name="springboot-douyin-watermark" />
         <module name="springboot-aop-unifiedlog" />
         <module name="storage-server" />
@@ -28,12 +28,6 @@
         <module name="springboot-douyin-watermark (1)" />
         <module name="springboot-redisson-lock" />
         <module name="springboot-tess4j-img" />
-      </profile>
-      <profile name="Annotation profile for Springboot-Notebook" enabled="true">
-        <sourceOutputDir name="../springboot-sharding-jdbc/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../springboot-sharding-jdbc/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="springboot-validator-param" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -18,7 +18,6 @@
         <option value="$PROJECT_DIR$/springboot-aop-unifiedlog/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-redisson-lock/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-database-doc/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-testng-report/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-work-flowable/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-global-formatting/pom.xml" />

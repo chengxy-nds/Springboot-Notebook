@@ -8,15 +8,11 @@
         <artifactId>Springboot-Notebook</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>springboot-sharding-jdbc</artifactId>
+    <artifactId>springboot-validator-param</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-validator-param</name>
 
     <dependencies>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.0</version>
-        </dependency>
+
     </dependencies>
 </project>

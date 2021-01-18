@@ -1,4 +1,4 @@
-package com.xiaofu.valid.vo;
+package com.xiaofu.vo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

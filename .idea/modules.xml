@@ -17,7 +17,6 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" filepath="$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" filepath="$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" filepath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-sql-attack/springboot-sql-attack.iml" filepath="$PROJECT_DIR$/springboot-sql-attack/springboot-sql-attack.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-tess4j-img/springboot-tess4j-img.iml" filepath="$PROJECT_DIR$/springboot-tess4j-img/springboot-tess4j-img.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" filepath="$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" />

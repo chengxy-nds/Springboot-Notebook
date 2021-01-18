@@ -1,4 +1,4 @@
-package com.xiaofu.valid.vo;
+package com.xiaofu.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
