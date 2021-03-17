@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-<!--        <module>springboot-sharding-jdbc</module>-->
+        <module>springboot-sharding-jdbc</module>
         <module>springboot-work-flowable</module>
         <module>springboot-testng-report</module>
         <module>springboot-redisson-lock</module>
@@ -26,6 +26,7 @@
         <module>springboot-delayqueue</module>
         <module>springboot-douyin-watermark</module>
         <module>springboot-global-formatting</module>
+        <module>springboot-sharding-jdbc</module>
     </modules>
 
     <properties>

@@ -16,6 +16,7 @@
         <module name="springboot-global-formatting" />
         <module name="account-server" />
         <module name="springboot-datasources-rollback (1)" />
+        <module name="springboot-sharding-jdbc" />
         <module name="springboot-douyin-watermark" />
         <module name="springboot-aop-unifiedlog" />
         <module name="storage-server" />

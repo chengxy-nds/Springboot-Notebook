@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" filepath="$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" filepath="$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" filepath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" filepath="$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-work-flowable/springboot-work-flowable.iml" filepath="$PROJECT_DIR$/springboot-work-flowable/springboot-work-flowable.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-seata-transaction/storage-server/storage-server.iml" filepath="$PROJECT_DIR$/springboot-seata-transaction/storage-server/storage-server.iml" />
