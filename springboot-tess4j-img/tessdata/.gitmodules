@@ -1,3 +1,0 @@
-[submodule "tessconfigs"]
-	path = tessconfigs
-	url = https://github.com/tesseract-ocr/tessconfigs.git

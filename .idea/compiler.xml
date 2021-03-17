@@ -7,16 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-validator-param" />
         <module name="springboot-aop-redis-lua" />
-        <module name="springboot-mqtt-messagepush" />
         <module name="springboot-testng-report" />
+        <module name="springboot-mqtt-messagepush" />
         <module name="springboot-rabbitmq-confirm" />
-        <module name="springboot-identify-img" />
         <module name="order-server" />
         <module name="eureka-server" />
         <module name="springboot-global-formatting" />
-        <module name="springboot-sql-attack" />
         <module name="account-server" />
         <module name="springboot-datasources-rollback (1)" />
         <module name="springboot-douyin-watermark" />
@@ -27,7 +24,6 @@
         <module name="springboot-delayqueue" />
         <module name="springboot-douyin-watermark (1)" />
         <module name="springboot-redisson-lock" />
-        <module name="springboot-tess4j-img" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -16,8 +16,6 @@
     <file url="file://$PROJECT_DIR$/springboot-douyin-watermark/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-global-formatting" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-global-formatting/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-identify-img" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-identify-img/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mqtt-messagepush" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mqtt-messagepush/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-rabbitmq-confirm" charset="UTF-8" />
@@ -28,14 +26,8 @@
     <file url="file://$PROJECT_DIR$/springboot-seata-transaction/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-seata-transaction/order-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-seata-transaction/storage-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-sharding-jdbc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-sql-attack/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-tess4j-img" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-tess4j-img/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-testng-report" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-testng-report/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-validator-param/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-work-flowable" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-work-flowable/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

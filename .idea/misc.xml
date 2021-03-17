@@ -23,17 +23,13 @@
         <option value="$PROJECT_DIR$/springboot-global-formatting/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-douyin-watermark/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-mqtt-messagepush/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-tess4j-img/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-identify-img/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-sql-attack/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-seata-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-seata-transaction/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-validator-param/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\51536\AppData\Roaming\Subversion</configuration>
   </component>

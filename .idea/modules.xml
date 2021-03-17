@@ -12,15 +12,11 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-delayqueue/springboot-delayqueue.iml" filepath="$PROJECT_DIR$/springboot-delayqueue/springboot-delayqueue.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-douyin-watermark/springboot-douyin-watermark.iml" filepath="$PROJECT_DIR$/springboot-douyin-watermark/springboot-douyin-watermark.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-global-formatting/springboot-global-formatting.iml" filepath="$PROJECT_DIR$/springboot-global-formatting/springboot-global-formatting.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-identify-img/springboot-identify-img.iml" filepath="$PROJECT_DIR$/springboot-identify-img/springboot-identify-img.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-mqtt-messagepush/springboot-mqtt-messagepush.iml" filepath="$PROJECT_DIR$/springboot-mqtt-messagepush/springboot-mqtt-messagepush.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" filepath="$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" filepath="$PROJECT_DIR$/springboot-seata-transaction/springboot-seata-transaction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-sql-attack/springboot-sql-attack.iml" filepath="$PROJECT_DIR$/springboot-sql-attack/springboot-sql-attack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-tess4j-img/springboot-tess4j-img.iml" filepath="$PROJECT_DIR$/springboot-tess4j-img/springboot-tess4j-img.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" filepath="$PROJECT_DIR$/springboot-testng-report/springboot-testng-report.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-validator-param/springboot-validator-param.iml" filepath="$PROJECT_DIR$/springboot-validator-param/springboot-validator-param.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-work-flowable/springboot-work-flowable.iml" filepath="$PROJECT_DIR$/springboot-work-flowable/springboot-work-flowable.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-seata-transaction/storage-server/storage-server.iml" filepath="$PROJECT_DIR$/springboot-seata-transaction/storage-server/storage-server.iml" />
     </modules>
