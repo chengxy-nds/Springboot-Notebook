@@ -15,7 +15,6 @@
 - [PC人脸识别登录，出乎意料的简单](https://mp.weixin.qq.com/s/YMgMRhd4E9ovGf_Kp19pPQ)
 - [被迫重构代码，这次我干掉了 if-else](https://mp.weixin.qq.com/s/-nmGpxa4nao8jPwuPgf0LQ)
 - [过滤器 和 拦截器 6个区别，别再傻傻分不清了](https://mp.weixin.qq.com/s/KwlqFezzTkOfg97M59n3GA)
-- [Redis 分布式限流器，可以说是非常厉害了！](https://mp.weixin.qq.com/s/kyFAWH3mVNJvurQDt4vchA)
 - [6种 @Transactional 注解失效场景](https://mp.weixin.qq.com/s/wUQwzPGo3NNodr2pHzB_lw)
 - [为了不复制粘贴，我被逼着学会了JAVA爬虫](https://mp.weixin.qq.com/s/rF9W00BUCCYHo7M6W5TBoA)
 
@@ -26,6 +25,18 @@
 - [分库分表中间件 Sharding-JDBC 4种分片策略](https://mp.weixin.qq.com/s/AUvcsschhqrhKopM5-XeMA)
 - [分库分表的 9种分布式主键ID 生成方案](https://mp.weixin.qq.com/s/x1gVtnKh2OEAzSwv0sFDxg)
 
+### zookeeper
+
+- [一文快速入门 zookeeper](https://mp.weixin.qq.com/s/FdG5jd3zEh6ug3vbE-zhLg)
+- [真的，千万不要给女朋友解释 什么是 “羊群效应”](https://mp.weixin.qq.com/s/PiypKum7ahQbugIV37PZxw)
+
+
+### redis
+
+- [Redis 分布式限流器，可以说是非常厉害了！](https://mp.weixin.qq.com/s/kyFAWH3mVNJvurQDt4vchA)
+- [阿里面试这样问：redis 为什么把简单的字符串设计成 SDS？](https://mp.weixin.qq.com/s/_rMBe4TJZV3IerTlejimYw)
+- [redis 分布式锁的 5个坑，真是又大又深](https://mp.weixin.qq.com/s/lvbZamr4_t2GKDiuEWi_IQ)
+
 
 ### RabbitMQ
 
@@ -34,18 +45,30 @@
 - [我也没想到 springboot + rabbitmq 做智能家居，会这么简单](https://mp.weixin.qq.com/s/udFE6k9pPetIWsa6KeErrA)（springboot-rabbitmq-mqtt）
 
 
+### 分布式事务
+
+- [分布式事务（2PC、3PC、TCC），这样解释没毛病！](https://mp.weixin.qq.com/s/08ixco06hMw99365vDiM0w)
+- [分布式事务中间件 Seata （原理+实践）](https://mp.weixin.qq.com/s/hiiVNElHucAr5SnAWG4BIw)
+
 ### 分布式
 
 - [滴滴的分布式ID生成器（Tinyid），好用的一批](https://mp.weixin.qq.com/s/_k__8MT7qGDoi7gPA_1X8A)
 - [美团（Leaf）分布式ID生成器，好用的一批！](https://mp.weixin.qq.com/s/Jq8OP2o7UuOsiT3H140-fw)
 - [6种 延时队列的实现方法，面试官也得服](https://mp.weixin.qq.com/s/tM3QVIdNtPW3x0w--LRy3Q)
-- [一文快速入门 zookeeper](https://mp.weixin.qq.com/s/FdG5jd3zEh6ug3vbE-zhLg)
-- [redis 分布式锁的 5个坑，真是又大又深](https://mp.weixin.qq.com/s/lvbZamr4_t2GKDiuEWi_IQ)
 - [4种 “附近的人” 实现方式，面试官笑了](https://mp.weixin.qq.com/s/Y8n-womOgOHqqzZ6AngJOQ)
-- [分布式事务（2PC、3PC、TCC），这样解释没毛病！](https://mp.weixin.qq.com/s/08ixco06hMw99365vDiM0w)
 - [9种 分布式ID生成方式，面试官有点懵了](https://mp.weixin.qq.com/s/0RBeWV-any_Rb9JbVPvcfw)
 - [阿里开源工具 canal 实时同步 MySQL binlog数据](https://mp.weixin.qq.com/s/ba842AgFDlqQm59AuNY6Ww)
-- [分布式事务中间件 Seata （原理+实践）](https://mp.weixin.qq.com/s/hiiVNElHucAr5SnAWG4BIw)
+
+### 数据脱敏
+
+- [大厂也在用的 6种 数据脱敏方案，别做泄密内鬼](https://mp.weixin.qq.com/s/_Dgekk1AJsIx0TTlnH6kUA)
+
+https://mp.weixin.qq.com/s/_Dgekk1AJsIx0TTlnH6kUA
+
+### MySQL
+
+- [面试官：不会看 Explain执行计划，简历敢写 SQL 优化？](https://mp.weixin.qq.com/s/AaCbTVRk0OZ00nQgJ8wqRQ)
+- [MySQL不会丢失数据的秘密，就藏在它的 7种日志里](https://mp.weixin.qq.com/s/-v6CHvvAwtuznG-bzZKQ0w)
 
 
 ### 干货
@@ -57,12 +80,13 @@
 - [程序员搭个人博客，一个 GitHub 账号足矣！](https://mp.weixin.qq.com/s/GHqgIVKfoOWlSDUX4oHuNA)
 - [10个 解放双手的 IDEA 插件，少些冤枉代码](https://mp.weixin.qq.com/s/aWQDlujb-j1ufdraA-bC6g)
 - [程序员必备的13个 免费技术电子书网站](https://mp.weixin.qq.com/s/HlzUgDRtj3PQXiEE2oouOA)
+- [10个解放双手实用在线工具，有些代码真的不用手写](https://mp.weixin.qq.com/s/Gj8NlKToTZEzBpnBeSRzcA)
+- [干掉 powerdesigner，设计数据库表用它就够了](https://mp.weixin.qq.com/s/MlzZLxv8RVO_mhPTJL4nyw)
 
 
 ### 求职
 
 - [看了 100多份简历后，想给找工作的程序员几点建议](https://mp.weixin.qq.com/s/iVBbzaNpC--Tk6c-JfwtUQ)
-- [面试官：不会看 Explain执行计划，简历敢写 SQL 优化？](https://mp.weixin.qq.com/s/AaCbTVRk0OZ00nQgJ8wqRQ)
 
 > 案例详细教程同步在 个人公众号：**程序员内点事** , 欢迎交流指正。
 
