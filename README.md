@@ -63,8 +63,6 @@
 
 - [大厂也在用的 6种 数据脱敏方案，别做泄密内鬼](https://mp.weixin.qq.com/s/_Dgekk1AJsIx0TTlnH6kUA)
 
-https://mp.weixin.qq.com/s/_Dgekk1AJsIx0TTlnH6kUA
-
 ### MySQL
 
 - [面试官：不会看 Explain执行计划，简历敢写 SQL 优化？](https://mp.weixin.qq.com/s/AaCbTVRk0OZ00nQgJ8wqRQ)
