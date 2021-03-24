@@ -58,11 +58,11 @@
             <version>1.14</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.xiaoju.uemc.tinyid</groupId>
-            <artifactId>tinyid-client</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.xiaoju.uemc.tinyid</groupId>-->
+<!--            <artifactId>tinyid-client</artifactId>-->
+<!--            <version>0.1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

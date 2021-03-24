@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: xyz.erupt:erupt-core:1.6.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/erupt/erupt-core/1.6.7/erupt-core-1.6.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/erupt/erupt-core/1.6.7/erupt-core-1.6.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/erupt/erupt-core/1.6.7/erupt-core-1.6.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

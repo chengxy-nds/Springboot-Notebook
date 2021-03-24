@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
+<!--        <module>springboot-erupt</module>-->
         <module>springboot-sharding-jdbc</module>
         <module>springboot-work-flowable</module>
         <module>springboot-testng-report</module>
@@ -27,6 +28,7 @@
         <module>springboot-douyin-watermark</module>
         <module>springboot-global-formatting</module>
         <module>springboot-sharding-jdbc</module>
+        <module>springboot-erupt</module>
     </modules>
 
     <properties>

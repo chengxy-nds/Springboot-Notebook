@@ -17,6 +17,7 @@
         <module name="account-server" />
         <module name="springboot-datasources-rollback (1)" />
         <module name="springboot-sharding-jdbc" />
+        <module name="springboot-erupt" />
         <module name="springboot-douyin-watermark" />
         <module name="springboot-aop-unifiedlog" />
         <module name="storage-server" />
@@ -40,6 +41,7 @@
       <module name="springboot-delayqueue" target="1.8" />
       <module name="springboot-douyin-watermark" target="1.8" />
       <module name="springboot-douyin-watermark (1)" target="1.8" />
+      <module name="springboot-erupt" target="1.8" />
       <module name="springboot-global-formatting" target="1.8" />
       <module name="springboot-identify-img" target="1.8" />
       <module name="springboot-mqtt-messagepush" target="1.8" />
@@ -66,6 +68,7 @@
       <module name="springboot-aop-unifiedlog" options="-parameters" />
       <module name="springboot-delayqueue" options="-parameters" />
       <module name="springboot-douyin-watermark" options="-parameters" />
+      <module name="springboot-erupt" options="-parameters" />
       <module name="springboot-global-formatting" options="-parameters" />
       <module name="springboot-identify-img" options="-parameters" />
       <module name="springboot-mqtt-messagepush" options="-parameters" />
