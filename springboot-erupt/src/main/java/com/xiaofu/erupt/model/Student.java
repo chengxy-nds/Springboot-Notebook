@@ -1,8 +1,14 @@
 package com.xiaofu.erupt.model;
 
+import com.xiaofu.erupt.filter.StudentFilter;
+import com.xiaofu.erupt.proxy.StudentDataProxy;
+import lombok.Getter;
+import lombok.Setter;
+import org.apache.poi.ss.usermodel.AutoFilter;
 import org.hibernate.annotations.GenericGenerator;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
+import xyz.erupt.annotation.sub_erupt.Filter;
 import xyz.erupt.annotation.sub_erupt.Power;
 import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
@@ -21,7 +27,9 @@ import java.util.Date;
  *  @Erupt注解修饰在类上，@EruptField注解修饰在字段上
  *  其他注解均为Jpa注解
  */
-@Erupt(name = "学生表",
+@Getter
+@Setter
+@Erupt(name = "学生表",dataProxy = {StudentDataProxy.class},
         power = @Power(importable = true, export = true)
 )
 @Entity
@@ -58,45 +66,4 @@ public class Student extends BaseModel {
             edit = @Edit(title = "考核状态", notNull = true, boolType = @BoolType(trueText = "通过", falseText = "挂科"), search = @Search)
     )
     private Boolean status;
-
-
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public String getStudentClass() {
-        return studentClass;
-    }
-
-    public void setStudentClass(String studentClass) {
-        this.studentClass = studentClass;
-    }
-
-    public String getStudentAge() {
-        return studentAge;
-    }
-
-    public void setStudentAge(String studentAge) {
-        this.studentAge = studentAge;
-    }
-
-    public String getStudentSex() {
-        return studentSex;
-    }
-
-    public void setStudentSex(String studentSex) {
-        this.studentSex = studentSex;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
 }
