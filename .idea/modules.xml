@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-douyin-watermark/springboot-douyin-watermark.iml" filepath="$PROJECT_DIR$/springboot-douyin-watermark/springboot-douyin-watermark.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-erupt/springboot-erupt.iml" filepath="$PROJECT_DIR$/springboot-erupt/springboot-erupt.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-global-formatting/springboot-global-formatting.iml" filepath="$PROJECT_DIR$/springboot-global-formatting/springboot-global-formatting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-magic-api/springboot-magic-api.iml" filepath="$PROJECT_DIR$/springboot-magic-api/springboot-magic-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-mqtt-messagepush/springboot-mqtt-messagepush.iml" filepath="$PROJECT_DIR$/springboot-mqtt-messagepush/springboot-mqtt-messagepush.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq-confirm/springboot-rabbitmq-confirm.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" filepath="$PROJECT_DIR$/springboot-redisson-lock/springboot-redisson-lock.iml" />

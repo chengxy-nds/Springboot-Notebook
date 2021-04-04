@@ -29,6 +29,7 @@
         <module>springboot-global-formatting</module>
         <module>springboot-sharding-jdbc</module>
         <module>springboot-erupt</module>
+        <module>springboot-magic-api</module>
     </modules>
 
     <properties>

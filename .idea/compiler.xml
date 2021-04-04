@@ -11,6 +11,7 @@
         <module name="springboot-testng-report" />
         <module name="springboot-mqtt-messagepush" />
         <module name="springboot-rabbitmq-confirm" />
+        <module name="springboot-magic-api" />
         <module name="order-server" />
         <module name="eureka-server" />
         <module name="springboot-global-formatting" />
@@ -44,6 +45,7 @@
       <module name="springboot-erupt" target="1.8" />
       <module name="springboot-global-formatting" target="1.8" />
       <module name="springboot-identify-img" target="1.8" />
+      <module name="springboot-magic-api" target="8" />
       <module name="springboot-mqtt-messagepush" target="1.8" />
       <module name="Springboot-Notebook" target="1.8" />
       <module name="springboot-rabbitmq-confirm" target="1.8" />
@@ -71,6 +73,7 @@
       <module name="springboot-erupt" options="-parameters" />
       <module name="springboot-global-formatting" options="-parameters" />
       <module name="springboot-identify-img" options="-parameters" />
+      <module name="springboot-magic-api" options="-parameters" />
       <module name="springboot-mqtt-messagepush" options="-parameters" />
       <module name="springboot-rabbitmq-confirm" options="-parameters" />
       <module name="springboot-redisson-lock" options="-parameters" />
