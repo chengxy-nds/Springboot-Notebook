@@ -18,7 +18,7 @@ public class RedisController {
     @ResponseBody
     public Map<String, Object> redisTest(String type) throws IOException {
 
-        return null;
+        return null ;
     }
 
 }
