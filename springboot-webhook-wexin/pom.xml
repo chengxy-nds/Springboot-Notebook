@@ -12,14 +12,11 @@
     <name>springboot-webhook-weixin</name>
 
     <dependencies>
-
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.1.0</version>
-            <scope>test</scope>
+            <groupId>com.dtflys.forest</groupId>
+            <artifactId>spring-boot-starter-forest</artifactId>
+            <version>1.5.0-RC3</version>
         </dependency>
-
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>

@@ -4,6 +4,11 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * @author zhifu.xin@ipinyou.com
+ * @Description:程序员内点事
+ * @date 2021/05/19
+ */
 @Data
 public class GithubWebhookPullVo {
 
@@ -21,7 +26,6 @@ public class GithubWebhookPullVo {
     private HookBean hook;
     private RepositoryBean repository;
     private SenderBean sender;
-
 
 
     public static class HookBean {
@@ -52,7 +56,6 @@ public class GithubWebhookPullVo {
         private String ping_url;
         private LastResponseBean last_response;
         private List<String> events;
-
 
 
         public static class ConfigBean {
