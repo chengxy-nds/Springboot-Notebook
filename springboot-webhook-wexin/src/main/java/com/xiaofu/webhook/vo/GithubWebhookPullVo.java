@@ -28,6 +28,7 @@ public class GithubWebhookPullVo {
     private SenderBean sender;
 
 
+    @Data
     public static class HookBean {
         /**
          * type : Repository
@@ -58,6 +59,7 @@ public class GithubWebhookPullVo {
         private List<String> events;
 
 
+        @Data
         public static class ConfigBean {
             /**
              * content_type : json
@@ -68,32 +70,9 @@ public class GithubWebhookPullVo {
             private String content_type;
             private String insecure_ssl;
             private String url;
-
-            public String getContent_type() {
-                return content_type;
-            }
-
-            public void setContent_type(String content_type) {
-                this.content_type = content_type;
-            }
-
-            public String getInsecure_ssl() {
-                return insecure_ssl;
-            }
-
-            public void setInsecure_ssl(String insecure_ssl) {
-                this.insecure_ssl = insecure_ssl;
-            }
-
-            public String getUrl() {
-                return url;
-            }
-
-            public void setUrl(String url) {
-                this.url = url;
-            }
         }
 
+        @Data
         public static class LastResponseBean {
             /**
              * code : null
@@ -105,32 +84,10 @@ public class GithubWebhookPullVo {
             private String status;
             private Object message;
 
-            public Object getCode() {
-                return code;
-            }
-
-            public void setCode(Object code) {
-                this.code = code;
-            }
-
-            public String getStatus() {
-                return status;
-            }
-
-            public void setStatus(String status) {
-                this.status = status;
-            }
-
-            public Object getMessage() {
-                return message;
-            }
-
-            public void setMessage(Object message) {
-                this.message = message;
-            }
         }
     }
 
+    @Data
     public static class RepositoryBean {
         /**
          * id : 275712523
@@ -284,6 +241,7 @@ public class GithubWebhookPullVo {
         private String default_branch;
 
 
+        @Data
         public static class OwnerBean {
             /**
              * login : chengxy-nds
@@ -329,6 +287,7 @@ public class GithubWebhookPullVo {
         }
     }
 
+    @Data
     public static class SenderBean {
         /**
          * login : chengxy-nds

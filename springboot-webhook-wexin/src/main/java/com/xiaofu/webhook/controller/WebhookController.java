@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @Slf4j
 @RestController
 public class WebhookController {
@@ -28,7 +30,7 @@ public class WebhookController {
     @PostMapping("/webhook")
     public String webhookGithub(@RequestBody GithubWebhookPullVo webhook) {
 
-
+        log.info("GithubWebhookPullVo {}", JSON.toJSONString(webhook));
         /**
          * {
          *     "msgtype": "text",
@@ -41,12 +43,19 @@ public class WebhookController {
          */
 
         WeChatWebhook weChatWebhook = new WeChatWebhook();
+        weChatWebhook.setMsgtype("text");
+        WeChatWebhook.TextDTO textDTO = new WeChatWebhook.TextDTO();
+        textDTO.setContent(webhook.getRepository().getFull_name());
+        textDTO.setMentionedList(new ArrayList<>());
+        textDTO.setMentionedMobileList(new ArrayList<>());
+        weChatWebhook.setText(textDTO);
 
         /**
          * 组装参数后向企业微信发送webhook请求
          */
+        log.info("企业微信发送 weChatWebhook {}", JSON.toJSONString(weChatWebhook));
         ForestResponse<String> attributeBatch = attributeClient.getAttributeBatch(weChatWebhook);
-
-        return JSON.toJSONString(webhook);
+        log.info("企业微信发送 weChatWebhook {}", JSON.toJSONString(weChatWebhook));
+        return JSON.toJSONString(attributeBatch);
     }
 }
