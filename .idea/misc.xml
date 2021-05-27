@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-seata-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-seata-transaction/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-webhook-wechat/pom.xml" />
       </list>
     </option>
   </component>

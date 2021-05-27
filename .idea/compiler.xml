@@ -12,6 +12,7 @@
         <module name="springboot-mqtt-messagepush" />
         <module name="springboot-rabbitmq-confirm" />
         <module name="springboot-magic-api" />
+        <module name="springboot-test" />
         <module name="order-server" />
         <module name="eureka-server" />
         <module name="springboot-global-formatting" />
@@ -24,6 +25,7 @@
         <module name="storage-server" />
         <module name="delayqueue" />
         <module name="springboot-work-flowable" />
+        <module name="springboot-webhook-wechat" />
         <module name="springboot-delayqueue" />
         <module name="springboot-douyin-watermark (1)" />
         <module name="springboot-redisson-lock" />
@@ -55,8 +57,11 @@
       <module name="springboot-sharding-jdbc" target="1.8" />
       <module name="springboot-sql-attack" target="1.8" />
       <module name="springboot-tess4j-img" target="1.8" />
+      <module name="springboot-test" target="8" />
       <module name="springboot-testng-report" target="1.8" />
       <module name="springboot-validator-param" target="1.8" />
+      <module name="springboot-webhook-wechat" target="1.8" />
+      <module name="springboot-webhook-weixin" target="1.8" />
       <module name="springboot-work-flowable" target="1.8" />
       <module name="storage-server" target="1.8" />
     </bytecodeTargetLevel>
@@ -81,8 +86,11 @@
       <module name="springboot-sharding-jdbc" options="-parameters" />
       <module name="springboot-sql-attack" options="-parameters" />
       <module name="springboot-tess4j-img" options="-parameters" />
+      <module name="springboot-test" options="-parameters" />
       <module name="springboot-testng-report" options="-parameters" />
       <module name="springboot-validator-param" options="-parameters" />
+      <module name="springboot-webhook-wechat" options="-parameters" />
+      <module name="springboot-webhook-weixin" options="-parameters" />
       <module name="springboot-work-flowable" options="-parameters" />
       <module name="storage-server" options="-parameters" />
     </option>

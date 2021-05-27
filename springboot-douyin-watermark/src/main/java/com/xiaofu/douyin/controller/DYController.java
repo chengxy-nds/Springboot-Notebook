@@ -21,7 +21,7 @@ import java.net.URLDecoder;
  * @date 2020/9/15 18:44
  */
 @Slf4j
-@Controller
+@Controller("/order")
 public class DYController {
 
     @Autowired
