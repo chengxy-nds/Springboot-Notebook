@@ -1,8 +1,8 @@
-package com.xiaofu.douyin.controller;//package com.xiaofu.webhook.controller;
+package com.xiaofu.webhook.controller;//package com.xiaofu.webhook.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.xiaofu.douyin.utils.HttpUtil;
-import com.xiaofu.douyin.vo.GithubWebhookPullVo;
+import com.xiaofu.webhook.utils.HttpUtil;
+import com.xiaofu.webhook.vo.GithubWebhookPullVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

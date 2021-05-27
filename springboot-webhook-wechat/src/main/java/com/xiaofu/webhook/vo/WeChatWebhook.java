@@ -1,4 +1,4 @@
-package com.xiaofu.douyin.vo;//package com.xiaofu.webhook.vo;
+package com.xiaofu.webhook.vo;//package com.xiaofu.webhook.vo;
 
 import lombok.Data;
 
