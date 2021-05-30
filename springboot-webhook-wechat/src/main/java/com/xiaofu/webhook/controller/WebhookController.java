@@ -63,9 +63,9 @@ public class WebhookController {
         StringBuffer sb = new StringBuffer();
         SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd");
         String now = simpleFormatter.format(new Date());
-        sb.append("时间：" + now + "\t");
-        sb.append("提交者：" + senderUser.getName() + "\t");
-        sb.append("向作者" + ownerUser.getName() + "远程仓库" + name + "提交代码" + "\t");
+        sb.append("提交者：[" + senderUser.getName() + "]");
+        sb.append("于：" + now);
+        sb.append("向作者：[" + ownerUser.getName() + "]的，远程仓库" + name + "提交代码");
 
         WeChatWebhook weChatWebhook = new WeChatWebhook();
         weChatWebhook.setMsgtype("text");
@@ -78,6 +78,7 @@ public class WebhookController {
         /**
          * 组装参数后向企业微信发送webhook请求
          */
+        log.info("企业微信发送参数 {}", JSON.toJSONString(weChatWebhook));
         String post = HttpUtil.sendPostJsonBody(WECHAT_URL, JSON.toJSONString(weChatWebhook));
         log.info("企业微信发送结果 post {}", post);
         return JSON.toJSONString(post);
