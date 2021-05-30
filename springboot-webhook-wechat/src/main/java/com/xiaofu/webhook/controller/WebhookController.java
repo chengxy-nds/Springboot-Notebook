@@ -22,11 +22,9 @@ import java.util.logging.SimpleFormatter;
 @RestController
 public class WebhookController {
 
-
     private static String WECHAT_URL = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=145a516a-dd15-421f-97a3-ba3bf1479369";
 
     private static String GITHUB_API = "https://api.github.com/users/";
-
 
     /**
      * @param webhook webhook
@@ -38,17 +36,6 @@ public class WebhookController {
     public String webhookGithub(@RequestBody GithubWebhookPullVo webhook) {
 
         log.info("webhook 入参接收 weChatWebhook {}", JSON.toJSONString(webhook));
-        /**
-         * {
-         *     "msgtype": "text",
-         *     "text": {
-         *         "content": "广州今日天气：29度，大部分多云，降雨概率：60%",
-         *         "mentioned_list":["wangqing","@all"],
-         *         "mentioned_mobile_list":["13800001111","@all"]
-         *     }
-         * }
-         */
-
         // 仓库名
         String name = webhook.getRepository().getName();
 
@@ -61,10 +48,10 @@ public class WebhookController {
         GithubUser senderUser = JSON.parseObject(HttpUtil.sendGet(GITHUB_API + sender), GithubUser.class);
 
         StringBuffer sb = new StringBuffer();
-        SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String now = simpleFormatter.format(new Date());
-        sb.append("提交者：[" + senderUser.getName() + "]");
-        sb.append("于：" + now);
+        sb.append("提交者：[" + senderUser.getName() + "]，");
+        sb.append("于：" + now + "，");
         sb.append("向作者：[" + ownerUser.getName() + "]的，远程仓库" + name + "提交代码");
 
         WeChatWebhook weChatWebhook = new WeChatWebhook();
