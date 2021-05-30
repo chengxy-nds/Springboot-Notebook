@@ -6,6 +6,7 @@ import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -45,6 +46,26 @@ public class HttpUtil {
         entity.setContentEncoding("UTF-8");
         entity.setContentType("application/json");
         httpPost.setEntity(entity);
+        HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+        try {
+            HttpClient client = httpClientBuilder.build();
+            HttpResponse response = client.execute(httpPost);
+            if (response.getStatusLine() != null && response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+                String result = EntityUtils.toString(response.getEntity(), "utf-8");
+                log.debug("[HttpClientUtil][sendPostJsonBody] 结果 url={} result={}", url, result);
+                return result;
+            }
+            log.warn("[HttpClientUtil][sendPostJsonBody] 请求失败 response={}", url, response.toString());
+            return "";
+        } catch (IOException ex) {
+            log.error("[HttpClientUtil][sendPostJsonBody] 请求异常 ex={}", url, ex);
+            return "";
+        }
+    }
+
+    public static String sendGet(String url) {
+        log.debug("[HttpClientUtil][sendPostJsonBody] 入参 url={} ", url);
+        HttpGet httpPost = new HttpGet(url);
         HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
         try {
             HttpClient client = httpClientBuilder.build();
