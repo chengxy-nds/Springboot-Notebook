@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.SimpleFormatter;
 
 @Slf4j
@@ -34,34 +35,52 @@ public class WebhookController {
      */
     @PostMapping("/webhook")
     public String webhookGithub(@RequestBody GithubWebhookPullVo webhook) {
-
         log.info("webhook 入参接收 weChatWebhook {}", JSON.toJSONString(webhook));
         // 仓库名
         String name = webhook.getRepository().getName();
-
-        // 拥有者
-        String owner = webhook.getRepository().getOwner().getLogin();
-        GithubUser ownerUser = JSON.parseObject(HttpUtil.sendGet(GITHUB_API + owner), GithubUser.class);
-
-        // 提交者
-        String sender = webhook.getSender().getLogin();
-        GithubUser senderUser = JSON.parseObject(HttpUtil.sendGet(GITHUB_API + sender), GithubUser.class);
-
-        StringBuffer sb = new StringBuffer();
         SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String now = simpleFormatter.format(new Date());
-        sb.append("提交者：[" + senderUser.getName() + "]，");
-        sb.append("于：" + now + "，");
-        sb.append("向作者：[" + ownerUser.getName() + "]的，远程仓库" + name + "提交代码");
+        String content = "";
+        if (webhook.getCommits().size() > 0) {
+            GithubWebhookPullVo.CommitsDTO commitsDTO = webhook.getCommits().get(0);
+            content += "提交者：[ " + commitsDTO.getCommitter().getName() + " ] \r\n" +
+                    "时间：[ " + now + " ]\n" +
+                    "向" + "远程仓库 [ " + name + " ]推送代码 \n" +
+                    "提交详情：  \n";
 
+            List<String> addeds = commitsDTO.getAdded();
+            if (addeds.size() > 0) {
+                content += "添加文件:  \n[\n";
+                for (int i = 0; i < addeds.size(); i++) {
+                    content += (i + 1) + "、" + addeds.get(i) + "\n";
+                }
+                content += "] , \n";
+            }
+            List<String> modifieds = commitsDTO.getModified();
+            if (modifieds.size() > 0) {
+                content += "修改文件:  \n[\n";
+                for (int i = 0; i < modifieds.size(); i++) {
+                    content += (i + 1) + "、" + modifieds.get(i) + "\n";
+                }
+                content += "] , \n";
+            }
+            List<String> removeds = commitsDTO.getRemoved();
+            if (removeds.size() > 0) {
+                content += "删除文件:  \n[\n";
+                for (int i = 0; i < removeds.size(); i++) {
+                    content += (i + 1) + "、" + removeds.get(i) + "\n";
+                }
+                content += "]";
+            }
+        }
+        log.info(content);
         WeChatWebhook weChatWebhook = new WeChatWebhook();
         weChatWebhook.setMsgtype("text");
         WeChatWebhook.TextDTO textDTO = new WeChatWebhook.TextDTO();
-        textDTO.setContent(sb.toString());
+        textDTO.setContent(content);
         textDTO.setMentionedList(Arrays.asList("@all"));
         textDTO.setMentionedMobileList(Arrays.asList("@all"));
         weChatWebhook.setText(textDTO);
-
         /**
          * 组装参数后向企业微信发送webhook请求
          */
