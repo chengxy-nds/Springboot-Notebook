@@ -3,6 +3,11 @@
 
 本着拿来即用的原则，助力于减少开发者在工作中的学习成本。
 
+
+> 案例详细教程同步在 个人公众号：**程序员内点事** , 欢迎交流指正。
+
+<img src='https://raw.githubusercontent.com/chengxy-nds/Springboot-Notebook/master/wx/gonghao.jpg' width="200" height="200">
+
 ### Springboot 开发技巧
 
 - [3种 Springboot 全局时间格式化方式，别再写重复代码了](https://mp.weixin.qq.com/s/MeDfnL__jdEq7Yi48vg_vA)（springboot-global-formatting）
@@ -86,10 +91,7 @@
 
 - [看了 100多份简历后，想给找工作的程序员几点建议](https://mp.weixin.qq.com/s/iVBbzaNpC--Tk6c-JfwtUQ)
 
-> 案例详细教程同步在 个人公众号：**程序员内点事** , 欢迎交流指正。
 
-
-<img src='https://raw.githubusercontent.com/chengxy-nds/Springboot-Notebook/master/wx/gonghao.jpg' width="200" height="200">
 
 
 
