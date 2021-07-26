@@ -1,0 +1,7 @@
+# \u7AEF\u53E3\u53F7
+server:
+  port: 9000
+# \u79D8\u94A5
+jasypt:
+  encryptor:
+    password: 35579B7F9C8CB15E

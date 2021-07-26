@@ -30,7 +30,8 @@
         <module>springboot-erupt</module>
         <module>springboot-magic-api</module>
         <module>springboot-test</module>
-<!--        <module>springboot-webhook-wechat</module>-->
+<!--        <module>springboot-jasypt</module>-->
+        <!--        <module>springboot-webhook-wechat</module>-->
     </modules>
 
     <properties>
