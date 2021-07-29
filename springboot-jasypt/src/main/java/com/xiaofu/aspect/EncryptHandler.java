@@ -31,17 +31,14 @@ public class EncryptHandler {
 
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint joinPoint) {
-
         /**
          * 加密
          */
         encrypt(joinPoint);
-
         /**
          * 解密
          */
         Object decrypt = decrypt(joinPoint);
-
         return decrypt;
     }
 
