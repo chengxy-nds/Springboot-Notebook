@@ -12,3 +12,4 @@ spring:
 jasypt:
   encryptor:
     password: 35579B7F9C8CB15E
+    poolSize: 3

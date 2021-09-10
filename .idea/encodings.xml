@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/springboot-aop-redis-lua/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-aop-unifiedlog" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-aop-unifiedlog/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-aop-unifiedlog/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-database-doc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-database-doc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-database-doc/src/main/resources" charset="UTF-8" />
@@ -19,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/springboot-global-formatting/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-jasypt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-magic-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mapstruct/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mqtt-messagepush" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mqtt-messagepush/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-rabbitmq-confirm" charset="UTF-8" />

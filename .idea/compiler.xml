@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-mapstruct" />
         <module name="springboot-aop-redis-lua" />
         <module name="springboot-testng-report" />
         <module name="springboot-mqtt-messagepush" />
@@ -21,7 +22,6 @@
         <module name="springboot-sharding-jdbc" />
         <module name="springboot-erupt" />
         <module name="springboot-douyin-watermark" />
-        <module name="springboot-aop-unifiedlog" />
         <module name="storage-server" />
         <module name="delayqueue" />
         <module name="springboot-work-flowable" />
@@ -50,6 +50,7 @@
       <module name="springboot-identify-img" target="1.8" />
       <module name="springboot-jasypt" target="8" />
       <module name="springboot-magic-api" target="8" />
+      <module name="springboot-mapstruct" target="8" />
       <module name="springboot-mqtt-messagepush" target="1.8" />
       <module name="Springboot-Notebook" target="1.8" />
       <module name="springboot-rabbitmq-confirm" target="1.8" />
@@ -66,6 +67,7 @@
       <module name="springboot-webhook-weixin" target="1.8" />
       <module name="springboot-work-flowable" target="1.8" />
       <module name="storage-server" target="1.8" />
+      <module name="untitled" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -82,6 +84,7 @@
       <module name="springboot-identify-img" options="-parameters" />
       <module name="springboot-jasypt" options="-parameters" />
       <module name="springboot-magic-api" options="-parameters" />
+      <module name="springboot-mapstruct" options="-parameters" />
       <module name="springboot-mqtt-messagepush" options="-parameters" />
       <module name="springboot-rabbitmq-confirm" options="-parameters" />
       <module name="springboot-redisson-lock" options="-parameters" />
@@ -96,6 +99,7 @@
       <module name="springboot-webhook-weixin" options="-parameters" />
       <module name="springboot-work-flowable" options="-parameters" />
       <module name="storage-server" options="-parameters" />
+      <module name="untitled" options="-parameters" />
     </option>
   </component>
 </project>

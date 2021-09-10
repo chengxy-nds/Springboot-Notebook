@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://47.93.6.5:3306/erupt?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/erupt?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
-    password: xinzhifu521
+    password: sb886684
   jpa:
     show-sql: true
     generate-ddl: true
