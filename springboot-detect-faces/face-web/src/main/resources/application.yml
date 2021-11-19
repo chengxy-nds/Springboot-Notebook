@@ -21,6 +21,6 @@ spring:
     show-sql: true
 # 人脸识别-windows
 face:
-  appId: Bkh8rdH7WT6V4fY4mnHEnZvmywVutjvRj7eTn3u8r4hB
-  sdkKey: 9hxhcfr6Zxb7DNsHBjX5hCLfrKHnzNx18SnedDAQwZUq
+  appId: #*****
+  sdkKey: #*****
   path: D://face
