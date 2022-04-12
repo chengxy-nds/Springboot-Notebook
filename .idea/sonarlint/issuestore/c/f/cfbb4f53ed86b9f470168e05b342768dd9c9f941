@@ -1,21 +1,0 @@
-
-ssquid:S00116("TRename this field "user_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¡Ş8­Õ€şÊ.
-msquid:S001007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¿úç8­Õ€şÊ.
-ssquid:S00116)"TRename this field "item_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú’‰º8­Õ€şÊ.
-rsquid:S00100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯×±Şüÿÿÿÿ8­Õ€şÊ.
-msquid:S00100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ˆÿõ8­Õ€şÊ.
-usquid:S00116"VRename this field "status_code" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü«­8­Õ€şÊ.
-vsquid:S00116R"RRename this field "item_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â§ñøÿÿÿÿ8­Õ€şÊ.
-rsquid:S00100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ƒÕ…ûÿÿÿÿ8­Õ€şÊ.
-usquid:S00117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ƒÕ…ûÿÿÿÿ8­Õ€şÊ.
-lsquid:S001003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ò†8­Õ€şÊ.
-vsquid:S00116@"WRename this field "encrypted_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À›©î8­Õ€şÊ.
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†İùÿÿÿÿ8­Õ€şÊ.
-usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿïıúÿÿÿÿ8­Õ€şÊ.
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿïıúÿÿÿÿ8­Õ€şÊ.
-psquid:S00117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ˆÿõ8­Õ€şÊ.
-rsquid:S00100V"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÚåøÿÿÿÿ8­Õ€şÊ.
-usquid:S00117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÛ´¸üÿÿÿÿ8­Õ€şÊ.
-rsquid:S00100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®óÍûÿÿÿÿ8­Õ€şÊ.
-rsquid:S00100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÛ´¸üÿÿÿÿ8­Õ€şÊ.
-psquid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¿úç8­Õ€şÊ.

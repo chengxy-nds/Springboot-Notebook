@@ -1,12 +1,0 @@
-
-Vsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8ëõß…Ü.
-rsquid:UselessImportCheck"GRemove this unused import 'com.xiaofu.sharding.mapper.OrderRepository'.(ô…ä8†ÍŞ…Ü.
-msquid:UselessImportCheck
-"=Remove this unused import 'com.xiaofu.sharding.model.TOrder'.(Çå£øÿÿÿÿ8¾Ôà…Ü.
-ˆsquid:UselessImportCheck"XRemove this unused import 'com.baomidou.mybatisplus.core.conditions.query.QueryWrapper'.(ÓÆÂæÿÿÿÿÿ8ëõß…Ü.
-vsquid:UselessImportCheck"KRemove this unused import 'com.xiaofu.sharding.mapper.OrderItemRepository'.(Í§Ô8¡ÇŞ…Ü.
-nsquid:UselessImportCheck	">Remove this unused import 'com.xiaofu.sharding.model.TConfig'.(å±Ãüÿÿÿÿ8ëõß…Ü.
-\squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8¾Ôà…Ü.
-jsquid:UselessImportCheck"@Remove this unused import 'com.xiaofu.sharding.model.TOrderDto'.(ü£t8ëõß…Ü.
-xsquid:UselessImportCheck"HRemove this unused import 'com.xiaofu.sharding.mapper.ConfigRepository'.(¸¨Éıÿÿÿÿ8ù¦Ş…Ü.
-ksquid:UselessImportCheck"ARemove this unused import 'org.springframework.util.StringUtils'.(Ğôÿ8ëõß…Ü.

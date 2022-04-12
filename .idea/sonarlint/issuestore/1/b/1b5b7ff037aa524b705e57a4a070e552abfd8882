@@ -1,6 +1,0 @@
-
-^squid:S00112l"FDefine and throw a dedicated exception instead of using a generic one.(šŠƒÚ
-fsquid:S00100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÚ™ 
-^squid:S00112’"FDefine and throw a dedicated exception instead of using a generic one.(êÙÎK
-˜squid:S1186""€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎÚ™ 
-csquid:S00112,"FDefine and throw a dedicated exception instead of using a generic one.(çÂ´ûþÿÿÿÿ

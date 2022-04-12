@@ -1,6 +1,0 @@
-
-Nsquid:S2589Y"7Remove this expression which always evaluates to "true"(ÜœĞÔ
-csquid:S00112\"FDefine and throw a dedicated exception instead of using a generic one.(Ë¬²ûÿÿÿÿ
-^squid:S00112`"FDefine and throw a dedicated exception instead of using a generic one.(Åš¹Ø
-^squid:S00112b"FDefine and throw a dedicated exception instead of using a generic one.(ÉÃø‹
-Wsquid:S1193_"@Replace the usage of the "instanceof" operator by a catch block.(‹âÍÒ

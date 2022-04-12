@@ -1,19 +1,0 @@
-
-xsquid:S3008"[Rename this field "DOU_YIN_BASE_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï€–y8™ÓúşÊ.
-jsquid:S00112;"FDefine and throw a dedicated exception instead of using a generic one.(Øå£„ÿÿÿÿÿ8çÉÊ.
-”"squid:ClassVariableVisibilityCheck"ZMake DOU_YIN_DOMAIN a static final constant or non-public and provide accessors if needed.(Ù¡æ—ûÿÿÿÿ8éñÿşÊ.
-Ssquid:S1444"6Make this "public static DOU_YIN_BASE_URL" field final(ï€–y8™ÓúşÊ.
-Wsquid:S1444"4Make this "public static DOU_YIN_DOMAIN" field final(Ù¡æ—ûÿÿÿÿ8éñÿşÊ.
-|squid:S3008"YRename this field "DOU_YIN_DOMAIN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù¡æ—ûÿÿÿÿ8éñÿşÊ.
-}squid:S3008"ZRename this field "HUO_SHAN_DOMAIN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÒÇÃùÿÿÿÿ8ÏÚ€ÿÊ.
-\squid:S4719@"9Replace charset name argument with StandardCharsets.UTF_8(¢İÈ¹ıÿÿÿÿ8çÉÊ.
-‚squid:S1149A"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(åûÒ¸ûÿÿÿÿ8çÉÊ.
-zsquid:S3008"\Rename this field "HUO_SHAN_BASE_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸’íƒ8™ÓúşÊ.
-Usquid:S1444"7Make this "public static HUO_SHAN_BASE_URL" field final(¸’íƒ8™ÓúşÊ.
-Xsquid:S1444"5Make this "public static HUO_SHAN_DOMAIN" field final(úÒÇÃùÿÿÿÿ8ÏÚ€ÿÊ.
-ƒsquid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "location".(²ğ“Àûÿÿÿÿ8çÉÊ.
-Xsquid:S1118":Add a private constructor to hide the implicit public one.(§Á¡Œ8š‚ï…Ê.
-’"squid:ClassVariableVisibilityCheck"]Make HUO_SHAN_BASE_URL a static final constant or non-public and provide accessors if needed.(¸’íƒ8™ÓúşÊ.
-"squid:ClassVariableVisibilityCheck"\Make DOU_YIN_BASE_URL a static final constant or non-public and provide accessors if needed.(ï€–y8™ÓúşÊ.
-•"squid:ClassVariableVisibilityCheck"[Make HUO_SHAN_DOMAIN a static final constant or non-public and provide accessors if needed.(úÒÇÃùÿÿÿÿ8ÏÚ€ÿÊ.
-Fsquid:S1148""#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8çÉÊ.
