@@ -1,0 +1,8 @@
+iot:
+    mqtt:
+        clientId: client-1
+        defaultTopic: push_message_topic
+        serverClientId: server-1
+        servers: tcp://47.93.6.5:1883
+server:
+  port: 7777
