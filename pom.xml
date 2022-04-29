@@ -28,7 +28,9 @@
         <module>springboot-global-formatting</module>
         <module>springboot-sharding-jdbc</module>
         <module>springboot-erupt</module>
+        <module>springboot-jasypt</module>
         <module>springboot-magic-api</module>
+        <module>springboot-detect-faces</module>
     </modules>
 
     <properties>
