@@ -23,6 +23,12 @@
             <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
             <version>[1.2.1,)</version>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.8</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
 

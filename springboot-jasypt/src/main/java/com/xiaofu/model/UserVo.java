@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Auther: zhifu.xin@ipinyou.com
+ * @Auther: 公众号：程序员小富
  * @Date: 2021/7/26 15:10
  * @Description:
  */

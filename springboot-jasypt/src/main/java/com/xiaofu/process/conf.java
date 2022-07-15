@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
- * @Auther: zhifu.xin@ipinyou.com
+ * @Auther: 公众号：程序员小富
  * @Date: 2021/7/30 18:41
  * @Description:
  */
