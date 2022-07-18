@@ -12,7 +12,11 @@
     <name>springboot-realtime-data</name>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
         <!--mqtt依赖包-->
         <dependency>
             <groupId>org.springframework.integration</groupId>
