@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+
+<head>
+    <title>未读消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/vue.min.js" type="text/javascript"></script>
+    <script src="/js/index.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="stylesheet" href="/push.css" type="text/css" />
+
+    <script>
+
+        function sendMessage() {
+            $.ajax({
+                url: '/polling/publish/10086',
+                type: 'GET',
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (err) {
+                    console.log(err)
+                },
+                done: function () {
+
+                }
+            })
+        }
+
+        function startLongPolling() {
+            $.ajax({
+                url: '/polling/watch/10086',
+                type: 'GET',
+                success: function (response, status, xhr) {
+                    console.log(xhr.status);	//状态码 304 再次发起长轮询
+                    if (xhr.status == 304) {
+                        startLongPolling();
+                    }
+                    if (xhr.status == 200) {
+                        $("#arrivedDiv").append("<br/>" + response);
+                        var count = $("#count").text();
+                        count = Number(count) + 1;
+                        $("#count").text(count);
+                        // 调用查询API
+                        startLongPolling();
+                    }
+                }
+            })
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <div>
+        <ul>
+            <li class="active"><i class="fa fa-home fa-lg"></i> 未读消息 <span id="count" class="unread">0</span></li>
+
+        </ul>
+        <div style="margin-left: 800px;">
+            <button class="button" onclick="sendMessage()"> 变更数据</button>
+
+            <button class="button" id="mySendBtn" onclick="startLongPolling()"> 开始长轮询</button>
+            <div style="font-size: 20px;color: darkcyan"> 接收到的消息</div>
+            <hr />
+            <div id="arrivedDiv" style="height:200px; width:300px; overflow:scroll; background:#EEEEEE;">
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,8 +1,10 @@
 package com.realtime.controller.polling;
 
+import cn.hutool.core.date.DateUtil;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.AsyncRequestTimeoutException;
@@ -21,6 +23,11 @@ public class PollingController {
 
     // 存放监听某个Id的长轮询集合
     public static Multimap<String, DeferredResult<String>> watchRequests = Multimaps.synchronizedMultimap(HashMultimap.create());
+
+    @RequestMapping("/index")
+    public String sse() {
+        return "polling";
+    }
 
     /**
      * 公众号：程序员小富
@@ -56,7 +63,7 @@ public class PollingController {
         if (watchRequests.containsKey(id)) {
             Collection<DeferredResult<String>> deferredResults = watchRequests.get(id);
             for (DeferredResult<String> deferredResult : deferredResults) {
-                deferredResult.setResult("我更新了" + new Date());
+                deferredResult.setResult("我更新了" + DateUtil.formatDate(new Date()));
             }
         }
         return "success";
