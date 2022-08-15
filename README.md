@@ -11,11 +11,11 @@
 > 本项目全部案例详细教程，同步在 个人公众号：**程序员小富** , 欢迎关注交流指正，加群学习
 
 <div style="text-align:">
-<img src='wx/gonghao.jpg' width="150" height="150">
+<img src='wx/gonghao.jpg' width="200" height="200">
 </div>
 
 ![](wx/person.png)
-[**作者小富，目前就职京东，一起来了解下**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
+[**作者小富，目前就职京东，点击一起来了解下**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
 
 ---
 
@@ -49,7 +49,7 @@
 - 《LeetCode算法笔记》
 
 
-[公众号：**程序员小富** , 回复 **1222**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
+**获取方式**：[公众号：**程序员小富** , 回复 **1222**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
 
 
 ### 电子书
@@ -199,6 +199,6 @@
 > 欢迎关注公众号、或者添加个人微信：xinzhifu521，加群学习
 
 <div style="text-align:">
-<img src='wx/gonghao.jpg' width="150" height="150">
-<img src='wx/wx.jpg' width="150" height="150">
+<img src='wx/gonghao.jpg' width="200" height="200">
+<img src='wx/wx.jpg' width="200" height="200">
 </div>
