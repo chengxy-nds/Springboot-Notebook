@@ -2,10 +2,10 @@
     <p style="font-size:25px;font-weight: 800;">Springboot-Notebook</p>
 </div>
 <div style="text-align:center;margin-top:30px;margin-bottom:20px">
-   <a style="padding-left:10px"><img src="https://img.shields.io/github/stars/chengxy-nds/Springboot-Notebook?style=for-the-badge"/></a>
-   <a style="padding-left:10px"><img src="https://img.shields.io/github/forks/chengxy-nds/Springboot-Notebook?color=red&logo=red&style=for-the-badge"/></a>
-   <a style="padding-left:10px" href="https://mp.weixin.qq.com/s/iogZNJ392dPuWZx_GSD4UA"><img src="https://img.shields.io/static/v1?label=%E5%85%AC%E4%BC%97%E5%8F%B7&message=%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B0%8F%E5%AF%8C&color=success&&logo=wechat&style=for-the-badge"/></a>
-   <a style="padding-left:10px" href="https://mp.weixin.qq.com/s/iogZNJ392dPuWZx_GSD4UA"><img src="https://img.shields.io/static/v1?label=%E5%BE%AE%E4%BF%A1&message=xinzhifu521&color=success&&logo=wechat&style=for-the-badge"/></a
+   <a style="padding-left:10px"><img src="https://img.shields.io/github/stars/chengxy-nds/Springboot-Notebook?"/></a>
+   <a style="padding-left:10px"><img src="https://img.shields.io/github/forks/chengxy-nds/Springboot-Notebook?color=red&logo=red&"/></a>
+   <a style="padding-left:10px" href="https://mp.weixin.qq.com/s/iogZNJ392dPuWZx_GSD4UA"><img src="https://img.shields.io/static/v1?label=%E5%85%AC%E4%BC%97%E5%8F%B7&message=%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B0%8F%E5%AF%8C&color=success&&logo=wechat&"/></a>
+   <a style="padding-left:10px" href="https://mp.weixin.qq.com/s/iogZNJ392dPuWZx_GSD4UA"><img src="https://img.shields.io/static/v1?label=%E5%BE%AE%E4%BF%A1&message=xinzhifu521&color=success&&logo=wechat&"/></a
 
 </div>
 
