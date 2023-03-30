@@ -1,0 +1,51 @@
+#spring:
+#  shardingsphere:
+#    datasource:
+#      names: ds-0,ds-1
+#      ds-0:
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driverClassName: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://47.93.6.5:3306/ds-0?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+#        username: root
+#        password: xinzhifu521
+#      ds-1:
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driverClassName: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://47.93.6.5:3306/ds-1?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+#        username: root
+#        password: xinzhifu521
+#    sharding:
+#      tables:
+#        t_order:
+#          actual-data-nodes: ds-$->{0..1}.t_order_$->{0..2}
+#          ## 指定分库规则
+#          database-strategy:
+#            inline:
+#              sharding-column: order_id
+#              #分片算法行表达式（只取最后两个数字进行分片）
+#              algorithm-expression: ds-$->{order_id % 2}
+#          ## 指定分表规则
+#          table-strategy:
+#            hint:
+#              # sharding-column: order_id
+#              #分片算法行表达式（只取最后两个数字进行分片）
+#              algorithm-class-name: com.xiaofu.sharding.algorithm.tableAlgorithm.MyTableHintShardingAlgorithm
+#          ## 生成分布式主键
+#          key-generator:
+#            #自增列名称，缺省表示不使用自增主键生成器
+#            column: order_id
+#            #自增列值生成器类型，缺省表示使用默认自增列值生成器。可使用用户自定义的列值生成器或选择内置类型：SNOWFLAKE/UUID/LEAF_SEGMENT
+#            type: SNOWFLAKE
+#      # 绑定主表与子表，避免关联查询导致的全数据源路由
+#      binding-tables: t_order , t_order_item
+#      # 配置广播表：以广播的形式保存（如果只涉及查询的话可以不配置，会随机取一个数据源）
+#      broadcast-tables: t_config
+#    # 打印sql
+#    props:
+#      sql:
+#        show: true
+#
+##使用了mybatis-plus
+#mybatis-plus:
+#  mapper-locations: classpath:mapping/*.xml
+#  map-underscore-to-camel-case: true

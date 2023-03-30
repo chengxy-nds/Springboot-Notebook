@@ -1,0 +1,2 @@
+com.xiaofu.sharding.key.MyShardingKeyGenerator
+com.xiaofu.sharding.key.TinyIdShardingKeyGenerator

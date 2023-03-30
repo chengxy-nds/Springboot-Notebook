@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofu.sharding.mapper.OrderRepository">
+
+    <resultMap id="orderResult" type="com.xiaofu.sharding.model.TOrderDto">
+        <result column="order_id" property="orderId"/>
+        <result column="order_no" property="orderNo"/>
+        <result column="item_id" property="itemId"/>
+        <result column="price" property="price"/>
+        <result column="create_name" property="createName"/>
+        <result column="item_name" property="itemName"/>
+        <result column="user_id" property="userId"/>
+    </resultMap>
+
+
+    <select id="selectOrderListPage" resultMap="orderResult">
+
+           SELECT * FROM t_order;
+
+    </select>
+
+
+    <select id="selectOrderAndItemByOrderId" parameterType="com.xiaofu.sharding.model.TOrderDto"
+            resultMap="orderResult">
+        SELECT o.order_id, o.order_no, o.create_name,o.user_id , o.price, i.item_id, i.item_name FROM
+        t_order o
+        LEFT JOIN t_order_item i ON o.order_no = i.order_no
+        <where>
+            <if test="orderNo!=null">
+                o.order_no = #{order_no}
+            </if>
+
+            <if test="userId!=null">
+                o.user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+</mapper>

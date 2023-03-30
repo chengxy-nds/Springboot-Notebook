@@ -1,0 +1,27 @@
+.button {
+    background-color: #af84ab;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.red-point {
+    position: relative;
+}
+
+.red-point::before {
+    content: " ";
+    border: 3px solid red; /*设置红色*/
+    border-radius: 3px; /*设置圆角*/
+    position: absolute;
+    z-index: 1000;
+    right: 0%;
+    margin-right: -5px;
+    margin-top: -5px;
+}

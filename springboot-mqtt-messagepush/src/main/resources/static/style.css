@@ -1,0 +1,111 @@
+
+
+body{
+    background: url('https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&fm=jpg&s=fd39ab9358b1aec7746ee67168ccf268') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+
+ul{
+    margin: 2em auto;
+    width: 300px;
+    background: #34495e;
+    list-style: none;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul>li{
+    color: #fff;
+    background: #34495e;
+    padding: 1em;
+    border-bottom: 0.5em solid #2c3e50;
+    margin-top: 0.25em;
+    border-left: 0.5em groove #e74c3c;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+i{
+    padding-right: 0.5em;
+}
+.active{
+    border-left: 0.5em groove #1abc9c;
+}
+
+li:hover{
+    background: #2c3e50;
+    border-left: 0.5em groove #3498db;
+}
+
+
+.unread{
+    float: right;
+    background: #e74c3c;
+    width: 2em;
+    border-radius: 50%;
+    font-size: 0.75em;
+    line-height: 2;
+    text-align: center;
+    animation: notificationpulse 0.5s infinite;
+    -webkit-animation: notificationpulse 0.5s infinite;
+    -moz-animation: notificationpulse 0.5s infinite;
+}
+/*the animations */
+@keyframes notificationpulse {
+  0% {
+    box-shadow: 0 0 0 0.00em #c0392b;
+  }
+  25% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  50% {
+    box-shadow: 0 0 0 0.50em #c0392b;
+  }
+  75% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  100% {
+    box-shadow: 0 0 0 0.15em #c0392b;
+  }
+}
+@-webkit-keyframes notificationpulse {
+  0% {
+    box-shadow: 0 0 0 0.00em #c0392b;
+  }
+  25% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  50% {
+    box-shadow: 0 0 0 0.50em #c0392b;
+  }
+  75% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  100% {
+    box-shadow: 0 0 0 0.15em #c0392b;
+  }
+}
+
+@-moz-keyframes notificationpulse {
+  0% {
+    box-shadow: 0 0 0 0.00em #c0392b;
+  }
+  25% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  50% {
+    box-shadow: 0 0 0 0.50em #c0392b;
+  }
+  75% {
+    box-shadow: 0 0 0 0.25em #c0392b;
+  }
+  100% {
+    box-shadow: 0 0 0 0.15em #c0392b;
+  }
+}

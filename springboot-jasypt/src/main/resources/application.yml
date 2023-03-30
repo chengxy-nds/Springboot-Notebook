@@ -1,0 +1,15 @@
+# \u7AEF\u53E3\u53F7
+server:
+  port: 9000
+
+spring:
+  datasource:
+    url: jdbc:mysql://1.2.3.4:3306/xiaofu?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: xiaofu
+    password: ENC(mVTvp4IddqdaYGqPl9lCQbzM3H/b0B6l)
+
+# \u79D8\u94A5
+jasypt:
+  encryptor:
+    password: 35579B7F9C8CB15E
+    poolSize: 3

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 解决访问视频url 请求403异常 -->
+    <meta name="referrer" content="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="抖音去水印,抖音视频去水印,抖音视频无水印解析,抖音视频解析,无水印解析,怎么去抖音水印,去抖音水印,抖音解析,抖音去水印,抖音短视 ,抖音视频去水印,保存无水印抖音视频到手机 抖音短视频到电脑,抖音视频解 "
+          name="keywords">
+    <meta content="抖音去水印,免费抖音解析网站,抖音去水印解析网站,快手解析,视频去水印,抖音短视频,抖音" name="description">
+    <meta content="抖音去水印" name="application-name">
+    <title>抖音去水印</title>
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/layer.css" id="layuicss-layer" media="all">
+    <link rel="stylesheet" href="/css/layui.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script src="/js/push.js"></script>
+    <script src="/js/hm.js"></script>
+    <script src="/js/jquery-1.11.0.min.js "></script>
+    <script src="/js/layui.js"></script>
+    <script src="/js/layui.all.js"></script>
+    <script src="/js/tool.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+
+<body style="background-image: url(/img/bg1.png);">
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<div class="content layui-row">
+
+    <div class="ym-header layui-row layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+        <div class="layui-logo">
+        </div>
+        <ul class="layui-nav layui-row" lay-filter="mnav">
+            <!--<li class="layui-nav-item  ">-->
+            <!--<a href="##"><img src="/img/webicon.png" width="100px" alt="" srcset=""></a>-->
+            <!--</li>-->
+            <li class="layui-nav-item">
+                <a id="to_record" class="is_login" href="http://dsp.youmi.ee/batch">一起去水印</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ym-body  layui-row layui-col-space20 layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+        <div class="relogotool layui-row">
+            <div class="layui-card layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                <div class="layui-card-header">
+                    <div class="tool-bar">
+                        <span>支持平台(抖音、火山小视频)</span>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <div class="layui-form layui-form-pane">
+                        <ul class="layui-row img-ul">
+                            <li class="layui-nav-item img-li">
+                                <a href="##"><img src="/img/douyin.png" class="img-show" alt="抖音"></a>
+                            </li>
+                            <!--<li class="layui-nav-item img-li">-->
+                            <!--<a href="##"><img src="/img/kuaishou.png" class="img-show" alt="快手"></a>-->
+                            <!--</li>-->
+                            <!--<li class="layui-nav-item img-li">-->
+                            <!--<a href="##"><img src="/img/quanmin.png" class="img-show" alt="全民小视频"></a>-->
+                            <!--</li>-->
+                            <li class="layui-nav-item img-li">
+                                <a href="##"><img src="/img/huoshan.png" class="img-show" alt="火山小视频"></a>
+                            </li>
+                            <!--<li class="layui-nav-item img-li">-->
+                            <!--<a href="##"><img src="/img/weishi.png" class="img-show" alt="微视"></a>-->
+                            <!--</li>-->
+                            <!--<li class="layui-nav-item img-li">-->
+                            <!--<a href="##"><img src="/img/pipixia.png" class="img-show" alt="皮皮虾"></a>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-card layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                <div class="layui-card-header">
+                    <div class="tool-bar">
+                        <span class="layui-badge-dot"></span>
+                        <span class="layui-badge-dot layui-bg-orange"></span>
+                        <span class="layui-badge-dot layui-bg-green"></span>
+                        <span class="layui-badge layui-bg-gray">去水印工具</span>
+                        <span class="layui-badge-dot layui-bg-cyan"></span>
+                        <span class="layui-badge-dot layui-bg-blue"></span>
+                        <span class="layui-badge-dot layui-bg-black"></span>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <div class="layui-form layui-form-pane">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label lable-1">输入链接</label>
+
+                            <div class="layui-input-block">
+                                <input id="qsy-url" type="text" class="layui-input"
+                                       placeholder="输入视频分享链接"
+                                       title="输入视频分享链接">
+                            </div>
+                        </div>
+
+                        <!-- 电脑 -->
+                        <div class="layui-form-item layui-hide-xs layui-show-sm-inline-block layui-show-md-inline-block layui-show-lg-inline-block">
+                            <button type="button"
+                                    class="layui-btn-sm layui-btn layui-btn-primary reset_btn layui-bg-orange">清空
+                            </button>
+                            <button type="submit" class="layui-btn-sm layui-btn qsy-submit layui-bg-blue" lay-submit=""
+                                    lay-filter="msubmit">
+                                去除水印
+                            </button>
+                        </div>
+
+                        <!-- 手机 -->
+                        <div class="layui-form-item layui-row layui-col-space10 layui-hide-sm layui-hide-md layui-hide-lg layui-show-xs-block">
+                            <div class="layui-btn-group layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                                <button type="button"
+                                        class="layui-btn-sm layui-bg-orange layui-btn layui-btn-primary   layui-col-xs4 layui-col-sm4 layui-col-md12 layui-col-lg12 reset_btn">
+                                    清空
+                                </button>
+                                <button type="submit"
+                                        class="layui-btn-sm layui-bg-blue qsy-submit layui-btn  layui-col-xs8 layui-col-sm8 layui-col-md12 layui-col-lg12"
+                                        lay-submit="" lay-filter="msubmit">去除水印
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-card layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                <div class="layui-card-header">
+                    <div class="tool-bar">
+                        <span>使用说明</span>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <span class="layui-badge layui-bg-gray">功能完善中，如遇点击下载按钮无响应，请按下图方式下载视频</span>
+                    <div class="layui-form layui-form-pane">
+
+                        <ul class="layui-row img-ul">
+                            <li class="layui-nav-item img-li" style="">
+                                <a href="##"><img src="/img/shuoming.png" class="img-remark" alt="火山小视频"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-card layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                <fieldset
+                        class="layui-elem-field layui-field-title layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                    <legend>声明</legend>
+                    <div class="layui-field-box">
+                        <div class="layui-card-body">
+                            <div class="layui-colla-item">
+                                <span>本工具不已盈利为目的，只为交流学习，咨询请关注公众号【程序员内点事】</span>
+                                <a href="##"><img src="/img/公号.jpg" style="height: 100px;width: 100px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+                &nbsp;
+            </div>
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md3 layui-col-lg3">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="contact">-->
+<!--<div>-->
+<!--<a href="https://wpa.qq.com/msgrd?v=3&amp;uin=515361725&amp;site=qq&amp;menu=yes">-->
+<!--<img src="/img/qq.png" width="32px" alt="" srcset="">-->
+<!--</a>-->
+<!--</div>-->
+<!--<div>-->
+<!--<a href="#" onclick="javascript:layer.msg('')">-->
+<!--<img src="/img/wx.png" width="32px" alt="" srcset="">-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<div class="layui-layer-move"></div>
+
+</body>
+</html>

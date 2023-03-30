@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef">
+    <process id="Leave" name="LeaveProcess" isExecutable="true">
+        <userTask id="leaveTask" name="请假" flowable:assignee="${leaveTask}"/>
+        <userTask id="managerTask" name="经理审核"/>
+        <exclusiveGateway id="managerJudgeTask"/>
+        <endEvent id="endLeave" name="结束"/>
+        <startEvent id="startLeave" name="开始"/>
+        <sequenceFlow id="modeFlow" sourceRef="leaveTask" targetRef="managerTask"/>
+        <sequenceFlow id="flowStart" sourceRef="startLeave" targetRef="leaveTask"/>
+        <sequenceFlow id="jugdeFlow" sourceRef="managerTask" targetRef="managerJudgeTask"/>
+        <sequenceFlow id="flowEnd" name="通过" sourceRef="managerJudgeTask" targetRef="endLeave">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${checkResult=='通过'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="rejectFlow" name="驳回" sourceRef="managerJudgeTask"
+                      targetRef="endLeave">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${checkResult=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+        <bpmndi:BPMNPlane bpmnElement="Leave" id="BPMNPlane_process">
+            <bpmndi:BPMNShape bpmnElement="leaveTask" id="BPMNShape_leaveTask">
+                <omgdc:Bounds height="79.99999999999999" width="100.0" x="304.60807973558974" y="122.00000000000001"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="managerTask" id="BPMNShape_managerTask">
+                <omgdc:Bounds height="80.0" width="100.0" x="465.0" y="122.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="managerJudgeTask" id="BPMNShape_managerJudgeTask">
+                <omgdc:Bounds height="40.0" width="40.0" x="611.5" y="142.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="endLeave" id="BPMNShape_endLeave">
+                <omgdc:Bounds height="28.0" width="28.0" x="696.5" y="148.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="startLeave" id="BPMNShape_startLeave">
+                <omgdc:Bounds height="30.0" width="30.0" x="213.2256558149128" y="147.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="endLeave2"
+                              id="BPMNShape_endLeave2">
+                <omgdc:Bounds height="28.0" width="28.0" x="617.5" y="73.32098285753572"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="flowEnd" id="BPMNEdge_flowEnd">
+                <omgdi:waypoint x="651.1217948717949" y="162.37820512820514"/>
+                <omgdi:waypoint x="696.5002839785394" y="162.0891701657418"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="rejectFlow" id="BPMNEdge_rejectFlow">
+                <omgdi:waypoint x="631.866093577786" y="142.36609357778607" />
+                <omgdi:waypoint x="631.5931090276993" y="101.32067323657485" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="modeFlow" id="BPMNEdge_modeFlow">
+                <omgdi:waypoint x="404.60807973558974" y="162.0" />
+                <omgdi:waypoint x="465.0" y="162.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="flowStart" id="BPMNEdge_flowStart">
+                <omgdi:waypoint x="243.2256558149128" y="162.0" />
+                <omgdi:waypoint x="304.60807973558974" y="162.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="jugdeFlow" id="BPMNEdge_jugdeFlow">
+                <omgdi:waypoint x="565.0" y="162.21367521367523" />
+                <omgdi:waypoint x="611.9141630901288" y="162.41416309012877" />
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>

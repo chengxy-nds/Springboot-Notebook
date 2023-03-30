@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: fire-book
+  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/face?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: sb886684
+  jpa:
+    generate-ddl: true
+    open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    hibernate:
+      #更新或者创建数据表结构
+      ddl-auto: update
+    #控制台显示SQL
+    show-sql: true
+# 人脸识别-windows
+face:
+  appId: #*****
+  sdkKey: #*****
+  path: D://face
