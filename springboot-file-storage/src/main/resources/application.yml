@@ -1,0 +1,25 @@
+server:
+  port: 3333
+
+
+spring:
+  #文件存储配置(本地、oss)
+  file-storage:
+    default-platform: local-1
+    thumbnail-suffix: ".min.jpg" #缩略图后缀
+    local:
+      - platform: local-1 # 存储平台标识
+        enable-storage: true #是否开启本存储（只能选一种）
+        enable-access: true #启用访问（线上请使用 Nginx 配置，效率更高）
+        domain: "http://127.0.0.1:2222/" #访问域名，注意后面要和path-patterns保持一致，“/”结尾
+        base-path: /tmp/Pictures/ # 存储地址
+        path-patterns: /** #访问路径
+    aliyun-oss:
+      - platform: aliyun-oss
+        enable-storage: true
+        access-key: xxxx
+        secret-key: xxxx
+        end-point: xxx
+        bucket-name: firebook
+        domain: http://fire100.top
+        base-path: #云平台文件路径

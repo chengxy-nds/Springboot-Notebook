@@ -1,0 +1,54 @@
+magic-api:
+  web: /magic/web # UI请求的界面以及UI服务地址
+  resource: #配置存储方式
+    type: database # 配置存储在数据库中
+    tableName: magic_api_file # 数据库中的表名
+    datasource: jdbc:mysql://47.93.6.5:3306/magic-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    #指定数据源（单数据源时无需配置，多数据源时默认使用主数据源，如果存在其他数据源中需要指定。）
+    prefix: /magic-api # key前缀
+    readonly: false # 是否是只读模式
+#  prefix: / # 接口前缀，可以不配置
+#  auto-import-module: db  # 自动导入的模块
+#  auto-import-package: java.lang.*,java.util.* #自动导包
+#  refresh-interval: 0  #不启用刷新
+#  allow-override: false #禁止覆盖应用接口
+#  sql-column-case: camel #启用驼峰命名转换
+#  editor-config: classpath:./magic-editor-config.js #编辑器配置
+#  support-cross-domain: true # 跨域支持，默认开启
+#  response: |- #配置JSON格式，格式为magic-script中的表达式
+#    {
+#      code: code,
+#      message: message,
+#      data,
+#      timestamp,
+#      requestTime,
+#      executeTime,
+#    }
+#  banner: true # 打印banner
+#  thread-pool-executor-size: 8 # async语句的线程池大小
+#  throw-exception: false #执行出错时是否抛出异常
+#  page-config:
+#    size: size # 页大小的参数名称
+#    page: page # 页码的参数名称
+#    default-page: 1 # 未传页码时的默认首页
+#    default-size: 10 # 未传页大小时的默认页大小
+#  security-config: # 安全配置
+#    username: admin # 登录用的用户名
+#    password: 123456 # 登录用的密码
+#  swagger-config:
+#    version: 1.0
+#    description: MagicAPI 接口信息
+#    title: MagicAPI Swagger Docs
+#    name: MagicAPI 接口
+#    location: /v2/api-docs/magic-api/swagger2.json
+#  debug-config:
+#    timeout: 60 # 断点超时时间，默认60s
+
+server:
+  port: 9999
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: xinzhifu521
+    url: jdbc:mysql://47.93.6.5:3306/magic-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root

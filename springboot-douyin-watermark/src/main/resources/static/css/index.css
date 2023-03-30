@@ -1,0 +1,171 @@
+.layui-form-pane .layui-form-item[pane] .layui-form-label {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+.layui-col-space20 {
+    margin: unset;
+}
+
+.layui-col-space10 {
+    margin: unset;
+}
+
+.user-body {
+    text-align: center;
+}
+
+.user-photo-daddy img {
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.usercenter-title {
+    position: relative;
+}
+
+.qiandao {
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.layui-nav {
+    background-color: #03152a;
+    opacity: 1;
+    border-radius: unset;
+    padding: unset;
+}
+
+.layui-nav .layui-nav-item {
+    line-height: 37px;
+}
+
+.leave-word div div input {
+    margin-top: 5px;
+}
+
+#leave-word-btn {
+    float: right;
+    margin: 5px;
+}
+
+.leave-word-box .layui-card-body {
+    max-height: 300px;
+    overflow: overlay;
+    position: relative;
+    overflow-wrap: anywhere;
+}
+
+.ym-body {
+    position: relative;
+}
+
+.relogotool {
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    max-width: 800px;
+}
+
+.card-number-box {
+    position: relative;
+}
+
+.card-btn-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tool-bar {
+    position: relative;
+}
+
+.tool-vip-set {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.vip {
+    display: none;
+}
+
+.card-quxiao {
+    display: none;
+}
+
+.layui-nav .layui-nav-item a {
+    padding: 0 10px;
+}
+
+.layui-card .layui-field-title {
+    margin: 10px 0 0 0;
+}
+
+.ad div a {
+    text-decoration: revert;
+}
+
+.ad div a:hover {
+    text-decoration: revert;
+}
+
+/* 悬浮联系方式 */
+
+.contact {
+    width: 32px;
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+}
+
+.contact div {
+    margin-bottom: 10px;
+}
+
+.popButton {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.img-ul {
+    list-style: none;
+}
+
+.img-li {
+    display: inline;
+    line-height: 40px;
+    float: left;
+    margin-left: 15px;
+}
+
+.img-show {
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    width: 30px;
+    height: 30px;
+}
+
+
+.img-remark {
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    width: 550px;
+    height: 350px;
+    margin-top: 15px;
+
+}
+
+

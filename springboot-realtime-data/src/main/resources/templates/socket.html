@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+
+<head>
+    <title>未读消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/vue.min.js" type="text/javascript"></script>
+    <script src="/js/index.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/push.css" type="text/css"/>
+
+    <script>
+        var ws = new WebSocket('ws://127.0.0.1:7777/websocket/10086');
+        // 获取连接状态
+        console.log('ws连接状态：' + ws.readyState);
+        //监听是否连接成功
+        ws.onopen = function () {
+            console.log('ws连接状态：' + ws.readyState);
+            //连接成功则发送一个数据
+            ws.send('test1');
+        }
+        // 接听服务器发回的信息并处理展示
+        ws.onmessage = function (data) {
+           $("#arrivedDiv").append("<br/>"+data.data);
+            var count = $("#count").text();
+            count = Number(count) + 1;
+            $("#count").text(count);
+            //完成通信后关闭WebSocket连接
+            //ws.close();
+        }
+        // 监听连接关闭事件
+        ws.onclose = function () {
+            // 监听整个过程中websocket的状态
+            console.log('ws连接状态：' + ws.readyState);
+        }
+        // 监听并处理error事件
+        ws.onerror = function (error) {
+            console.log(error);
+        }
+
+        function sendMessage() {
+            var content = $("#message").val();
+            $.ajax({
+                url: '/socket/publish?userId=10086&message='+content,
+                type: 'GET',
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        }
+
+
+    </script>
+</head>
+
+
+<body>
+<div>
+    <ul>
+        <li class="active"><i class="fa fa-home fa-lg"></i> 未读消息 <span id="count" class="unread">0</span></li>
+
+    </ul>
+    <div style="margin-left: 800px;">
+        <input style="height: 25px; width: 180px;" maxlength="60" value="" id="message"/>
+        <button class="button" id="mySendBtn" onclick="sendMessage()"> 点击发送</button>
+        <div style="font-size: 20px;color: darkcyan"> 接收到的websocket消息</div>
+        <hr/>
+        <div id="arrivedDiv" style="height:200px; width:300px; overflow:scroll; background:#EEEEEE;">
+            <br/>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

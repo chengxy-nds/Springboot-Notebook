@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/xin-master?serverTimezone=UTC
+    username: junkang
+    password: junkang
+server:
+  port: 4000

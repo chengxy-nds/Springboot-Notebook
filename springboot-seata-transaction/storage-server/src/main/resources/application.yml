@@ -1,0 +1,36 @@
+server:
+    port: 8182
+
+# seata 日志级别
+logging:
+    level:
+        io:
+            seata: info
+
+# 数据源 seata 事务分组
+spring:
+    application:
+        name: storage-server
+    cloud:
+        alibaba:
+            seata:
+                tx-service-group: my_test_tx_group
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://47.93.6.5:3306/seat-storage
+        username: root
+        password: xinzhifu521
+
+# eureka 注册中心
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    instance:
+        hostname: 47.93.6.5
+        prefer-ip-address: true
+
+# mybatis 配置
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    typeAliasesPackage: io.seata.sample.entity

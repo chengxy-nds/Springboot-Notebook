@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+    <title>未读消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/vue.min.js" type="text/javascript"></script>
+    <script src="/js/index.js"></script>
+    <link rel="stylesheet" href="/style.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="push.css"/>
+
+    <script type="text/javascript">
+        // mqtt协议rabbitmq服务
+        //var brokerIp = location.hostname;
+        var brokerIp = "47.93.6.5";
+        // mqtt协议端口号
+        var port = 15675;
+        // 接受推送消息的主题
+        var topic = "push_message_topic";
+
+        // mqtt连接
+        client = new Paho.MQTT.Client(brokerIp, port, "/ws", "clientId_" + parseInt(Math.random() * 100, 10));
+
+        var options = {
+            timeout: 3, //超时时间
+            keepAliveInterval: 30,//心跳时间
+            onSuccess: function () {
+                console.log(("连接成功~"));
+                client.subscribe(topic, {qos: 1});
+            },
+            onFailure: function (message) {
+                console.log(("连接失败~" + message.errorMessage));
+            }
+        };
+        // 考虑到https的情况
+        if (location.protocol == "https:") {
+            options.useSSL = true;
+        }
+        client.connect(options);
+        console.log(("已经连接到" + brokerIp + ":" + port));
+
+        // 连接断开事件
+        client.onConnectionLost = function (responseObject) {
+            console.log("失去连接 - " + responseObject.errorMessage);
+        };
+
+        // 接收消息事件
+        client.onMessageArrived = function (message) {
+            console.log("接受主题： " + message.destinationName + "的消息： " + message.payloadString);
+            $("#arrivedDiv").append("<br/>"+message.payloadString);
+            var count = $("#count").text();
+            count = Number(count) + 1;
+            $("#count").text(count);
+        };
+
+        // 推送给指定主题
+        function sendMessage() {
+            var a = $("#message").val();
+            if (client.isConnected()) {
+                var message = new Paho.MQTT.Message(a);
+                message.destinationName = topic;
+                client.send(message);
+            }
+        }
+
+
+    </script>
+</head>
+
+
+<body>
+<div>
+    <ul>
+        <li class="active"><i class="fa fa-home fa-lg"></i> 未读消息 <span id="count" class="unread">0</span></li>
+
+    </ul>
+    <div style="margin-left: 800px;">
+        <input style="height: 25px; width: 180px;" maxlength="60" value="" id="message"/>
+        <button class="button" id="mySendBtn" onclick="sendMessage()"> 点击发送</button>
+        <div style="font-size: 20px;color: darkcyan"> 接收到的mqtt消息</div>
+        <hr/>
+        <div id="arrivedDiv" style="height:200px; width:300px; overflow:scroll; background:#EEEEEE;">
+            <br/>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

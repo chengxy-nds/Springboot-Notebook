@@ -1,0 +1,44 @@
+.button {
+    background-color: #af84ab;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.red-point {
+    position: relative;
+}
+
+.red-point::before {
+    content: " ";
+    border: 3px solid red; /*设置红色*/
+    border-radius: 3px; /*设置圆角*/
+    position: absolute;
+    z-index: 1000;
+    right: 0%;
+    margin-right: -5px;
+    margin-top: -5px;
+}
+
+body {
+    background: url('https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&fm=jpg&s=fd39ab9358b1aec7746ee67168ccf268') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
