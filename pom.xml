@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.7.6</version>
     </parent>
     <groupId>com.notebook</groupId>
     <artifactId>Springboot-Notebook</artifactId>
@@ -14,23 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-sharding-jdbc</module>
-        <module>springboot-work-flowable</module>
-        <module>springboot-redisson-lock</module>
-        <module>springboot-rabbitmq-confirm</module>
-        <module>springboot-mqtt-messagepush</module>
-        <module>springboot-aop-redis-lua</module>
-        <module>springboot-aop-unifiedlog</module>
-        <module>springboot-database-doc</module>
-        <module>springboot-delayqueue</module>
-        <module>springboot-douyin-watermark</module>
-        <module>springboot-global-formatting</module>
-        <module>springboot-sharding-jdbc</module>
-        <module>springboot-erupt</module>
-        <module>springboot-jasypt</module>
-        <module>springboot-magic-api</module>
-        <module>springboot-detect-faces</module>
-        <module>springboot-shardingsphere</module>
+        <module>springboot-101</module>
     </modules>
 
     <properties>
@@ -38,59 +22,58 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.7</version>
         </dependency>
+
+        <!-- springboot核心包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
+        </dependency>
+
+        <!-- lombok工具包 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
+
+        <!-- 单元测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.83</version>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
+        <!-- thymeleaf 页面模版 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -99,5 +82,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
