@@ -1,0 +1,25 @@
+{
+  "singleServerConfig":{
+    "idleConnectionTimeout":10000,
+    "pingTimeout":1000,
+    "connectTimeout":10000,
+    "timeout":3000,
+    "retryAttempts":3,
+    "retryInterval":1500,
+    "password":"redispw",
+    "subscriptionsPerConnection":5,
+    "clientName":null,
+    "address": "redis://127.0.0.1:55001",
+    "subscriptionConnectionMinimumIdleSize":1,
+    "subscriptionConnectionPoolSize":50,
+    "connectionMinimumIdleSize":32,
+    "connectionPoolSize":64,
+    "database":14
+  },
+  "threads":0,
+  "nettyThreads":0,
+  "codec":{
+    "class":"org.redisson.codec.JsonJacksonCodec"
+  },
+  "transportMode":"NIO"
+}

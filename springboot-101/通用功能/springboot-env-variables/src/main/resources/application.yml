@@ -1,0 +1,11 @@
+server:
+  port: 6667
+
+env101:
+  var1: var1-公众号：程序员小富
+  var2: var2-公众号：程序员小富
+  var3: var3-公众号：程序员小富
+  var4: var4-公众号：程序员小富
+  var5: var5-公众号：程序员小富
+  var6: var6-公众号：程序员小富
+  var7: var7-公众号：程序员小富
