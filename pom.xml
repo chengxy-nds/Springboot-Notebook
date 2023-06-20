@@ -14,7 +14,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-101</module>
+        <module>springboot101</module>
+        <module>shardingsphere101</module>
     </modules>
 
     <properties>

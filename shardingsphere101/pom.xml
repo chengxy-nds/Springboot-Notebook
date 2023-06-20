@@ -7,15 +7,41 @@
         <artifactId>Springboot-Notebook</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
+    <groupId>com.shardingsphere101</groupId>
     <artifactId>shardingsphere101</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>shardingsphere101</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>8</java.version>
+    </properties>
 
     <modules>
-        <module>springboot-sharding-jdbc</module>
+        <module>shardingsphere-3fast</module>
     </modules>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- 必须引入的包 mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- 必须引入的包 ShardingSphere -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+            <version>5.2.0</version>
+        </dependency>
 
     </dependencies>
 </project>

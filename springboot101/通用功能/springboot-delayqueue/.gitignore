@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example order template template
+### Example order template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
