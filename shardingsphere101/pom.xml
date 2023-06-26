@@ -16,10 +16,11 @@
 
     <properties>
         <java.version>8</java.version>
+        <shardingsphere.version>5.2.0</shardingsphere.version>
     </properties>
 
     <modules>
-        <module>shardingsphere-3fast</module>
+        <module>shardingsphere-2fastcode</module>
     </modules>
 
     <dependencies>
@@ -40,7 +41,7 @@
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
-            <version>5.2.0</version>
+            <version>${shardingsphere.version}</version>
         </dependency>
 
     </dependencies>

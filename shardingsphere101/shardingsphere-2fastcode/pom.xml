@@ -7,9 +7,9 @@
         <artifactId>shardingsphere101</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>shardingsphere-3fast</artifactId>
+    <artifactId>shardingsphere-2fastcode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shardingsphere-3fast</name>
+    <name>shardingsphere-2fastcode</name>
 
     <dependencies>
 
