@@ -1,10 +1,8 @@
 package com.springboot101.value注解;
 
-import com.springboot101.service.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,9 +11,6 @@ import javax.annotation.Resource;
 @Slf4j
 @SpringBootTest
 public class EnvVariables2Test {
-
-    @Resource
-    private TestService testService;
 
     private final String var6;
 
@@ -41,6 +36,6 @@ public class EnvVariables2Test {
     @Test
     public void var7Test() {
 
-        log.info("非注册的类中使用 注入: {}", testService.getVar7());
+//        log.info("非注册的类中使用 注入: {}", testService.getVar7());
     }
 }

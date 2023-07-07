@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Author: xiaofu
+ * @Author: 公众号：程序员小富
  * @Description:
  */
 @Configuration

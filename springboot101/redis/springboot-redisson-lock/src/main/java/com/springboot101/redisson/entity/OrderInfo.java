@@ -5,7 +5,7 @@ import org.redisson.api.annotation.RId;
 import org.redisson.api.annotation.RIndex;
 
 /**
- * @Author: xiaofu
+ * @Author: 公众号：程序员小富
  * @Description:
  */
 @REntity
