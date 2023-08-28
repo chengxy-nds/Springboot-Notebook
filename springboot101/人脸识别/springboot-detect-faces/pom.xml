@@ -24,7 +24,7 @@
             <artifactId>arcsoft-sdk-face</artifactId>
             <version>3.0.0.0</version>
             <scope>system</scope>
-            <systemPath>lib/arcsoft-sdk-face-3.0.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/lib/arcsoft-sdk-face-3.0.0.0.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -36,7 +36,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>

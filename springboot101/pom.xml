@@ -43,6 +43,10 @@
         <module>通用功能/springboot-env-variables</module>
         <module>通用功能/springboot-global-formatting</module>
         <module>通用功能/springboot-jasypt</module>
+        <module>通用功能/springboot-banner</module>
+
+        <!-- 接口文档 -->
+        <module>接口文档/springboot-swagger</module>
     </modules>
 
     <properties>

@@ -16,7 +16,7 @@ import java.net.URLDecoder;
 
 
 /**
- * @author 公众号：程序员小富-公众号：程序员内点事
+ * @author 公众号：程序员小富-公众号：程序员小富
  * @description 抖音无水印视频下载
  * @date 2020/9/15 18:44
  */

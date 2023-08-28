@@ -1,0 +1,9 @@
+server:
+  port: 9002
+
+# 登录账号密码
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456

@@ -25,13 +25,13 @@ public class GithubUser {
      * received_events_url : https://api.github.com/users/chengxy-nds/received_events
      * type : User
      * site_admin : false
-     * name : 程序员内点事
+     * name : 程序员小富
      * company : null
      * blog :
      * location : null
      * email : null
      * hireable : null
-     * bio : 公众号：程序员内点事
+     * bio : 公众号：程序员小富
      * twitter_username : null
      * public_repos : 6
      * public_gists : 0

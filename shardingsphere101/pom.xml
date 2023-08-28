@@ -21,6 +21,7 @@
 
     <modules>
         <module>shardingsphere-2fastcode</module>
+        <module>shardingsphere-default</module>
     </modules>
 
     <dependencies>
@@ -32,9 +33,9 @@
 
         <!-- 必须引入的包 mysql -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.32</version>
         </dependency>
 
         <!-- 必须引入的包 ShardingSphere -->
