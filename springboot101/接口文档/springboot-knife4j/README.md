@@ -1,5 +1,2 @@
-此项目为 springboot 脚手架
 
-已经整合了 jpa 连接mysql，自动根据JAVA实体属性创建对应的表
-
-起新项目直接复制它即可
+[knife4j详解文章地址](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247504501&idx=1&sn=edf8fd2f154f9c9241eabdd839271320&chksm=9b864288acf1cb9ea9f5981b8f99a97517c90e99e5cc26155e751d5f0b7c6d132f61be615d95&token=1250755825&lang=zh_CN#rd)
