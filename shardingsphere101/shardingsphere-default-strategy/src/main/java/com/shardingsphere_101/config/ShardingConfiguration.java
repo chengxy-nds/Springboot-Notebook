@@ -5,6 +5,7 @@
 //import org.apache.shardingsphere.infra.config.algorithm.AlgorithmConfiguration;
 //import org.apache.shardingsphere.sharding.api.config.ShardingRuleConfiguration;
 //import org.apache.shardingsphere.sharding.api.config.rule.ShardingTableRuleConfiguration;
+//import org.apache.shardingsphere.sharding.api.config.strategy.keygen.KeyGenerateStrategyConfiguration;
 //import org.apache.shardingsphere.sharding.api.config.strategy.sharding.StandardShardingStrategyConfiguration;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
@@ -32,8 +33,19 @@
 //        // 分片rules规则配置
 //        ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
 //
-//        shardingRuleConfig.setShardingAlgorithms(getShardingAlgorithms());
+//        // 默认的分库策略
+//        shardingRuleConfig.setDefaultDatabaseShardingStrategy(new StandardShardingStrategyConfiguration("order_id", "database-inline"));        // 默认的分库策略
+//        // 默认的分表策略
+//        shardingRuleConfig.setDefaultTableShardingStrategy(new StandardShardingStrategyConfiguration("order_id", "table-inline"));
+//        // 默认的主键生成策略
+//        shardingRuleConfig.setDefaultShardingColumn("order_id");
+//        shardingRuleConfig.setDefaultKeyGenerateStrategy(new KeyGenerateStrategyConfiguration("id", "table-inline"));
 //
+//        // 广播表
+//        shardingRuleConfig.setBroadcastTables(Collections.singletonList("t_city_dict"));
+//
+//        // 分片算法
+//        shardingRuleConfig.setShardingAlgorithms(getShardingAlgorithms());
 //        // 配置 t_order 表分片规则
 //        ShardingTableRuleConfiguration orderTableRuleConfig = new ShardingTableRuleConfiguration("t_order", "db${0..1}.t_order_${0..2}");
 //        orderTableRuleConfig.setTableShardingStrategy(new StandardShardingStrategyConfiguration("order_id", "table-inline"));

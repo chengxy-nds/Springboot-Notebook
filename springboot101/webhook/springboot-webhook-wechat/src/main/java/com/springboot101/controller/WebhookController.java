@@ -4,7 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.springboot101.utils.HttpUtil;
 import com.springboot101.vo.GithubWebhookPullVo;
 import com.springboot101.vo.WeChatWebhook;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +15,9 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-@Slf4j
 @RestController
 public class WebhookController {
-
+    private static final Logger log = LoggerFactory.getLogger(HttpUtil.class);
     private static final String WECHAT_URL = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=145a516a-dd15-421f-97a3-ba3bf1479369";
 
     private static final String GITHUB_API = "https://api.github.com/users/";
