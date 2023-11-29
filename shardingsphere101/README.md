@@ -1,3 +1,5 @@
-快速实现分库分表的两种方式
+本项目的主要内容：
 
-文件链接：[SpringBoot 2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/XdlJK170YZEwof6DzZlbZg)
+1、默认的分库分表策略
+2、广播表
+3、绑定表的使用

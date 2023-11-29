@@ -17,18 +17,21 @@
     <properties>
         <java.version>8</java.version>
         <shardingsphere.version>5.2.0</shardingsphere.version>
+        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
     </properties>
 
     <modules>
         <module>shardingsphere-2fastcode</module>
-        <module>shardingsphere-default</module>
+        <module>shardingsphere-default-strategy</module>
     </modules>
 
     <dependencies>
 
+        <!-- MyBatis Plus -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis.plus.version}</version>
         </dependency>
 
         <!-- 必须引入的包 mysql -->

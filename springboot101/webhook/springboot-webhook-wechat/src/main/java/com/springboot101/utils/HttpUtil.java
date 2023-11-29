@@ -1,6 +1,5 @@
 package com.springboot101.utils;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -9,6 +8,8 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -19,8 +20,9 @@ import java.io.IOException;
  * @Description:
  */
 @Component
-@Slf4j
+
 public class HttpUtil {
+    private static final Logger log = LoggerFactory.getLogger(HttpUtil.class);
 
     /**
      * 发送post请求

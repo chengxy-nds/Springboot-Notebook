@@ -7,15 +7,12 @@
         <artifactId>shardingsphere101</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>shardingsphere-2fastcode</artifactId>
+    <artifactId>shardingsphere-default-strategy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shardingsphere-2fastcode</name>
+    <name>shardingsphere-default-strategy</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
     </dependencies>
 
     <build>

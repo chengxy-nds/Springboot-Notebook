@@ -3,17 +3,9 @@ server:
 
 
 spring:
-  # 数据库连接信息
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_1?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: 123456
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    encoding: UTF-8 #编码
+    suffix: .html #模板后缀
+    mode: HTML #模板

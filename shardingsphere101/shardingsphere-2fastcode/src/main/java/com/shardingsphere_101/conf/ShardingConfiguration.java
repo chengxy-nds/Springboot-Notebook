@@ -32,8 +32,8 @@ public class ShardingConfiguration {
         // 分片rules规则配置
         ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
 
+        shardingRuleConfig.setBroadcastTables(Collections.singletonList("t_city_dict"));
         shardingRuleConfig.setShardingAlgorithms(getShardingAlgorithms());
-
         // 配置 t_order 表分片规则
         ShardingTableRuleConfiguration orderTableRuleConfig = new ShardingTableRuleConfiguration("t_order", "db${0..1}.t_order_${0..2}");
         orderTableRuleConfig.setTableShardingStrategy(new StandardShardingStrategyConfiguration("order_id", "table-inline"));

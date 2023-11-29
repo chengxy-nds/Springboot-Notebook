@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Page</title>
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+</head>
+<body>
+<h1>Welcome to Thymeleaf Example Page</h1>
+
+<div th:if="${fruits.size() > 0}">
+    <ul>
+        <li th:each="fruit : ${fruits}" th:text="${fruit}"></li>
+    </ul>
+</div>
+<div th:unless="${fruits.size() > 0}">
+    <p>No fruits available.</p>
+</div>
+
+<!--<script src="/js/script.js"></script>-->
+</body>
+</html>

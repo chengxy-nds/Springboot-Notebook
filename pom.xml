@@ -14,7 +14,9 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!-- springboot2.0实战 -->
         <module>springboot101</module>
+        <!-- shardingsphere5.x实战 -->
         <module>shardingsphere101</module>
     </modules>
 
@@ -65,12 +67,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.83</version>
-        </dependency>
-
-        <!-- thymeleaf 页面模版 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
     </dependencies>

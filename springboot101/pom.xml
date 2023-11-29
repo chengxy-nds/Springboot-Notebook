@@ -48,6 +48,15 @@
         <!-- 接口文档 -->
         <module>接口文档/springboot-swagger</module>
         <module>接口文档/springboot-knife4j</module>
+
+        <!-- 设计模式 -->
+        <module>设计模式/springboot-design-chain</module>
+
+        <!-- 模版引擎 -->
+        <module>模版引擎/springboot-thymeleaf</module>
+
+        <!-- 数据库相关 -->
+<!--        <module>数据库/springboot-dynamic-datasource</module>-->
     </modules>
 
     <properties>

@@ -9,6 +9,7 @@ import com.arcsoft.face.enums.ErrorInfo;
 import com.arcsoft.face.toolkit.ImageInfo;
 import com.springboot101.entity.User;
 import com.springboot101.repository.UserDao;
+import com.springboot101.util.Base64Util;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
