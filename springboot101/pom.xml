@@ -56,7 +56,7 @@
         <module>模版引擎/springboot-thymeleaf</module>
 
         <!-- 数据库相关 -->
-<!--        <module>数据库/springboot-dynamic-datasource</module>-->
+        <module>数据库/springboot-dynamic-datasource</module>
     </modules>
 
     <properties>
