@@ -7,7 +7,7 @@ import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author: xinzhifu
+ * @Author: 程序员小富
  * @Description: 基础配置类
  * @date 2020/6/8 18:25
  */

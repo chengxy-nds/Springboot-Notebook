@@ -20,7 +20,7 @@ class BaseShare {
         User user = new User();
         user.setName("公众号：程序员小富");
         user.setAge(0);
-        user.setEmail("vx：xinzhifu521");
+        user.setEmail("vx：程序员小富521");
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
         userService.insertUser(user);

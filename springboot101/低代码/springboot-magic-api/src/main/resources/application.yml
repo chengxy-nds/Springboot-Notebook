@@ -49,6 +49,6 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    password: xinzhifu521
+    password: 123456
     url: jdbc:mysql://47.93.6.5:3306/magic-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root

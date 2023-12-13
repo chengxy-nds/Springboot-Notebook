@@ -5,7 +5,7 @@ import org.flowable.spring.boot.EngineConfigurationConfigurer;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author xinzhifu
+ * @author 程序员小富
  * @description 设置样式，解决中文乱码
  * @date 2020/8/27 15:04
  */

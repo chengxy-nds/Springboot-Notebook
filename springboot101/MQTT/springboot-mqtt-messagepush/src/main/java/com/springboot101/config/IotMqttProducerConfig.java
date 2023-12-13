@@ -12,7 +12,7 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 
 /**
- * @Author: xinzhifu
+ * @Author: 程序员小富
  * @Description:
  */
 @Configuration
