@@ -3,13 +3,13 @@ package com.shardingsphere_101.service.impl;
 import com.shardingsphere_101.entity.Order;
 import com.shardingsphere_101.repository.OrderRepository;
 import com.shardingsphere_101.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.LongStream;
@@ -21,7 +21,7 @@ import java.util.stream.LongStream;
  */
 @Service
 public class OrderServiceImpl implements OrderService {
-    @Autowired
+    @Resource
     private OrderRepository orderRepository;
 
     @Override
