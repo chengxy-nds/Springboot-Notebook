@@ -18,11 +18,13 @@
         <java.version>8</java.version>
         <shardingsphere.version>5.2.0</shardingsphere.version>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
+        <mysql.connector.version>8.2.0</mysql.connector.version>
     </properties>
 
     <modules>
         <module>shardingsphere-2fastcode</module>
         <module>shardingsphere-default-strategy</module>
+        <module>shardingsphere-autocreate-table</module>
     </modules>
 
     <dependencies>
@@ -38,7 +40,7 @@
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.32</version>
+            <version>${mysql.connector.version}</version>
         </dependency>
 
         <!-- 必须引入的包 ShardingSphere -->

@@ -3,7 +3,6 @@ package com.shardingsphere_101;
 import com.shardingsphere_101.dao.OrderItemMapper;
 import com.shardingsphere_101.dao.OrderMapper;
 import com.shardingsphere_101.entity.Order;
-import com.shardingsphere_101.entity.OrderItem;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -35,23 +34,24 @@ class MyBindingTablesTests {
 
     @Test
     public void insertOrderAndItemsTest() {
+
         for (int i = 0; i < 6; i++) {
             Order order = new Order();
 
             long orderId = getRandomNumber(11);
-            order.setOrderId(orderId);
+//            order.setOrderId(orderId);
             order.setOrderNumber("WIN" + orderId);
             order.setCustomerId((long) i);
             order.setOrderDate(new Date());
             order.setTotalAmount(new BigDecimal("0" + i));
             orderMapper.insert(order);
 
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrderId(order.getOrderId());
-            orderItem.setProductId(i);
-            orderItem.setQuantity(i);
-            orderItem.setUnitPrice(new BigDecimal("0" + i));
-            orderItemMapper.insert(orderItem);
+//            OrderItem orderItem = new OrderItem();
+//            orderItem.setOrderId(order.getOrderId());
+//            orderItem.setProductId(i);
+//            orderItem.setQuantity(i);
+//            orderItem.setUnitPrice(new BigDecimal("0" + i));
+//            orderItemMapper.insert(orderItem);
         }
     }
 }

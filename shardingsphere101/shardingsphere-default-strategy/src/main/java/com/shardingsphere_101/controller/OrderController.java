@@ -26,7 +26,6 @@ public class OrderController {
     @Resource
     private OrderItemMapper orderItemMapper;
 
-
     @RequestMapping("/test1")
     public String test1() {
         for (int i = 0; i < 3; i++) {
@@ -36,12 +35,12 @@ public class OrderController {
             order.setOrderDate(new Date());
             order.setTotalAmount(new BigDecimal("0" + i));
             orderMapper.insert(order);
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrderId(order.getOrderId());
-            orderItem.setProductId(i);
-            orderItem.setQuantity(i);
-            orderItem.setUnitPrice(new BigDecimal("0" + i));
-            orderItemMapper.insert(orderItem);
+//            OrderItem orderItem = new OrderItem();
+//            orderItem.setOrderId(order.getOrderId());
+//            orderItem.setProductId(i);
+//            orderItem.setQuantity(i);
+//            orderItem.setUnitPrice(new BigDecimal("0" + i));
+//            orderItemMapper.insert(orderItem);
         }
         return "ok";
     }

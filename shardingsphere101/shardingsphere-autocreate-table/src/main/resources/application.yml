@@ -1,0 +1,84 @@
+spring:
+  shardingsphere:
+    # 数据源配置
+    datasource:
+      # 数据源名称，多数据源以逗号分隔 ,放在第一个的数据源为未配置分片规则表的默认数据源
+      names: db0 , db1
+      # 名称与上边 names 保持一致
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+    # 具体规则配置
+    rules:
+      sharding:
+        # 自动分片表规则配置
+#        auto-tables:
+#          t_order:
+#            actual-data-sources: db$->{0..1}
+#            sharding-strategy:
+#              standard:
+#                sharding-column: order_date
+#                sharding-algorithm-name: t_order_mod
+        # 分片算法定义
+        sharding-algorithms:
+          # 自定义分片算法名称
+          t_order_database_algorithms:
+            # 分片算法类型
+            type: INLINE
+            # 自定义参数
+            props:
+              algorithm-expression: db$->{order_id % 2}
+          t_order_table_algorithms:
+            type: INLINE
+            props:
+              algorithm-expression: t_order_$->{order_id % 1000}
+          t_order_mod:
+            type: MOD
+            props:
+              # 指定分片数量
+              sharding-count: 2000
+        # 分布式序列算法配置
+        key-generators:
+          t_order_snowflake:
+            # 分布式序列算法（雪花算法：SNOWFLAKE； UUID：UUID）（注：UUID没有props配置）
+            type: SNOWFLAKE
+            # 分布式序列算法属性配置
+            props:
+              # 工作机器唯一标识
+              worker-id: 1
+        tables:
+          # 逻辑表名称
+          t_order:
+            # 数据节点：数据库.分片表
+            actual-data-nodes: db$->{0..1}.t_order_${1..1000}
+            # 分库策略
+            database-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: order_id
+                # 分片算法名称
+                sharding-algorithm-name: t_order_database_algorithms
+            # 分表策略
+            table-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: order_id
+                # 分片算法名称
+                sharding-algorithm-name: t_order_table_algorithms
+            keyGenerateStrategy:
+              column: order_id
+              keyGeneratorName: t_order_snowflake
+
+    # 属性配置
+    props:
+      # 展示修改以后的sql语句
+      sql-show: true

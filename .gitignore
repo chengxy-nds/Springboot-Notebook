@@ -36,3 +36,5 @@ build/
 !/mvnw
 
 !/mvnw.cmd
+shardingsphere101/.idea/**
+springboot101/.idea/**
