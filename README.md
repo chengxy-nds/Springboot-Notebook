@@ -41,6 +41,14 @@
 消息推送  | 7种实时消息推送
 更多 | ......
 
+### 《ShardingSphere5.x分库分表原理与实战》
+
+[（一）好好的系统，为什么要分库分表？](https://mp.weixin.qq.com/s/-WFBtHtTMtHoGwIm9bL4Uw)
+
+[（二）分库分表的 21 条法则，hold 住！](https://mp.weixin.qq.com/s/aRQLKGzFHcX7zQLqa6FIbA)
+
+[（三）2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/XdlJK170YZEwof6DzZlbZg)
+
 ### 面试八股
 
 - 《spring cloud alibaba 微服务全家桶》
