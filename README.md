@@ -49,6 +49,9 @@
 
 [（三）2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/XdlJK170YZEwof6DzZlbZg)
 
+[（四）2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/IdJoG-0cCaPJ5s2aAOM3Jw)
+
+
 ### 面试八股
 
 - 《spring cloud alibaba 微服务全家桶》
