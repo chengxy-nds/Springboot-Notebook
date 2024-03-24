@@ -25,6 +25,7 @@
         <module>shardingsphere-2fastcode</module>
         <module>shardingsphere-default-strategy</module>
         <module>shardingsphere-autocreate-table</module>
+        <module>shardingsphere-algorithms</module>
     </modules>
 
     <dependencies>

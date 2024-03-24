@@ -1,0 +1,181 @@
+server:
+  port: 10202
+spring:
+  shardingsphere:
+    # 数据源配置
+    datasource:
+      # 数据源名称，多数据源以逗号分隔 ,放在第一个的数据源为未配置分片规则表的默认数据源
+      names: db0 , db1
+      # 名称与上边 names 保持一致
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+    # 具体规则配置
+    rules:
+      sharding:
+        # 自动分片表规则配置
+        #        auto-tables:
+        #          t_order:
+        #            actual-data-sources: db$->{0..1}
+        #            sharding-strategy:
+        #              standard:
+        #                sharding-column: order_id
+        #                sharding-algorithm-name: t_order_table_cosid_mod
+        # 分片算法定义
+        sharding-algorithms:
+
+          t_order_database_algorithms:
+            # 分片算法类型
+            type: INLINE
+            props: # 自定义参数
+              algorithm-expression: db$->{order_id % 2}
+          t_order_table_algorithms:
+            type: INLINE
+            props:
+              algorithm-expression: t_order_$->{order_id % 3}
+          t_order_database_mod:
+            type: MOD
+            props:
+              sharding-count: 2 # 指定分片数量
+          # 内置分片算法
+          # 1、取模分片算法
+          t_order_table_mod:
+            type: MOD
+            props:
+              sharding-count: 3 # 指定分片数量
+          # 2、哈希取模分片算法
+          t_order_table_hash_mod:
+            type: HASH_MOD
+            props:
+              sharding-count: 6  # 指定分片数量
+          # 3、基于分片容量的范围分片算法 [1,2) 第一张表 [2,12) 第二张表 [12,20) 第三张表 [20,♾️) 第四张表
+          t_order_table_volume_range:
+            type: VOLUME_RANGE
+            props:
+              range-lower: 2 # 范围下界，超过边界的数据会报错
+              range-upper: 20 # 范围上界，超过边界的数据会报错
+              sharding-volume: 10 # 分片容量
+          # 4、基于分片边界的范围分片算法，[1,10) 第一张表 [10,20) 第二张表 [20,30) 第三张表 [30,40) 第四张表 [40,♾️) 第五张表
+          t_order_table_boundary_range:
+            type: BOUNDARY_RANGE
+            props:
+              sharding-ranges: 10,20,30,40 # 分片的范围边界，多个范围边界以逗号分隔
+          # 5、自动时间段分片算法
+          t_order_table_auto_interval:
+            type: AUTO_INTERVAL
+            props:
+              datetime-lower: '2024-01-01 00:00:00' # 分片的起始时间范围，时间戳格式：yyyy-MM-dd HH:mm:ss
+              datetime-upper: '2026-01-01 00:00:00' #  分片的结束时间范围，时间戳格式：yyyy-MM-dd HH:mm:ss
+              sharding-seconds: 31536000 # 单一分片所能承载的最大时间，单位：秒，允许分片键的时间戳格式的秒带有时间精度，但秒后的时间精度会被自动抹去
+          # 标准分片算法
+          # 6、行表达式分片算法
+          t_order_table_inline:
+            type: INLINE
+            props:
+              algorithm-expression: t_order_$->{order_id  % 3} # 分片算法的行表达式
+              allow-range-query-with-inline-sharding: false # 是否允许范围查询。注意：范围查询会无视分片策略，进行全路由，默认 false
+
+          # 7、时间范围分片算法
+          t_order_table_interval:
+            type: INTERVAL
+            props:
+              datetime-pattern: "yyyy-MM-dd HH:mm:ss"  # 分片字段格式
+              datetime-lower: "2024-01-01 00:00:00"  # 范围下限
+              datetime-upper: "2024-06-30 23:59:59"  # 范围上限
+              sharding-suffix-pattern: "yyyyMM"  # 分片名后缀，可以是MM，yyyyMMdd等。
+              datetime-interval-amount: 1  # 分片间隔，这里指一个月
+              datetime-interval-unit: "MONTHS" # 分片间隔单位
+
+          # 8、基于 CosId 的取模分片算法
+          t_order_table_cosid_mod:
+            type: COSID_MOD
+            props:
+              mod: 3  # 分片数量
+              logic-name-prefix: t_order_ # 分片数据源或真实表的前缀格式
+
+          # 9、基于 CosId 的固定时间范围的分片算法
+          t_order_table_cosid_interval:
+            type: COSID_INTERVAL
+            props:
+              zone-id: "Asia/Shanghai" # 时区，必须遵循 java.time.ZoneId 的所含值。 例如：Asia/Shanghai
+              logic-name-prefix: t_order_ # 分片数据源或真实表的前缀格式
+              sharding-suffix-pattern: "yyyyMM" # 分片数据源或真实表的后缀格式，必须遵循 Java DateTimeFormatter 的格式，必须和 datetime-interval-unit 保持一致。例如：yyyyMM
+              datetime-lower: "2024-01-01 00:00:00" # 时间分片下界值，格式与 yyyy-MM-dd HH:mm:ss 的时间戳格式一致
+              datetime-upper: "2024-12-31 00:00:00" # 时间分片上界值，格式与 yyyy-MM-dd HH:mm:ss 的时间戳格式一致
+              datetime-interval-unit: "MONTHS" # 分片键时间间隔单位，必须遵循 Java ChronoUnit 的枚举值。例如：MONTHS
+              datetime-interval-amount: 1 # 分片键时间间隔，超过该时间间隔将进入下一分片
+          # 10、基于 CosId 的雪花ID固定时间范围的分片算法
+          t_order_table_cosid_interval_snowflake:
+            type: COSID_INTERVAL_SNOWFLAKE
+            props:
+              zone-id: "Asia/Shanghai" # 时区，必须遵循 java.time.ZoneId 的所含值。 例如：Asia/Shanghai
+              logic-name-prefix: t_order_ # 分片数据源或真实表的前缀格式
+              sharding-suffix-pattern: "yyyyMM" # 分片数据源或真实表的后缀格式，必须遵循 Java DateTimeFormatter 的格式，必须和 datetime-interval-unit 保持一致。例如：yyyyMM
+              datetime-lower: "2024-01-01 00:00:00" # 时间分片下界值，格式与 yyyy-MM-dd HH:mm:ss 的时间戳格式一致
+              datetime-upper: "2024-12-31 00:00:00" # 时间分片上界值，格式与 yyyy-MM-dd HH:mm:ss 的时间戳格式一致
+              datetime-interval-unit: "MONTHS" # 分片键时间间隔单位，必须遵循 Java ChronoUnit 的枚举值。例如：MONTHS
+              datetime-interval-amount: 1 # 分片键时间间隔，超过该时间间隔将进入下一分片
+
+          # 11、Hint 行表达式分片算法
+          t_order_database_hint_inline:
+            type: HINT_INLINE
+            props:
+              algorithm-expression: db$->{Integer.valueOf(value) % 2} # 分片算法的行表达式，默认值${value}
+          t_order_table_hint_inline:
+            type: HINT_INLINE
+            props:
+              algorithm-expression: t_order_$->{Integer.valueOf(value) % 3} # 分片算法的行表达式，默认值${value}
+
+          # 12、自定义 STANDARD 标准算法
+          t_order_standard_custom_algorithm:
+            type: CLASS_BASED
+            props:
+              # 分片策略
+              strategy: standard
+              # 分片算法类
+              algorithmClassName: com.shardingsphere_101.algorithm.OrderStandardCustomAlgorithm
+              # 自定义属性
+              prop:
+                aaaaaa: 123456
+                bbbbbb: 654321
+
+        # 分布式序列算法配置
+        key-generators:
+          t_order_snowflake:
+            # 分布式序列算法（雪花算法：SNOWFLAKE； UUID：UUID）（注：UUID没有props配置）
+            type: SNOWFLAKE
+            # 分布式序列算法属性配置
+            props:
+              # 工作机器唯一标识
+              worker-id: 1
+        tables:
+          # 逻辑表名称
+          t_order:
+            # 数据节点：数据库.分片表
+            actual-data-nodes: db$->{0..1}.t_order_${202401..202406}
+            # 分库策略
+            database-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: t_order_database_mod
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: interval_value
+                sharding-algorithm-name: t_order_table_interval
+            keyGenerateStrategy:
+              column: id
+              keyGeneratorName: t_order_snowflake
+    # 属性配置
+    props:
+      # 展示修改以后的sql语句
+      sql-show: true

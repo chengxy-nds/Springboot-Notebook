@@ -1,5 +1,3 @@
-server:
-  port: 10202
 spring:
   shardingsphere:
     # 数据源配置
@@ -23,31 +21,28 @@ spring:
     rules:
       sharding:
         # 自动分片表规则配置
-#        auto-tables:
-#          t_order:
-#            actual-data-sources: db$->{0..1}
-#            sharding-strategy:
-#              standard:
-#                sharding-column: order_date
-#                sharding-algorithm-name: t_order_mod
+        #        auto-tables:
+        #          t_order:
+        #            actual-data-sources: db$->{0..1}
+        #            sharding-strategy:
+        #              standard:
+        #                sharding-column: order_id
+        #                sharding-algorithm-name: t_order_table_cosid_mod
         # 分片算法定义
         sharding-algorithms:
-          # 自定义分片算法名称
-          t_order_database_algorithms:
-            # 分片算法类型
-            type: INLINE
-            # 自定义参数
+          # 12、自定义 STANDARD 标准算法
+          t_order_standard_custom_algorithm:
+            type: CLASS_BASED
             props:
-              algorithm-expression: db$->{order_id % 2}
-          t_order_table_algorithms:
-            type: INLINE
-            props:
-              algorithm-expression: t_order_$->{order_id % 1000}
-          t_order_mod:
-            type: MOD
-            props:
-              # 指定分片数量
-              sharding-count: 2000
+              # 分片策略
+              strategy: standard
+              # 分片算法类
+              algorithmClassName: com.shardingsphere_101.algorithm.OrderStandardCustomAlgorithm
+              # 自定义属性
+              prop:
+                aaaaaa: 123456
+                bbbbbb: 654321
+
         # 分布式序列算法配置
         key-generators:
           t_order_snowflake:
@@ -61,25 +56,20 @@ spring:
           # 逻辑表名称
           t_order:
             # 数据节点：数据库.分片表
-            actual-data-nodes: db$->{0..1}.t_order_${1..1000}
+            actual-data-nodes: db$->{0..1}.t_order_${0..2}
             # 分库策略
             database-strategy:
               standard:
-                # 分片列名称
                 sharding-column: order_id
-                # 分片算法名称
-                sharding-algorithm-name: t_order_database_algorithms
+                sharding-algorithm-name: t_order_database_mod
             # 分表策略
             table-strategy:
               standard:
-                # 分片列名称
                 sharding-column: order_id
-                # 分片算法名称
-                sharding-algorithm-name: t_order_table_algorithms
+                sharding-algorithm-name: t_order_standard_custom_algorithm
             keyGenerateStrategy:
-              column: order_id
+              column: id
               keyGeneratorName: t_order_snowflake
-
     # 属性配置
     props:
       # 展示修改以后的sql语句
