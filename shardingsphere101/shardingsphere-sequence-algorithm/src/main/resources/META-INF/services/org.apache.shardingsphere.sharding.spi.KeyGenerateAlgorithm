@@ -1,0 +1,6 @@
+com.shardingsphere_101.keyGenerator.algorithm.SequenceAlgorithms
+org.apache.shardingsphere.sharding.algorithm.keygen.SnowflakeKeyGenerateAlgorithm
+org.apache.shardingsphere.sharding.algorithm.keygen.UUIDKeyGenerateAlgorithm
+org.apache.shardingsphere.sharding.nanoid.algorithm.keygen.NanoIdKeyGenerateAlgorithm
+org.apache.shardingsphere.sharding.cosid.algorithm.keygen.CosIdKeyGenerateAlgorithm
+org.apache.shardingsphere.sharding.cosid.algorithm.keygen.CosIdSnowflakeKeyGenerateAlgorithm

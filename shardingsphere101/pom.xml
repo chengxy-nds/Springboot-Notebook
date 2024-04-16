@@ -22,10 +22,15 @@
     </properties>
 
     <modules>
+        <!-- yml和java方式实现分片-->
         <module>shardingsphere-2fastcode</module>
         <module>shardingsphere-default-strategy</module>
+        <!-- 分片表管理 -->
         <module>shardingsphere-autocreate-table</module>
+        <!-- 13中分片算法 -->
         <module>shardingsphere-algorithms</module>
+        <!-- 分布式ID生成器 -->
+        <module>shardingsphere-sequence-algorithm</module>
     </modules>
 
     <dependencies>

@@ -1,13 +1,14 @@
 package com.shardingsphere_101.algorithm;
 
 import com.alibaba.fastjson.JSON;
-import com.google.common.collect.Range;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.sharding.api.sharding.standard.PreciseShardingValue;
 import org.apache.shardingsphere.sharding.api.sharding.standard.RangeShardingValue;
 import org.apache.shardingsphere.sharding.api.sharding.standard.StandardShardingAlgorithm;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Properties;
 
 /**
  * 自定义标准分片算法
@@ -22,17 +23,27 @@ public class OrderStandardCustomAlgorithm implements StandardShardingAlgorithm<L
      * 精准分片进入 sql中有 = 和 in 等操作符会执行
      *
      * @param availableTargetNames 所有分片表的集合
-     * @param shardingValue        分片健的值，SQL中解析出来的分片值
+     * @param preciseShardingValue        分片健的值，SQL中解析出来的分片值
      */
     @Override
     public String doSharding(Collection<String> availableTargetNames,
-                             PreciseShardingValue<Long> shardingValue) {
-        log.info("进入精准分片 = 和 in");
+                             PreciseShardingValue<Long> preciseShardingValue) {
+        /**
+         * 分库策略使用时：availableTargetNames 参数数据为分片库的集合 ["db0","db1"]
+         * 分表策略使用时：availableTargetNames 参数数据为分片库的集合 ["t_order_0","t_order_1","t_order_2"]
+         */
+        log.info("进入精准分片 precise availableTargetNames:{}", JSON.toJSONString(availableTargetNames));
+
+        /**
+         * 分库策略使用时： shardingValue 参数数据：{"columnName":"order_id","dataNodeInfo":{"paddingChar":"0","prefix":"db","suffixMinLength":1},"logicTableName":"t_order","value":1}
+         * 分表策略使用时： shardingValue 参数数据：{"columnName":"order_id","dataNodeInfo":{"paddingChar":"0","prefix":"t_order_","suffixMinLength":1},"logicTableName":"t_order","value":1}
+         */
+        log.info("进入精准分片 preciseShardingValue:{}", JSON.toJSONString(preciseShardingValue));
         int tableSize = availableTargetNames.size();
         // 真实表的前缀
-        String tablePrefix = shardingValue.getDataNodeInfo().getPrefix();
+        String tablePrefix = preciseShardingValue.getDataNodeInfo().getPrefix();
         // 分片健的值
-        long orderId = shardingValue.getValue();
+        long orderId = preciseShardingValue.getValue();
         // 对分片健取模后确定位置
         long mod = orderId % tableSize;
         return tablePrefix + mod;
@@ -42,34 +53,52 @@ public class OrderStandardCustomAlgorithm implements StandardShardingAlgorithm<L
      * 范围分片进入 sql中有 between 和  < > 等操作符会执行
      *
      * @param availableTargetNames 所有分片表的集合
-     * @param shardingValue        分片健的值，SQL中解析出来的分片值
+     * @param rangeShardingValue        分片健的值，SQL中解析出来的分片值
      * @return
      */
     @Override
     public Collection<String> doSharding(Collection<String> availableTargetNames,
-                                         RangeShardingValue<Long> shardingValue) {
-        log.info("进入范围分片 = 和 in");
-        // 分片健值的下边界
-        Range<Long> valueRange = shardingValue.getValueRange();
-        Long lower = (Long) valueRange.lowerEndpoint();
-        // 分片健值的上边界
-        Long upper = (Long) valueRange.upperEndpoint();
-        // 真实表的前缀
-        String tablePrefix = shardingValue.getDataNodeInfo().getPrefix();
-        if (lower != null && upper != null) {
-            // 分片健的值
-            long orderId = upper - lower;
-            // 对分片健取模后确定位置
-            long mod = orderId % availableTargetNames.size();
-            return Arrays.asList(tablePrefix + mod);
-        }
+                                         RangeShardingValue<Long> rangeShardingValue) {
+        /**
+         * 分库策略使用时：availableTargetNames 参数数据为分片库的集合 ["db0","db1"]
+         * 分表策略使用时：availableTargetNames 参数数据为分片库的集合 ["t_order_0","t_order_1","t_order_2"]
+         */
+        log.info("进入范围分片：range availableTargetNames:{}", JSON.toJSONString(availableTargetNames));
+
+
+        /**
+         * 分库策略使用时 shardingValue 参数数据：{"columnName":"order_id","dataNodeInfo":{"paddingChar":"0","prefix":"db","suffixMinLength":1},"logicTableName":"t_order","valueRange":{"empty":false}}
+         * 分表策略使用时 shardingValue 参数数据：{"columnName":"order_id","dataNodeInfo":{"paddingChar":"0","prefix":"t_order_","suffixMinLength":1},"logicTableName":"t_order","valueRange":{"empty":false}}
+         */
+        log.info("进入范围分片：rangeShardingValue:{}", JSON.toJSONString(rangeShardingValue));
+
+        Properties props = getProps();
+        log.info("进入范围分片：rangeShardingValue props:{}", JSON.toJSONString(props));
+        // 分片健值的上下边界
+//        Range<Long> valueRange = rangeShardingValue.getValueRange();
+//        Long lower = valueRange.lowerEndpoint();
+//        // 分片健值的上边界
+//        Long upper = valueRange.upperEndpoint();
+//        // 真实表的前缀
+//        String tablePrefix = rangeShardingValue.getDataNodeInfo().getPrefix();
+//        if (lower != null && upper != null) {
+//            // 分片健的值
+//            long orderId = upper - lower;
+//            // 对分片健取模后确定位置
+//            long mod = orderId % availableTargetNames.size();
+//            return Arrays.asList(tablePrefix + mod);
+//        }
         //
         return Collections.singletonList("t_order_0");
     }
 
     @Override
     public Properties getProps() {
-        return null;
+        Properties props = new Properties();
+        // 设置算法所需的配置信息
+        props.setProperty("key1", "value1");
+        props.setProperty("key2", "value2");
+        return props;
     }
 
     /**
@@ -79,7 +108,7 @@ public class OrderStandardCustomAlgorithm implements StandardShardingAlgorithm<L
      */
     @Override
     public void init(Properties properties) {
-        Object prop = properties.get("prop");
-        log.info("配置信息：{}", JSON.toJSONString(prop));
+        Object prop = properties.get("cccccc");
+        log.info("自定义配置信息：{}", JSON.toJSONString(prop));
     }
 }

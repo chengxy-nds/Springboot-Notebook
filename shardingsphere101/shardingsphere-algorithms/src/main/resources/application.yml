@@ -144,9 +144,28 @@ spring:
               # 分片算法类
               algorithmClassName: com.shardingsphere_101.algorithm.OrderStandardCustomAlgorithm
               # 自定义属性
-              prop:
-                aaaaaa: 123456
-                bbbbbb: 654321
+              cccccc: cccccc
+
+          # 13、自定义 complex 标准算法
+          t_order_complex_custom_algorithm:
+            type: CLASS_BASED
+            props:
+              # 分片策略
+              strategy: complex
+              # 分片算法类
+              algorithmClassName: com.shardingsphere_101.algorithm.OrderComplexCustomAlgorithm
+              # 自定义属性
+              aaaaaa: aaaaaa
+          # 14、自定义 hint 标准算法
+          t_order_hint_custom_algorithm:
+            type: CLASS_BASED
+            props:
+              # 分片策略
+              strategy: hint
+              # 分片算法类
+              algorithmClassName: com.shardingsphere_101.algorithm.OrderHintCustomAlgorithm
+              # 自定义属性
+              bbbbbb: bbbbbb
 
         # 分布式序列算法配置
         key-generators:
@@ -161,7 +180,7 @@ spring:
           # 逻辑表名称
           t_order:
             # 数据节点：数据库.分片表
-            actual-data-nodes: db$->{0..1}.t_order_${202401..202406}
+            actual-data-nodes: db$->{0..1}.t_order_${0..2}
             # 分库策略
             database-strategy:
               standard:
@@ -170,8 +189,8 @@ spring:
             # 分表策略
             table-strategy:
               standard:
-                sharding-column: interval_value
-                sharding-algorithm-name: t_order_table_interval
+                sharding-column: order_id
+                sharding-algorithm-name: t_order_table_mod
             keyGenerateStrategy:
               column: id
               keyGeneratorName: t_order_snowflake

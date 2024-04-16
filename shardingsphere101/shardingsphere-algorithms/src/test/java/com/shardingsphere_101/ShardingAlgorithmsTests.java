@@ -20,6 +20,7 @@ import java.util.Date;
  * @author 公众号：程序员小富
  * @date 2023/12/31 17:25
  */
+@DisplayName("分片算法测试类")
 @SpringBootTest
 class ShardingAlgorithmsTests {
 
@@ -37,17 +38,7 @@ class ShardingAlgorithmsTests {
     @DisplayName("创建分片表")
     @Test
     public void autoCreateOrderTableAlgorithmsTest() {
-        jdbcTemplate.execute("CREATE TABLE `t_order` (\n" +
-                "  `id` bigint(20) NOT NULL,\n" +
-                "  `order_id` bigint(20) NOT NULL,\n" +
-                "  `user_id` bigint(20) NOT NULL,\n" +
-                "  `order_number` varchar(255) NOT NULL,\n" +
-                "  `customer_id` bigint(20) NOT NULL,\n" +
-                "  `order_date` datetime  default NULL,\n" +
-                "  `interval_value` varchar(125)  default NULL,\n" +
-                "  `total_amount` decimal(10,2) NOT NULL,\n" +
-                "  PRIMARY KEY (`order_id`) USING BTREE\n" +
-                ");");
+        jdbcTemplate.execute("CREATE TABLE `t_order` (\n" + "  `id` bigint(20) NOT NULL,\n" + "  `order_id` bigint(20) NOT NULL,\n" + "  `user_id` bigint(20) NOT NULL,\n" + "  `order_number` varchar(255) NOT NULL,\n" + "  `customer_id` bigint(20) NOT NULL,\n" + "  `order_date` datetime  default NULL,\n" + "  `interval_value` varchar(125)  default NULL,\n" + "  `total_amount` decimal(10,2) NOT NULL,\n" + "  PRIMARY KEY (`order_id`) USING BTREE\n" + ");");
     }
 
     /**
@@ -87,9 +78,7 @@ class ShardingAlgorithmsTests {
     @DisplayName("查询标准策略")
     @Test
     public void queryTableTest() {
-        QueryWrapper<OrderPo> queryWrapper = new QueryWrapper<OrderPo>()
-                .eq("order_id", 9)
-                .eq("id", 1769988936014688257L);
+        QueryWrapper<OrderPo> queryWrapper = new QueryWrapper<OrderPo>().eq("order_id", 9).eq("id", 1769988936014688257L);
         OrderPo orderPo = orderMapper.selectOne(queryWrapper);
         System.out.println(orderPo.getId());
     }
@@ -157,6 +146,7 @@ class ShardingAlgorithmsTests {
         // 1%3 = 1 所以放入 db0.t_order_1 分片表
         // /* SHARDINGSPHERE_HINT: t_order.SHARDING_DATABASE_VALUE=0, t_order.SHARDING_TABLE_VALUE=1 */
         jdbcTemplate.execute("INSERT INTO `t_order`(`id`,`order_date`,`order_id`, `order_number`, `customer_id`, `total_amount`, `interval_value`, `user_id`) VALUES (1, '2024-03-20 00:00:00', 1, '1', 1, 1.00, '2024-01-01 00:00:00', 1);");
+
         hintManager.close();
     }
 }
