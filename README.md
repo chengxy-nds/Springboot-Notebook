@@ -8,19 +8,20 @@
    <a style="padding-left:10px" href="https://mp.weixin.qq.com/s/iogZNJ392dPuWZx_GSD4UA"><img src="https://img.shields.io/static/v1?label=%E5%BE%AE%E4%BF%A1&message=xinzhifu521&color=success&&logo=wechat"/></a>
 </div>
 
-> 本项目全部案例详细教程，同步在 个人公众号：**程序员小富** , 欢迎关注交流指正，加群学习
+## 说在前边
+
+
+> 本项目全部案例详细教程，同步在 个人**公众号：程序员小富** , 欢迎关注交流指正，加群学习！
 
 <div style="text-align:">
-<img src='wx/gonghao.jpg' width="200" height="200">
+<img src='http://fire-blog.oss-cn-beijing.aliyuncs.com//images/20240415141903.png' width="200" height="200">
 </div>
 
 ![](wx/person.png)
 [**作者小富，目前就职某大厂，点击一起来了解下**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
 
----
 
-
-### 介绍
+## 项目介绍
 
 **Springboot-Notebook** 一个以 `springboot` 为基础开发框架，
 整合 `Redis` 、`Mysql` 、 `Rabbitmq` 、`ES` 、`MongoDB`、`sharding-jdbc
@@ -41,28 +42,84 @@
 消息推送  | 7种实时消息推送
 更多 | ......
 
+## 🤝 关于作者
+
+大家好，我是本站作者小富～ 从事编程工作十余年，在大厂狗东做过架构相关工作.
+
+写作分享很多年，将工作中的所遇到的问题、用到技术梳理成文章分享出来和小伙伴们共勉，希望对大家有用！
+
+目前在持续的更新三个系列的专题《Springboot开发实战100例》、《ShardingSphere5.x分库分表原理与实战》、《面试八股》
+
+## 🔥技术群 & 资料
+
+如果遇到了问题，可以通过以下方式联系我。也欢迎加入我们的技术交流群，群里都是热心的Javaer，会讨论技术问题，互相帮助，相信能让您获得更多收获。
+
+**在我的公众号：程序员小富，内提供了一些资料：**
+
+- 技术书籍公众号内回复[ **pdf** ] Get。
+
+- 面试笔记、springcloud进阶实战PDF，公众号内回复[ **1222** ] Get。
+
+- 原创《ShardingSphere5.x分库分表原理与实战》PDF，公众号内回复[ **分库分表** ] Get。
+
+
+| ![个人公众号](https://img.shields.io/static/v1?label=wechat&message=微信公众号&logo=wechat&color=07C160)  | ![个人公众号](https://img.shields.io/static/v1?label=wechat&message=个人微信&logo=wechat&color=07C160)  |
+| ---------| ------- |
+|  <img src="http://fire-blog.oss-cn-beijing.aliyuncs.com//images/20240415141903.png" style="width:15rem; height:15rem;"> |  <img src="http://fire-blog.oss-cn-beijing.aliyuncs.com//images/20240415141919.png" style="width:15rem; height:15rem;">                                                       |
+| 关注公众号：程序员小富   | 接搜微信号：<span style="color: #ff0606">xiaofucode</span>|
+
+
+## 系列专题
+
 ### 《ShardingSphere5.x分库分表原理与实战》
 
-[（一）好好的系统，为什么要分库分表？](https://mp.weixin.qq.com/s/-WFBtHtTMtHoGwIm9bL4Uw)
+内容同步在小富的个人网站：[xiaofucode.com](https://xiaofucode.com)，现有章节已经生成了 **PDF**，欢迎下载！
 
-[（二）分库分表的 21 条法则，hold 住！](https://mp.weixin.qq.com/s/aRQLKGzFHcX7zQLqa6FIbA)
+获取方式：《ShardingSphere5.x分库分表原理与实战》PDF，**公众号：程序员小富**内回复[ **分库分表** ] Get。
 
-[（三）2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/XdlJK170YZEwof6DzZlbZg)
+<div style="text-align:">
+<img src='http://fire-blog.oss-cn-beijing.aliyuncs.com//images/20240415141903.png' width="200" height="200">
+</div>
 
-[（四）2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/IdJoG-0cCaPJ5s2aAOM3Jw)
+系列往期精选：
 
+- [好好的系统，为什么要分库分表？](https://mp.weixin.qq.com/s/-WFBtHtTMtHoGwIm9bL4Uw)
+- [分库分表的 21 条法则，hold 住！](https://mp.weixin.qq.com/s/aRQLKGzFHcX7zQLqa6FIbA)
+- [2 种方式快速实现分库分表，轻松拿捏！](https://mp.weixin.qq.com/s/XdlJK170YZEwof6DzZlbZg)
+- [分库分表如何管理不同实例中几万张分片表？](https://mp.weixin.qq.com/s/IdJoG-0cCaPJ5s2aAOM3Jw)
+- [一口气搞懂分库分表 12 种分片算法，大厂都在用](https://mp.weixin.qq.com/s/HAoCXGoGCbDt9ZaWCu-qIw)
+- [DIY 3 种分库分表分片算法，自己写的轮子才吊！](https://mp.weixin.qq.com/s/EADxOtkURwYEit7-ou2bqQ)
+- [ 持续更新中...](https://xiaofucode.com)
+
+### 《Springboot 开发场景 100 例》
+
+Springboot101 上百个 Springboot 开发实战案例分享，开发工作拿来即用，省下的时间就是生活。内容同步在小富的个人网站：[xiaofucode.com](https://xiaofucode.com)!
+
+系列往期精选：
+
+- [springboot一行代码实现文件上传20个平台](http://www.xiaofucode.com/guide/springboot101/high/一行代码实现文件上传%2020个平台.html)
+- [springboot + rabbitmq + MQTT 实现智能家居](http://www.xiaofucode.com/guide/springboot101/high/springboot%20_%20rabbitmq%20做智能家居.html)
+- [springboot + redis 分布式限流器](http://www.xiaofucode.com/guide/springboot101/high/springboot%20_%20Redis%20分布式限流器.html)
+- [springboot注解实现动态数据源切换](http://www.xiaofucode.com/guide/springboot101/数据库/注解实现动态数据源切换.html)
+- [springboot + Knife4j 集成API文档](http://www.xiaofucode.com/guide/springboot101/文档/集成Knife4j.html)
+- [springboot + oauth2.0实战](http://www.xiaofucode.com/guide/springboot101/high/OAuth2.0实战.html)
+- [springboot + canal实现 mysql+binlog 监控](http://www.xiaofucode.com/guide/springboot101/high/canal%20实现mysql%20binlog监控.html)
+- [springboot + jsoup 实现爬虫](http://www.xiaofucode.com/guide/springboot101/high/springboot%20_%20jsoup%20实现爬虫.html)
+- [ 更多文章...](https://xiaofucode.com)
 
 ### 面试八股
 
+内容同步在小富的个人网站：[xiaofucode.com](https://xiaofucode.com)。
+
 - 《spring cloud alibaba 微服务全家桶》
-
 - 《面试笔记》
-
 - 《LeetCode算法笔记》
 
+**获取方式**：[公众号：**程序员小富** , 回复[ **1222** ]](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
 
-**获取方式**：[公众号：**程序员小富** , 回复 **1222**](https://mp.weixin.qq.com/s?__biz=MzAxNTM4NzAyNg==&mid=2247500646&idx=1&sn=5a0993997dc1fc609da4eda5ba610681&chksm=9b86539bacf1da8d2bc22b569d27e1b7b85a21a0ec7d5a5f4a6660148a5f40f076e2d42e4885&token=1045698719&lang=zh_CN#rd)
-
+<div style="text-align:">
+<img src='http://fire-blog.oss-cn-beijing.aliyuncs.com//images/20240415141903.png' width="200" height="200">
+</div>
 
 ### 电子书
 
@@ -70,9 +127,9 @@
 
 ![](wx/book.png)
 
-### 优质文章精选
+## 优质文章精选
 
-#### Java 开发技巧
+### Java 开发技巧
 
 - [3种 Springboot 全局时间格式化方式，别再写重复代码了](https://mp.weixin.qq.com/s/MeDfnL__jdEq7Yi48vg_vA) (`springboot-global-formatting`)
 - [真是没想到，Springboot + Flowable 开发工作流会这么简单！](https://mp.weixin.qq.com/s/hXS9HirRnhYRMIwd4GVeIQ) (`springboot-work-flowable`)
@@ -201,20 +258,3 @@
 
 - [看了 100多份简历后，想给找工作的程序员几点建议](https://mp.weixin.qq.com/s/iVBbzaNpC--Tk6c-JfwtUQ)
 
-
-
-
-## springboot 101
-
-
-springboot 101 一个全新的免费 springboot 专栏，旨在让新手Java开发者可以快速上手实战，整个专栏分为基础篇和高级篇两大块。
-
-
-
-
-> 欢迎关注公众号、或者添加个人微信：xinzhifu521，加群学习
-
-<div style="text-align:">
-<img src='wx/gonghao.jpg' width="200" height="200">
-<img src='wx/wx.jpg' width="200" height="200">
-</div>

@@ -1,0 +1,78 @@
+spring:
+  shardingsphere:
+    # 数据源配置
+    datasource:
+      # 数据源名称，多数据源以逗号分隔 ,放在第一个的数据源为未配置分片规则表的默认数据源
+      names: db0 , db1
+      # 名称与上边 names 保持一致
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+    rules:
+      sharding:
+        # 分片算法定义
+        sharding-algorithms:
+          t_order_database_mod:
+            type: MOD
+            props:
+              sharding-count: 2 # 指定分片数量
+          t_order_table_mod:
+            type: MOD
+            props:
+              sharding-count: 3 # 指定分片数量
+        key-generators: # 分布式序列算法配置
+          # 雪花ID生成算法
+          snowflake-gen:
+            type: SNOWFLAKE
+            props:
+              worker-id: 1 # 工作机器唯一标识
+              max-vibration-offset: 2 # 最大抖动上限值，范围[0, 4096)。注：若使用此算法生成值作分片值，建议配置此属性。此算法在不同毫秒内所生成的 key 取模 2^n (2^n一般为分库或分表数) 之后结果总为 0 或 1。为防止上述分片问题，建议将此属性值配置为 (2^n)-1
+              max-tolerate-time-difference-milliseconds: 10 # 最大容忍时钟回退时间，单位：毫秒
+          # UUID生成算法
+          uu-id-gen:
+            type: UUID
+          # nanoid生成算法
+          nanoid-gen:
+            type: NANOID
+          # COSID生成算法
+          cosId-gen:
+            type: COSID
+            props:
+              id-name: __share__
+              as-string: false
+          # cosId-snowflake生成算法
+          cosId-snowflake-gen:
+            type: COSID_SNOWFLAKE
+            props:
+              epoch: 1477929600000
+              as-string: false
+          # 自定义ID生成策略
+          xiaofu-id-gen:
+            type: custom
+        tables:
+          t_order: # 逻辑表名称
+            actual-data-nodes: db$->{0..1}.t_order_${0..2} # 数据节点：数据库.分片表
+            database-strategy: # 分库策略
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: t_order_database_mod
+            table-strategy: # 分表策略
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: t_order_table_mod
+            key-generate-strategy: # 分布式主键生成策略
+              column: id
+              keyGeneratorName: xiaofu-id-gen
+    # 属性配置
+    props:
+      # 展示修改以后的sql语句
+      sql-show: true
