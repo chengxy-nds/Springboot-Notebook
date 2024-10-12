@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE</title>
+</head>
+<body>
+<div id="content" style="text-align: center;">
+    <h1>SSE 接收服务端事件消息数据</h1>
+    <div id="message">等待连接...</div>
+</div>
+<script>
+    let source = null;
+    let userId = 7777
+
+    function setMessageInnerHTML(message) {
+        const messageDiv = document.getElementById("message");
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = message;
+        messageDiv.appendChild(newParagraph);
+    }
+
+    if (window.EventSource) {
+        // 建立连接
+        source = new EventSource('http://127.0.0.1:9033/subSseEmitter/'+userId);
+        setMessageInnerHTML("连接用户=" + userId);
+        /**
+         * 连接一旦建立，就会触发open事件
+         * 另一种写法：source.onopen = function (event) {}
+         */
+        source.addEventListener('open', function (e) {
+            setMessageInnerHTML("建立连接。。。");
+        }, false);
+        /**
+         * 客户端收到服务器发来的数据
+         * 另一种写法：source.onmessage = function (event) {}
+         */
+        source.addEventListener('message', function (e) {
+            setMessageInnerHTML(e.data);
+        });
+    } else {
+        setMessageInnerHTML("你的浏览器不支持SSE");
+    }
+</script>
+</body>
+</html>

@@ -45,6 +45,7 @@
         <module>通用功能/springboot-jasypt</module>
         <module>通用功能/springboot-banner</module>
         <module>通用功能/springboot-valid-params</module>
+        <module>通用功能/springboot-streaming</module>
 
         <!-- 接口文档 -->
         <module>接口文档/springboot-swagger</module>
