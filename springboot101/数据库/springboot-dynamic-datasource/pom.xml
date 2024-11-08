@@ -15,7 +15,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
-        <mysql.connector.version>8.0.32</mysql.connector.version>
+        <mysql.connector.version>8.2.0</mysql.connector.version>
         <druid.version>1.2.6</druid.version>
     </properties>
 
